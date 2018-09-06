@@ -19,7 +19,7 @@ function collect(connect, monitor) {
 class QuizTarget extends Component {
     render() {
         const { connectDropTarget, hovered, imgFile, optionVal } = this.props;
-        const backgroundColor = hovered ? '#4286f4' : '';
+        const backgroundColor = hovered ? '#4286f4' : 'white';
         return connectDropTarget(
             <img 
                 style={{marginRight: optionVal === 'yes'? 100 : 0 ,backgroundColor, borderRadius: 7}}  
