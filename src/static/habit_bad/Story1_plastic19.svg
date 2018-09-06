@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Story1_plastic19</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Story1_plastic19" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(70.794229, 41.356406) rotate(-287.000000) translate(-70.794229, -41.356406) translate(54.794229, 32.356406)">
+            <path d="M24.5332771,2.62692137 C24.5111775,2.7495334 24.5,2.87407963 24.5,3 C24.5,4.35961361 25.8227869,5.49623561 27.4917391,5.49999071 L27.7518799,5.50057602 L27.9007065,5.71394015 C29.5834527,8.12639663 30.5,10.9951853 30.5,14 L30.5,14.5 L30,14.5 C13.963217,14.5 13.963217,14.5 2,14.5 L1.5,14.5 L1.5,14 C1.5,5.99187113 7.99187113,-0.5 16,-0.5 C19.0228305,-0.5 21.9078258,0.427606495 24.3287227,2.12916561 L24.5899049,2.31274095 L24.5332771,2.62692137 Z M-0.5,14.5 L32.5,14.5 L32.5,18.5 L-0.5,18.5 L-0.5,14.5 Z" id="Combined-Shape" stroke="#455A64" fill-opacity="0.9" fill="#EAF2F9"></path>
+            <path d="M13.032992,2.90668718 C10.6219082,3.82184293 8.52927427,5.38385646 6.96700863,7.38080937 M5.90791774,8.93989766 C5.41090911,9.78930666 5.00084033,10.6957751 4.68992128,11.6470932" id="Oval-14-Copy" stroke="#FFFFFF" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero" opacity="0.800000012" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+        <path d="M19.6595704,39.8895612 L48.742484,39.8895612 L45.8238362,77.0311511 L45.4475018,77.101705 C40.428838,78.0425876 36.6844719,78.5137423 34.2016517,78.5137423 C31.7185212,78.5137423 28.0016723,78.0425086 23.0386203,77.1015151 L22.6641235,77.0305106 L19.6595704,39.8895612 Z" id="Path" stroke="#455A64" fill-opacity="0.9" fill="#EAF2F9" transform="translate(34.201652, 59.201652) rotate(45.000000) translate(-34.201652, -59.201652) "></path>
+    </g>
+</svg>

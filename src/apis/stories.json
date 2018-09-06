@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1, 
+        "title": "Story 1",
+        "storyBadInputs": [
+            "1_bad_input0.png",
+            "1_bad_input1.png",
+            "1_bad_input2.png"
+        ],
+        "storyGoodInputs": [
+            "1_good_input0.png",
+            "1_good_input1.png",
+            "1_good_input2.png"
+        ],
+        "habits": [
+            {
+                "id": 1,
+                "title": "habit 1",
+                "badHabitDesc": "bad habit desc for 1",
+                "goodHabitDesc": "good habit desc for 1",
+                "goodHabitAnimationImg": [
+                    {
+                        "file": "1_fish0.svg",
+                        "x": 220,
+                        "y": 285
+                    },
+                    {
+                        "file": "1_fish1.svg",
+                        "x": 167,
+                        "y": 308
+                    }
+                ],
+                "badHabitAnimationImg": [
+                    {
+                        "file": "1_plastic0.svg",
+                        "x": 619,
+                        "y": 285
+                    },
+                    {
+                        "file": "1_plastic1.svg",
+                        "x": 167,
+                        "y": 308
+                    }
+                ],
+                "goodHabitImg": [
+                    "ZeroWasteAni_01_1.svg",
+                    "ZeroWasteAni_01_2.svg",
+                    "ZeroWasteAni_01_3.svg"
+                ],
+                "badHabitImg": [
+                    "WasteAni_01_1.svg",
+                    "WasteAni_01_2.svg",
+                    "WasteAni_01_3.svg",
+                    "WasteAni_01_4.svg"
+                ]
+            },
+            {
+                "id": 2,
+                "title": "habit 2",
+                "badHabitDesc": "bad habit desc for 2",
+                "goodHabitDesc": "good habit desc for 2",
+                "goodHabitAnimationImg": [
+                    {
+                        "file": "2_fish0.svg",
+                        "x": 270,
+                        "y": 285
+                    }
+                ],
+                "badHabitAnimationImg": [
+                    {
+                        "file": "2_plastic0.svg",
+                        "x": 585,
+                        "y": 140
+                    },
+                    {
+                        "file": "2_plastic1.svg",
+                        "x": 315,
+                        "y": 330
+                    }
+                ],
+                "goodHabitImg": [
+                    "ZeroWasteAni_02_1.svg",
+                    "ZeroWasteAni_02_2.svg",
+                    "ZeroWasteAni_02_3.svg"
+                ],
+                "badHabitImg": [
+                    "WasteAni_02_1.svg",
+                    "WasteAni_02_2.svg",
+                    "WasteAni_02_3.svg",
+                    "WasteAni_02_4.svg"
+                ]
+            },
+            {
+                "id": 3,
+                "title": "habit 3",
+                "badHabitDesc": "bad habit desc for 3",
+                "goodHabitDesc": "good habit desc for 3",
+                "goodHabitAnimationImg": [
+                    {
+                        "file": "3_fish0.svg",
+                        "x": 250,
+                        "y": 285
+                    }
+                ],
+                "badHabitAnimationImg": [
+                    {
+                        "file": "3_plastic0.svg",
+                        "x": 270,
+                        "y": 356
+                    },
+                    {
+                        "file": "3_plastic1.svg",
+                        "x": 655,
+                        "y": 163
+                    }
+                ],
+                "goodHabitImg": [
+                    "ZeroWasteAni_03_1.svg",
+                    "ZeroWasteAni_03_2.svg",
+                    "ZeroWasteAni_03_3.svg"
+                ],
+                "badHabitImg": [
+                    "WasteAni_03_1.svg",
+                    "WasteAni_03_2.svg",
+                    "WasteAni_03_3.svg",
+                    "WasteAni_03_4.svg"
+                ]
+            }
+        ]
+    }
+]
