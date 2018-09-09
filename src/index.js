@@ -13,7 +13,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import { faKey, faBookReader,faHome,faTasks,faUsers, faArrowCircleLeft, faArrowCircleRight, faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp  } from '@fortawesome/free-solid-svg-icons';
 
 
-import { getAllStories, getAllHabits} from './actions/index';
+import { getAllStories, getAllHabits, getAllQuiz } from './actions/index';
 
 import WebFont from 'webfontloader';
 import App from './app';
@@ -29,6 +29,7 @@ const store = createStore(
 //fetch stories and habits from redux thunk
 store.dispatch(getAllStories());
 store.dispatch(getAllHabits());
+store.dispatch(getAllQuiz());
 
 //load M+PLUS+Rounded+1c font family for whole website
 WebFont.load({

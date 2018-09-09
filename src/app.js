@@ -8,7 +8,7 @@ import StoriesGridComponent from './containers/stories_grid';
 import StoryBoxComponent from './containers/story_box';
 import Home from './components/home';
 import HabitTrackerDetail from './containers/habit_tracker_detail';
-import Quiz from './components/quiz';
+import Quiz from './containers/quiz';
 import Calculator from './components/calculator';
 
 class App extends Component {
@@ -60,7 +60,7 @@ class App extends Component {
                     closable={false}
                     centered={true}
                     title={null}
-                    visible={this.state.modalVisible}
+                    visible={false}
                     maskStyle={{backgroundColor: '#18BC9C'}}
                     footer={[<Button key="submit" type="primary" onClick={() => this.handleOk()}>
                                 Submit

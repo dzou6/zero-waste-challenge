@@ -12,6 +12,38 @@
             "1_good_input1.png",
             "1_good_input2.png"
         ],
+        "quiz": [
+            {
+                "id": 1,
+                "desc": "Drinking with plastic cups and straws will increase more plastic waste and harm turtle's health", 
+                "answer": "no"
+            },
+            {
+                "id": 2,
+                "desc": "2 desc", 
+                "answer": "yes"
+            },
+            {
+                "id": 3,
+                "desc": "3 desc", 
+                "answer": "no"
+            },
+            {
+                "id": 4,
+                "desc": "4 desc", 
+                "answer": "yes"
+            },
+            {
+                "id": 5,
+                "desc": "5 desc", 
+                "answer": "no"
+            },
+            {
+                "id": 6,
+                "desc": "6 desc", 
+                "answer": "yes"
+            }
+        ],
         "habits": [
             {
                 "id": 1,

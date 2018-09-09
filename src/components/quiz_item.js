@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {DragSource} from 'react-dnd';
 
-
+//event handler for drag and drop
 const itemSource = {
     beginDrag(props){
         return props.item;
@@ -15,6 +15,7 @@ const itemSource = {
     
 }
 
+//collect source to assign the drag drop related to component state
 function collect(connect,monitor){
     return{
         connectDragSource:connect.dragSource(),
@@ -23,7 +24,10 @@ function collect(connect,monitor){
     }
 }
 
+
+//Quiz Item component
 class QuizItem extends Component {
+    // render functiction to dispaly quiz item compnent
     render(){
         const{isDragging,connectDragSource,item} = this.props;
         return connectDragSource(
