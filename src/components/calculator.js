@@ -20,7 +20,9 @@ const results = (<div id="container_2">
 const reset = (<div><img id="btn_reset_cover" src={require('../static/calculator_element/btn_reset.png')}/></div>);
 
 class Calculator extends Component {
-  state = { showResults: false,showReset: false};
+  state = { showResults: false,
+    showReset: false
+  };
   
   onClickHandler = ()=>{
     this.setState(prev => ({showResults: true,showReset: true}));
@@ -62,6 +64,46 @@ class Calculator extends Component {
     document.getElementById("show2nd").innerHTML = "";
   }
 
+  onChangeHandler(e)
+  {
+    function show1()
+    {
+      document.getElementById("happy_01").style.visibility= "visible";
+      document.getElementById("happy_02").style.visibility= "hidden";
+      document.getElementById("happy_03").style.visibility= "hidden";
+    }
+
+    function show2()
+    {
+      document.getElementById("happy_01").style.visibility= "hidden";
+      document.getElementById("happy_02").style.visibility= "visible";
+      document.getElementById("happy_03").style.visibility= "hidden";
+    }
+
+    function show3()
+    {
+      document.getElementById("happy_01").style.visibility= "hidden";
+      document.getElementById("happy_02").style.visibility= "hidden";
+      document.getElementById("happy_03").style.visibility= "visible";
+    }
+
+    if(e.target.value==1)
+    {
+      show1();
+    }
+
+    if(e.target.value==2)
+    {
+      show2();
+    }
+
+    if(e.target.value==3)
+    {
+      show3();
+    }
+    
+  }
+
   render() {
     return (
         <body>
@@ -73,21 +115,41 @@ class Calculator extends Component {
           <img id="background" src={require('../static/calculator_element/Calculator_background.png')}/>
           <div id="container_1">
             <img id="card_01" src={require('../static/calculator_element/card_01.png')} />
+            <img id="happy_01" src={require('../static/calculator_element/Story1_Habit1_happy_1.png')}/>
+            <img id="happy_02" src={require('../static/calculator_element/Story1_Habit2_happy_1.png')}/>
+            <img id="happy_03" src={require('../static/calculator_element/Story1_Habit3_happy_1.png')}/>
 
             <div id="slh">
-              <select id="selectHabit">
-                <option value="1">Bring your own bag for shopping</option>
-                <option value="2">Bring your own cup for drinking</option>
+              <select id="selectHabit" value={this.state.value} onChange={this.onChangeHandler}>
+                <option value="1" >No single use plastic straws</option>
+                <option value="2" >Bring your own bag for shopping</option>
+                <option value="3" >Bring your own bottles and cups</option>
               </select>
             </div>
 
             <div id="sld">
-              <select id="selectDay">
+              <select id="selectDay" size="5">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
+                <option value="1">6</option>
+                <option value="2">7</option>
+                <option value="3">8</option>
+                <option value="4">9</option>
+                <option value="5">10</option>
+                <option value="1">11</option>
+                <option value="2">12</option>
+                <option value="3">13</option>
+                <option value="4">14</option>
+                <option value="5">15</option>
+                <option value="1">16</option>
+                <option value="2">17</option>
+                <option value="3">18</option>
+                <option value="4">19</option>
+                <option value="5">20</option>
+                <option value="5">21</option>
               </select>
             </div>
             
