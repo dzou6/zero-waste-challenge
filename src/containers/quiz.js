@@ -48,7 +48,7 @@ class Quiz extends Component {
     onDropFinished(id) {
         const {quiz} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
-            this.setState({modalTitle: 'Congratulation! You are correct :)'});
+            this.setState({modalTitle: 'Congratulations! You are correct :)'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
         } else {
