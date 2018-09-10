@@ -1,0 +1,249 @@
+#title{
+    color:rgb(0, 119, 255);
+    font-size: large;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    position: fixed;
+    left:644px;
+    top: 75px;
+    z-index: 1;
+  }
+  
+  #background{
+    position: fixed;
+    left:326px;
+    top:56px;
+    height: 600px;
+    width: 825px;
+    z-index: 0;
+  }
+  
+  #selectHabit {
+    position: fixed;
+    left: 670px;
+    top: 142px;
+    border: 4px solid;
+    height:30px;
+    line-height:30px;
+    font-weight:bold;
+    border-radius: 8px;
+  }
+  
+  #selectDay {
+    position: fixed;
+    left: 696px;
+    top: 236px;
+    border: 4px solid;
+    height:30px;
+    line-height:30px;
+    font-weight:bold;
+    border-radius: 8px;
+  }
+  
+  #outputWaste {
+    position: fixed;
+    left: 823px;
+    top: 440px;
+    color:rgb(0, 110, 255);
+    font-size: small;
+  }
+  
+  #outputAnimals {
+    position: fixed;
+    left: 358px;
+    top: 460px;
+    color:rgb(0, 110, 255);
+    font-size: large;
+  }
+  
+  #main_container{
+    margin-top: 65px;
+    margin-bottom: 66px;
+  }
+  
+  #card_01{
+    width: 624px;
+    height: 192px;
+    position: fixed;
+    left: 426px;
+    top: 110px;
+  }
+  
+  #card_02{
+    width: 352px;
+    height: 192px;
+    position: fixed;
+    left: 770px;
+    top: 360px;
+    -webkit-animation: smooth 0.8s ease-in;
+    -moz-animation: smooth 0.8s ease-in;
+    -o-animation: smooth 0.8s ease-in;
+    -ms-animation: smooth 0.8s ease-in;
+    animation: smooth 0.8s ease-in;
+  }
+  
+  #card_03{
+    width: 352px;
+    height: 192px;
+    position: fixed;
+    left: 355px;
+    top: 360px;
+    -webkit-animation: smooth 2s ease-in;
+    -moz-animation: smooth 2s ease-in;
+    -o-animation: smooth 2s ease-in;
+    -ms-animation: smooth 2s ease-in;
+    animation: smooth 2s ease-in;
+  }
+  
+  #count {
+    border-radius: 4px;
+    background-color: #f4901e;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 5px;
+    position: fixed;
+    left: 910px;
+    top: 222px;
+    width: 90px;
+    height: 30px;
+    opacity:0;
+  }
+  
+  #showFst{
+    position: fixed;
+    left: 791px;
+    top: 410px;
+    color:rgb(0, 110, 255);
+    font-size: 3em;
+    -webkit-animation: smooth 1s ease-in;
+    -moz-animation: smooth 1s ease-in;
+    -o-animation: smooth 1s ease-in;
+    -ms-animation: smooth 1s ease-in;
+    animation: smooth 1s ease-in;
+  }
+  
+  #show2nd{
+    position: fixed;
+    left: 380px;
+    top: 426px;
+    color:rgb(0, 110, 255);
+    font-size: 3em;
+  }
+  
+  #kg{
+    position: fixed;
+    left: 796px;
+    top: 466px;
+    color:rgb(0, 110, 255);
+    font-weight: bold;
+    -webkit-animation: smooth 0.8s ease-in;
+    -moz-animation: smooth 0.8s ease-in;
+    -o-animation: smooth 0.8s ease-in;
+    -ms-animation: smooth 0.8s ease-in;
+    animation: smooth 0.8s ease-in;
+  }
+  
+  #arrow_01{
+    position: fixed;
+    left: 1048px;
+    top: 295px;
+    height:50px;
+    width: 50px;
+    -webkit-animation: smooth 0.5s ease-in;
+    -moz-animation: smooth 0.5s ease-in;
+    -o-animation: smooth 0.5s ease-in;
+    -ms-animation: smooth 0.5s ease-in;
+    animation: smooth 0.5s ease-in;
+  }
+  
+  #arrow_02{
+    position: fixed;
+    left: 700px;
+    top: 545px;
+    height:21px;
+    width: 78px;
+    -webkit-animation: smooth 1.5s ease-in;
+    -moz-animation: smooth 1.5s ease-in;
+    -o-animation: smooth 1.5s ease-in;
+    -ms-animation: smooth 1.5s ease-in;
+    animation: smooth 1.5s ease-in;
+  }
+  
+  #arrow_03{
+    position: fixed;
+    left: 380px;
+    top: 297px;
+    height:50px;
+    width: 50px;
+    -webkit-animation: smooth 2.5s ease-in;
+    -moz-animation: smooth 2.5s ease-in;
+    -o-animation: smooth 2.5s ease-in;
+    -ms-animation: smooth 2.5s ease-in;
+    animation: smooth 2.5s ease-in;
+  }
+  
+  #btn_reset_cover{
+    position: fixed;
+    left: 702px;
+    top: 299px;
+    height:75px;
+    width: 75px;
+    -webkit-animation: smooth 3s ease-in;
+    -moz-animation: smooth 3s ease-in;
+    -o-animation: smooth 3s ease-in;
+    -ms-animation: smooth 3s ease-in;
+    animation: smooth 3s ease-in;
+  }
+  
+  #reset {
+    border-radius: 4px;
+    background-color: #f4901e;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 5px;
+    position: fixed;
+    left: 700px;
+    top: 299px;
+    width: 60px;
+    height: 60px;
+    opacity:0;
+  }
+  
+  @-webkit-keyframes smooth {
+    0% { opacity: 0;}
+    25% { opacity: 0;}
+    50% { opacity: 0;}
+    75% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+  
+  #countCover{
+    position: fixed;
+    left: 910px;
+    top: 236px;
+    width: 90px;
+    height: 30px;
+  }
+  
+  #s1{
+    -webkit-animation: smooth 0.8s ease-in;
+    -moz-animation: smooth 0.8s ease-in;
+    -o-animation: smooth 0.8s ease-in;
+    -ms-animation: smooth 0.8s ease-in;
+    animation: smooth 0.8s ease-in;
+  }
+  
+  #s2{
+    -webkit-animation: smooth 2s ease-in;
+    -moz-animation: smooth 2s ease-in;
+    -o-animation: smooth 2s ease-in;
+    -ms-animation: smooth 2s ease-in;
+    animation: smooth 2s ease-in;
+  }
+  
+  

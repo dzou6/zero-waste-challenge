@@ -80,6 +80,7 @@ class Quiz extends Component {
     // render the quiz componet
     render() {
         const {quiz} = this.props;
+        //const quiz = this.props.quiz;
 
         if(quiz.length == 0) {
             return <LoadingPanel />
@@ -90,13 +91,13 @@ class Quiz extends Component {
                 <h2 className="text-white">Do you think it is a good habit that can help the turtle?</h2>
                 <QuizTargetComponent>
                     <QuizTarget
-                        onDropTarget={(optionVal) => this.onDropTarget(optionVal)}
                         optionVal="yes"
+                        onDropTarget={(optionVal) => this.onDropTarget(optionVal)}
                         imgFile={require('../static/quiz_target/Yes.png')}
                     />
                     <QuizTarget
-                        onDropTarget={(optionVal) => this.onDropTarget(optionVal)}
                         optionVal="no"
+                        onDropTarget={(optionVal) => this.onDropTarget(optionVal)}
                         imgFile={require('../static/quiz_target/No.png')}
                     />
                 </QuizTargetComponent>
@@ -134,5 +135,5 @@ Quiz =  DragDropContext(HTML5Backend)(Quiz);
 //establish connect between redux and quiz component
 export default connect(
     mapStateToProps,
-    {getAllQuiz}
+    {getAllQuiz: getAllQuiz}
 )(Quiz);
