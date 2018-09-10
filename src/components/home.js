@@ -2,7 +2,7 @@ import React from 'react';
 import HomeSliders from '../components/home_slider';
 import { Link } from 'react-router-dom';
 
-//funciton component to render home page
+
 const Home = () => {
 
     return (
@@ -16,8 +16,8 @@ const Home = () => {
                     bottom: "650px"
                 }}>
                     <span className="mb-4" style={{width: "500px"}}>
-                        <p>Hi</p>
-                        <p>Did you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>
+                        <p>Little Angel</p>
+                        <p>Do you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>
                         <p>These plastics are causing marine animals die</p>
                         <p>Would you be willing to take actions to save their lives?</p>
                     </span>

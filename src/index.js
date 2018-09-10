@@ -7,18 +7,20 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers'
 import { Provider } from 'react-redux';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import 'font-awesome/css/font-awesome.min.css'
-import { faKey, faBookReader,faHome,faTasks,faUsers, faArrowCircleLeft, faArrowCircleRight, faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp  } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faBookReader,faHome,faTasks,faUsers  } from '@fortawesome/free-solid-svg-icons';
 
-
-import { getAllStories, getAllHabits, getAllQuiz } from './actions/index';
-
+import NavigationHeader from './components/navigation_header';
+import StoriesGridComponent from './containers/stories_grid';
+import { getAllStories, getAllHabits} from './actions/index';
+import StoryBoxComponent from './containers/story_box';
+import Home from './components/home';
 import WebFont from 'webfontloader';
-import App from './app';
+import { Layout } from 'antd';
+import HabitTrackerDetail from './containers/habit_tracker_detail';
 
-//make use of redux thunk middleware
 const middleware = [ thunk ];
 
 const store = createStore(
@@ -26,42 +28,42 @@ const store = createStore(
     applyMiddleware(...middleware)
 )
 
-//fetch stories and habits from redux thunk
 store.dispatch(getAllStories());
 store.dispatch(getAllHabits());
-store.dispatch(getAllQuiz());
 
-//load M+PLUS+Rounded+1c font family for whole website
 WebFont.load({
     google: {
       families: ['M+PLUS+Rounded+1c', 'sans-serif']
     }
   });
 
-//Add fontawesome libary to project
 library.add(
-    faArrowCircleLeft,
-    faArrowCircleRight,
     faKey, 
     faBookReader,
     faHome,
     faTasks,
-    faUsers,
-    faQuestionCircle,
-    faCalculator,
-    faHandPointDown,
-    faHandPointUp
-);
+    faUsers);
 
+const { Content, Footer } = Layout;
 
-//make use of ant design layout
-
-
-//render react router for different pages
 ReactDOM.render(
     <Provider store={store}>
           <BrowserRouter>
-            <App />
+            <Layout>
+                <NavigationHeader />
+                <Content className="bg-primary text-white text-center"
+                    style={{ minHeight: 'calc(100vh - 133px)', marginTop: 64, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <Switch>
+                        <Route path="/habit-tracker" component={HabitTrackerDetail} />
+                        <Route path="/story/:id" component={StoryBoxComponent} />
+                        <Route path="/stories" component={StoriesGridComponent} />
+                        <Route path="/" component={Home} />
+                    </Switch>
+                </Content>
+                <Footer style={{ textAlign: 'center' }}>
+                    Zero-Waste Challenge ©{(new Date()).getFullYear()}
+                </Footer>
+            </Layout>
           </BrowserRouter>
     </Provider>, 
     document.getElementById('root')

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Tooltip } from 'antd';
 
-//function component to render good VS bad habit list
 const HabitRowItem = (props) => {
     const {habit, index} = props;
     return (
@@ -11,14 +9,10 @@ const HabitRowItem = (props) => {
             </div>
             <div className="habit-pics">
                 <div className="bad-habit">
-                    <Tooltip placement="left" title={habit.badHabitDesc}>
-                        <img width="160px" src={require(`../static/tracker_bad/${habit.id}_sad.png`)} alt="bad habit"/>
-                    </Tooltip>
+                    <img width="160px" src={require(`../static/tracker_bad/${habit.id}_sad.png`)} alt="bad habit"/>
                 </div>
                 <div className="good-habit">
-                    <Tooltip placement="right" title={habit.goodHabitDesc}>
-                        <img width="160px" src={require(`../static/tracker_good/${habit.id}_happy.png`)} alt="good habit"/>
-                    </Tooltip>
+                    <img width="160px" src={require(`../static/tracker_good/${habit.id}_happy.png`)} alt="good habit"/>
                 </div>
             </div>
         </div>

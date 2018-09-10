@@ -1,5 +1,6 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+/* body {
+  font-family: 'Lato';
+} */
 
 h1,
 h2,
@@ -602,146 +603,111 @@ hr.star-dark, hr.star-light {
   color: rgba(0, 0, 0, 0.25) !important;
 }
 
-.slick-prev  {
-  height: 60px;
-  width: 40px;
-  left: -40px;
-  font-size: 18px !important;
+/* slider image size */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.slick-next {
-  height: 60px;
-  width: 40px;
-  right: -40px;
-  font-size: 18px !important;
-}
-
- .slick-prev:before, .slick-next:before  {
-  content: '' !important;
-}
-
-/*Caculator*/
-
-.App {
-  text-align: center;
-  background-color:  #18bc9c;
-}
-
-.App-intro{
-  color:rgb(0, 119, 255);
-  font-size: large;
-}
-
-#selectHabit {
-  position: fixed;
-  left: 530px;
-  top: 280px;
-}
-
-#selectDay {
-  position: absolute;
-  left: 695px;
-  top: 347px;
-}
-
-#outputWaste {
-  position: fixed;
-  left: 1250px;
-  top: 460px;
-  color:rgb(0, 110, 255);
-  font-size: large;
-}
-
-#outputAnimals {
-  position: fixed;
-  left: 300px;
-  top: 460px;
-  color:rgb(0, 110, 255);
-  font-size: large;
-}
-
-#wasteBtn {
-  position: fixed;
-  left: 1020px;
-  top: 438px;
-  color:rgb(0, 110, 255);
-}
-
-#outputWaste {
-  position: fixed;
-  left: 980px;
-  top: 450px;
-  color:rgb(0, 110, 255);
-}
-
-
-#lifeBtn {
-  position: fixed;
-  left: 423px;
-  top: 421px;
-  color:rgb(0, 110, 255);
-}
-
-#clearBtn {
-  position: fixed;
-  left:460px;
-  top: 240px;
-  color:rgb(0, 110, 255);
-}
-
-select {
-  height:30px;
-  line-height:30px;
-  opacity:0.4;
-  font-weight:bold;
-  border-radius: 8px;
-} 
-
-select:hover
-{
-  opacity:0.8;
-}
-
-/* button{
-  font-weight:bold;
-  border-radius: 8px;
-}
-
-button:hover
-{
-  opacity:0.9;
-} */
-
-#days{
+.logo {
   width: 120px;
+  height: 31px;
+  background: rgba(255,255,255,.2);  
+  margin: 16px 28px 16px 0;
+  float: left;
 }
 
-#crying{
-  position: fixed;
-  left:0px;
-  top: 220px;
+.story-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color:#fff;
 }
 
-#turtle{
-  position: fixed;
-  left:17px;
-  top: 380px;
+.story-info {
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.App-intro{
-  position: fixed;
-  left:270px;
-  top: 5px;
+.story-desc {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
 }
 
-/* img:hover{
-  opacity:1.0;
-} */
-
-#background{
-  width:825px;
-  height:600px;
-  position: fixed;
-  left:270px;
-  top: 65px;
+.story-interaction {
+  display: flex;
+  height: calc(100% - 41px);
 }
+
+.story-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-top {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-bottom {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-list-container {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 10px;
+}
+
+.story-output {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.habit-info {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.habit-notify-msg {
+  height: 30px;
+  padding: 10px
+}
+
+.habit-detail {
+  display: flex;
+}
+
+.habit-container {
+  flex-flow: column nowrap;
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+  flex: auto;
+}
+
+.habit-nav-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+ */

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//function component to render story grid, and display each story as a image.
-//not in use for now
 const StoryGridItemComponent = (props) => {
     const {id} = props.story;
 

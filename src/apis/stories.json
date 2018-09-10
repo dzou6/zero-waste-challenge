@@ -2,76 +2,26 @@
     {
         "id": 1, 
         "title": "Story 1",
-        "storyBadInputs": [
-            "1_bad_input0.png",
-            "1_bad_input1.png",
-            "1_bad_input2.png"
-        ],
-        "storyGoodInputs": [
-            "1_good_input0.png",
-            "1_good_input1.png",
-            "1_good_input2.png"
-        ],
-        "quiz": [
-            {
-                "id": 1,
-                "desc": "Drinking with plastic cups and straws will increase more plastic waste and harm turtle's health", 
-                "answer": "no"
-            },
-            {
-                "id": 2,
-                "desc": "2 desc", 
-                "answer": "yes"
-            },
-            {
-                "id": 3,
-                "desc": "3 desc", 
-                "answer": "no"
-            },
-            {
-                "id": 4,
-                "desc": "4 desc", 
-                "answer": "yes"
-            },
-            {
-                "id": 5,
-                "desc": "5 desc", 
-                "answer": "no"
-            },
-            {
-                "id": 6,
-                "desc": "6 desc", 
-                "answer": "yes"
-            }
+        "description": "Do you know story 1?",
+        "storyInputs": [
+            "1_input0.svg",
+            "1_input1.svg",
+            "1_input2.svg"
         ],
         "habits": [
             {
                 "id": 1,
                 "title": "habit 1",
-                "badHabitDesc": "bad habit desc for 1",
-                "goodHabitDesc": "good habit desc for 1",
-                "goodHabitAnimationImg": [
-                    {
-                        "file": "1_fish0.svg",
-                        "x": 220,
-                        "y": 285
-                    },
-                    {
-                        "file": "1_fish1.svg",
-                        "x": 167,
-                        "y": 308
-                    }
-                ],
-                "badHabitAnimationImg": [
+                "animationImg": [
                     {
                         "file": "1_plastic0.svg",
-                        "x": 619,
-                        "y": 285
+                        "x": 470,
+                        "y": 240
                     },
                     {
                         "file": "1_plastic1.svg",
-                        "x": 167,
-                        "y": 308
+                        "x": 470,
+                        "y": 470
                     }
                 ],
                 "goodHabitImg": [
@@ -82,80 +32,57 @@
                 "badHabitImg": [
                     "WasteAni_01_1.svg",
                     "WasteAni_01_2.svg",
-                    "WasteAni_01_3.svg",
-                    "WasteAni_01_4.svg"
+                    "WasteAni_01_3.svg"
                 ]
             },
             {
                 "id": 2,
                 "title": "habit 2",
-                "badHabitDesc": "bad habit desc for 2",
-                "goodHabitDesc": "good habit desc for 2",
-                "goodHabitAnimationImg": [
+                "animationImg": [
                     {
-                        "file": "2_fish0.svg",
-                        "x": 270,
-                        "y": 285
-                    }
-                ],
-                "badHabitAnimationImg": [
-                    {
-                        "file": "2_plastic0.svg",
-                        "x": 585,
-                        "y": 140
+                        "file": "1_plastic0.svg",
+                        "x": 460,
+                        "y": 220
                     },
                     {
-                        "file": "2_plastic1.svg",
-                        "x": 315,
-                        "y": 330
+                        "file": "1_plastic1.svg",
+                        "x": 450,
+                        "y": 450
                     }
                 ],
                 "goodHabitImg": [
-                    "ZeroWasteAni_02_1.svg",
-                    "ZeroWasteAni_02_2.svg",
-                    "ZeroWasteAni_02_3.svg"
+                    "ZeroWasteAni_01_1.svg",
+                    "ZeroWasteAni_01_2.svg",
+                    "ZeroWasteAni_01_3.svg"
                 ],
                 "badHabitImg": [
-                    "WasteAni_02_1.svg",
-                    "WasteAni_02_2.svg",
-                    "WasteAni_02_3.svg",
-                    "WasteAni_02_4.svg"
+                    "WasteAni_01_1.svg",
+                    "WasteAni_01_2.svg",
+                    "WasteAni_01_3.svg"
                 ]
             },
             {
                 "id": 3,
                 "title": "habit 3",
-                "badHabitDesc": "bad habit desc for 3",
-                "goodHabitDesc": "good habit desc for 3",
-                "goodHabitAnimationImg": [
+                "animationImg": [
                     {
-                        "file": "3_fish0.svg",
-                        "x": 250,
-                        "y": 285
-                    }
-                ],
-                "badHabitAnimationImg": [
-                    {
-                        "file": "3_plastic0.svg",
-                        "x": 270,
-                        "y": 356
+                        "file": "1_plastic0.svg",
+                        "x": 450,
+                        "y": 210
                     },
                     {
-                        "file": "3_plastic1.svg",
-                        "x": 655,
-                        "y": 163
+                        "file": "1_plastic1.svg",
+                        "x": 420,
+                        "y": 420
                     }
                 ],
                 "goodHabitImg": [
-                    "ZeroWasteAni_03_1.svg",
-                    "ZeroWasteAni_03_2.svg",
-                    "ZeroWasteAni_03_3.svg"
+                    "1_good.png"
                 ],
                 "badHabitImg": [
-                    "WasteAni_03_1.svg",
-                    "WasteAni_03_2.svg",
-                    "WasteAni_03_3.svg",
-                    "WasteAni_03_4.svg"
+                    "1_bad.png",
+                    "2_bad.png",
+                    "3_bad.png"
                 ]
             }
         ]

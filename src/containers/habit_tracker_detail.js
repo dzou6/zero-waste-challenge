@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Tabs, Icon } from 'antd';
+import { Carousel, Steps, Button, Icon } from 'antd';
 import * as jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import _ from 'lodash';
 import HabitRowItem from '../components/habit_row_item';
-import { NextArrow, PrevArrow } from '../components/slider_arrow';
-import Slider from 'react-slick';
 
-//componet for habit tracker detail
+const Step = Steps.Step;
+
+const steps = [{
+    title: 'Bad Habit VS Good Habit',
+    icon: 'table'
+}, {
+    title: 'Zero-Waste Challenge Form',
+    icon: 'schedule'
+}, {
+    title: 'How to Use the Form',
+    icon: 'info-circle-o'
+}];
+
+
 class HabitTrackerDetail extends Component {
 
     constructor(props) {
         super(props);
-        this.instructions = [
-            require('../static/habit_good/demo-1.png'),
-            require('../static/habit_good/demo-2.png'),
-            require('../static/habit_good/bring own cups.png'),
-        ];
+        this.state = {
+            current: 0
+        }
     }
 
-    //functio to download 0-waste challenge form
     downloadPdf() {
         const input = document.getElementById('imgToPrint');
         html2canvas(input)
@@ -37,7 +45,6 @@ class HabitTrackerDetail extends Component {
             ;
     }
 
-    //render the good vs bad habits grid
     renderHabitGrid() {
         const { habits } = this.props;
         return _.map(habits, (habit, index) => {
@@ -45,66 +52,89 @@ class HabitTrackerDetail extends Component {
         })
     }
 
-    renderInstructions() {
-        return this.instructions.map(instruction => {
-            return (
-                <div key={instruction}>
-                    <img 
-                        className="img-fluid mb-5 d-block mx-auto" 
-                        src={instruction} 
-                        alt="instruction" />
-                </div>
-            );
-        })
+    next() {
+        const current = this.state.current + 1;
+        this.setState({ current });
     }
 
+    prev() {
+        const current = this.state.current - 1;
+        this.setState({ current });
+    }
 
-    //render habit tracker detail component
+    renderContent(step) {
+        switch (step.title) {
+            case steps[0].title:
+                return (
+                    <div className="steps-content">
+                        {this.renderHabitGrid()}
+                    </div>
+                );
+            case steps[1].title:
+                return (
+                    <div className="steps-content">
+                            <button  
+                                style={{marginTop: '10px'}}
+                                onClick={this.downloadPdf}
+                                className="btn btn-primary btn-m font-weight-light mb-1">
+                                Download  Here!
+                            </button>
+                        <div id="imgToPrint">
+                            <img width="800px" height="500px" className="img-fluid mx-auto" src={require('../static/habit_good/habit_table_v2.png')} alt="" />
+                        </div>
+
+                    </div>
+                );
+            case steps[2].title:
+                return (
+                    <div className="steps-content">
+                        <Carousel autoplay>
+                            <div><img className="img-fluid mb-5 d-block mx-auto" src={require('../static/habit_good/demo-1.png')} alt="" /></div>
+                            <div><img className="img-fluid mb-5 d-block mx-auto" src={require('../static/habit_good/demo-2.png')} alt="" /></div>
+                            <div><img className="img-fluid mb-5 d-block mx-auto" src={require('../static/habit_good/bring own cups.png')} alt="" /></div>
+                        </Carousel>
+                    </div>
+                );
+            default: 
+                console.warn('page not supprted');
+        }
+    }
+
     render() {
-        const TabPane = Tabs.TabPane;
-        const sliderSettings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            nextArrow: <NextArrow color="#18bc9c" />,
-            prevArrow: <PrevArrow color="#18bc9c" />
-          }
+        const { current } = this.state;
         return (
             <div style={{
                 width: "70%",
                 textAlign: "left",
                 padding: "10px"
             }}>
-               <Tabs 
-                style={{background: "#fff", padding: 10, borderRadius: 8}}
-                type="card">
-                <TabPane tab={<span><Icon type="table" />Bad Habit VS Good Habit</span>} key="1">
-                    {this.renderHabitGrid()}
-                </TabPane>
-                <TabPane tab={<span><Icon type="schedule" />Zero-Waste Challenge Form</span>} key="2">
-                    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                        <button  
-                            style={{marginTop: '10px'}}
-                            onClick={this.downloadPdf}
-                            className="btn btn-primary btn-m font-weight-light mb-1">
-                            Download  Here!
-                        </button>
-                        
-                        <div id="imgToPrint">
-                            <img width="800px" height="500px" className="img-fluid mx-auto" src={require('../static/habit_good/habit_table_v2.png')} alt="" />
-                        </div>
-                    </div>
-                </TabPane>
-                <TabPane tab={<span><Icon type="info-circle-o" />How to Use the Form</span>} key="3">
-                    <div style={{width: 540, height: 625, margin: '0 auto'}}>
-                    <Slider {...sliderSettings}>
-                        {this.renderInstructions()}
-                    </Slider>
-                    </div>
-                </TabPane>
-               </Tabs>
+                <div className="steps-action">
+                    {
+                        current > 0
+                        && (
+                            <Button
+                                style={{ fontSize: 20, backgroundColor: '#699def' }}
+                                icon="left-circle-o"
+                                onClick={() => this.prev()}>
+                            </Button>
+                        )
+                    }
+                    {
+                        current < steps.length - 1
+                        && (
+                            <Button
+                                style={{ marginLeft: 8, fontSize: 20, backgroundColor: '#699def' }}
+                                type="primary"
+                                icon="right-circle-o"
+                                onClick={() => this.next()}>
+                            </Button>)
+                    }
+                </div>
+                <Steps current={current}>
+                    {steps.map(item => <Step key={item.title} title={item.title} icon={<Icon type={item.icon} />}  />)}
+                </Steps>
+                {this.renderContent(steps[current])}
+
             </div>
 
         );
