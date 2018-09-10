@@ -101,7 +101,7 @@ class Quiz extends Component {
                         imgFile={require('../static/quiz_target/No.png')}
                     />
                 </QuizTargetComponent>
-                <Tooltip title="Drag Me To Yes or No!" visible={true}>
+                <Tooltip title="Drag Me To Yes or No!" height="10px" visible={true}>
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />
                 </Tooltip>
                 <Modal

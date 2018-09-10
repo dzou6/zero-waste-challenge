@@ -13,8 +13,9 @@
     left:326px;
     top:56px;
     height: 600px;
-    width: 825px;
+    width: 815px;
     z-index: 0;
+    margin-top:1.5em;
   }
   
   #selectHabit {
@@ -186,10 +187,10 @@
   
   #btn_reset_cover{
     position: fixed;
-    left: 702px;
+    left: 682px;
     top: 299px;
-    height:75px;
-    width: 75px;
+    height:100px;
+    width: 100px;
     -webkit-animation: smooth 3s ease-in;
     -moz-animation: smooth 3s ease-in;
     -o-animation: smooth 3s ease-in;
