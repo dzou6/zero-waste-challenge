@@ -7,19 +7,15 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducers'
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import 'font-awesome/css/font-awesome.min.css'
 import { faKey, faBookReader,faHome,faTasks,faUsers  } from '@fortawesome/free-solid-svg-icons';
 
-import NavigationHeader from './components/navigation_header';
-import StoriesGridComponent from './containers/stories_grid';
 import { getAllStories, getAllHabits} from './actions/index';
-import StoryBoxComponent from './containers/story_box';
-import Home from './components/home';
 import WebFont from 'webfontloader';
-import { Layout } from 'antd';
-import HabitTrackerDetail from './containers/habit_tracker_detail';
+import App from './app';
+
 
 const middleware = [ thunk ];
 
@@ -44,26 +40,10 @@ library.add(
     faTasks,
     faUsers);
 
-const { Content, Footer } = Layout;
-
 ReactDOM.render(
     <Provider store={store}>
           <BrowserRouter>
-            <Layout>
-                <NavigationHeader />
-                <Content className="bg-primary text-white text-center"
-                    style={{ minHeight: 'calc(100vh - 133px)', marginTop: 64, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <Switch>
-                        <Route path="/habit-tracker" component={HabitTrackerDetail} />
-                        <Route path="/story/:id" component={StoryBoxComponent} />
-                        <Route path="/stories" component={StoriesGridComponent} />
-                        <Route path="/" component={Home} />
-                    </Switch>
-                </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    Zero-Waste Challenge ©{(new Date()).getFullYear()}
-                </Footer>
-            </Layout>
+            <App />
           </BrowserRouter>
     </Provider>, 
     document.getElementById('root')
