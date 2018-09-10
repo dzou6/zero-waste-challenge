@@ -26,12 +26,17 @@ class Quiz extends Component {
         super(props);
         this.state = {
             optionVal: '',
+            tooltipVisible: false,
             modalVisible: false,
             modalTitle: '',
             modalOkText: '',
             isAnswerCorrect: false,
             shownItmIdx: Math.floor(Math.random() * 5)  
         };
+    }
+
+    componentDidMount() {
+        setTimeout(() => this.setState({tooltipVisible: true}), 2000);
     }
 
     //event handler when dragged item is dropped on the target
@@ -43,11 +48,11 @@ class Quiz extends Component {
     onDropFinished(id) {
         const {quiz} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
-            this.setState({modalTitle: 'Congratulation! You are correct! :)'});
-            this.setState({modalOkText: 'Go To Next Quiz'});
+            this.setState({modalTitle: 'Congratulation! You are correct :)'});
+            this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
         } else {
-            this.setState({modalTitle: 'Sorry, you are wrong :('});
+            this.setState({modalTitle: 'Sorry, you are wrong :( '});
             this.setState({modalOkText: 'Retry'});
             this.setState({isAnswerCorrect: false});
         }
@@ -80,7 +85,6 @@ class Quiz extends Component {
     // render the quiz componet
     render() {
         const {quiz} = this.props;
-        //const quiz = this.props.quiz;
 
         if(quiz.length == 0) {
             return <LoadingPanel />
@@ -88,7 +92,7 @@ class Quiz extends Component {
 
         return (
             <div>
-                <h2 className="text-white">Do you think it is a good habit that can help the turtle?</h2>
+                <h2 className="text-white">Do you think the image at the bottom is a good habit that can help the turtle?</h2>
                 <QuizTargetComponent>
                     <QuizTarget
                         optionVal="yes"
@@ -101,7 +105,10 @@ class Quiz extends Component {
                         imgFile={require('../static/quiz_target/No.png')}
                     />
                 </QuizTargetComponent>
-                <Tooltip title="Drag Me To Yes or No!" height="10px" visible={true}>
+                <Tooltip 
+                    overlayStyle={{fontSize: 20}}
+                    title="Drag Me to Yes or No!" 
+                    visible={this.state.tooltipVisible}>
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />
                 </Tooltip>
                 <Modal

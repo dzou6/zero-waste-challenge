@@ -15,9 +15,8 @@ const Home = () => {
                     fontSize: "1.1em",
                     bottom: "650px"
                 }}>
-                    <span className="mb-4" style={{width: "500px"}}>
-                        <p>Hi</p>
-                        <p>Did you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>
+                    <span className="mb-4" style={{width: "500px", fontSize:"20px"}}>
+                        <p>Hi, did you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>
                         <p>These plastics are causing marine animals die</p>
                         <p>Would you be willing to take actions to save their lives?</p>
                     </span>

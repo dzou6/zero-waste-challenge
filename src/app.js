@@ -60,7 +60,7 @@ class App extends Component {
                     closable={false}
                     centered={true}
                     title={null}
-                    visible={false}
+                    visible={this.state.modalVisible}
                     maskStyle={{backgroundColor: '#18BC9C'}}
                     footer={[<Button key="submit" type="primary" onClick={() => this.handleOk()}>
                                 Submit

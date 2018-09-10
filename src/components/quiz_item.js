@@ -31,7 +31,11 @@ class QuizItem extends Component {
     render(){
         const{isDragging,connectDragSource,item} = this.props;
         return connectDragSource(
-            <img style={{marginTop:60}} src={require(`../static/quiz_items/Quiz${item.id}.png`)} alt="quiz1" />
+            <img
+                height="200px" 
+                style={{marginTop:65}}
+                src={require(`../static/quiz_items/Quiz${item.id}.png`)} 
+                alt="quizitem" />
         )
     }
 }

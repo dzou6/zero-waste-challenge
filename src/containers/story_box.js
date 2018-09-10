@@ -127,7 +127,7 @@ class StoryBoxComponent extends Component {
         }
         return (
             <div>
-                <span style={{color: 'white', fontWeight: '700', fontSize: '1.2em', paddingBottom: '10px'}}>{story.title}</span>
+                <span style={{color: 'white', fontWeight: '700', fontSize: '1.4em', paddingBottom: '10px'}}>{story.title}</span>
                 <StoryContainer key={this.state.boxKey}>
                     <StoryLeftSider>
                         <StoryInputComponent 

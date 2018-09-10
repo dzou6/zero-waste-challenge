@@ -40,10 +40,13 @@ class HomeSliders extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />
+      prevArrow: <PrevArrow />,
+      pauseOnFocus:true,
+      pauseOnHover:true,
+      autoplay:true
     }
     return (
-      <div style={{margin: '10px auto', width: 898.64}}>
+      <div style={{margin: '10px auto', width: 898.64, height: 680}}>
         <Slider {...sliderSettings}>
             {this.renderBackgrounds()}
           </Slider>

@@ -553,6 +553,7 @@ hr.star-dark, hr.star-light {
   border-left: 2px solid #18bc9c;
   border-right: 2px solid #18bc9c;
   border-top: 2px solid #18bc9c;
+  font-size: 18px
 }
 
 .habit-pics {

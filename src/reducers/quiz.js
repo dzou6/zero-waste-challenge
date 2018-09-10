@@ -1,7 +1,7 @@
 import { RECEIVE_QUIZ } from '../constants/action_types';
 import _ from 'lodash';
 
-//quiz reducer to fecth data with receve quiz action type
+//quiz reducer to fecth data with receive quiz action type
 const byId = (state = [], action) => {
     switch(action.type) {
         case RECEIVE_QUIZ:
