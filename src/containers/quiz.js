@@ -92,7 +92,7 @@ class Quiz extends Component {
 
         return (
             <div>
-                <h3 className="text-white">Do you think the image at the bottom is a good habit that can help the turtle?</h3>
+                <h3 className="text-white">Do you think the image at the bottom shows a good habit that can help the turtle?</h3>
                 <QuizTargetComponent>
                     <QuizTarget
                         optionVal="yes"

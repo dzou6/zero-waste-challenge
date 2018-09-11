@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import '../calculator.css';
 
-const results = (<div id="container_2">
+const results = (<div style={{marginTop: 60, display: 'flex'}}>
+
+                  <img id="card_03" src={require('../static/calculator_element/card_03.png')} />
+                  <div style={{width: 70, position: 'relative'}}>
+                    <img id="arrow_01" src={require('../static/calculator_element/arrow_01.png')} />
+
+                    <img id="arrow_02" src={require('../static/calculator_element/arrow_02.png')} />
+
+                    <img id="arrow_03" src={require('../static/calculator_element/arrow_03.png')} />
+                  </div>
                   <img id="card_02" src={require('../static/calculator_element/card_02.png')} />
+
                   <div id="outputWaste">
                     <div id="kg">KG</div>
                   </div>
-
-                  <img id="card_03" src={require('../static/calculator_element/card_03.png')} />
-
-                  <img id="arrow_01" src={require('../static/calculator_element/arrow_01.png')} />
-
-                  <img id="arrow_02" src={require('../static/calculator_element/arrow_02.png')} />
-
-                  <img id="arrow_03" src={require('../static/calculator_element/arrow_03.png')} />
-                  
                 </div>);
 
-const reset = (<div><img id="btn_reset_cover" src={require('../static/calculator_element/btn_reset.png')}/></div>);
+const reset = (<div style={{position: 'relative'}}><img id="btn_reset_cover" src={require('../static/calculator_element/btn_reset.png')}/></div>);
 
 class Calculator extends Component {
   state = { showResults: false,
@@ -106,67 +107,59 @@ class Calculator extends Component {
 
   render() {
     return (
-        <body>
-          <div>
-            <h3 id="title">
-              Zero Waste Caculator
-            </h3>
-          </div>
-          <img id="background" src={require('../static/calculator_element/Calculator_background.png')}/>
-          <div id="container_1">
+        <div style={{width: 815, height: 499, backgroundImage: `url(${require('../static/calculator_element/Calculator_background.png')})`}}>
             <img id="card_01" src={require('../static/calculator_element/card_01.png')} />
-            <img id="happy_01" src={require('../static/calculator_element/Story1_Habit1_happy_1.png')}/>
-            <img id="happy_02" src={require('../static/calculator_element/Story1_Habit2_happy_1.png')}/>
-            <img id="happy_03" src={require('../static/calculator_element/Story1_Habit3_happy_1.png')}/>
-
-            <div id="slh">
-              <select id="selectHabit" value={this.state.value} onChange={this.onChangeHandler}>
-                <option value="1" >No single use plastic straws</option>
-                <option value="2" >Bring your own bag for shopping</option>
-                <option value="3" >Bring your own bottles and cups</option>
-              </select>
+            <div style={{position: 'relative', height: 0}}>
+              <img id="happy_01" src={require('../static/calculator_element/Story1_Habit1_happy_1.png')}/>
+              <img id="happy_02" src={require('../static/calculator_element/Story1_Habit2_happy_1.png')}/>
+              <img id="happy_03" src={require('../static/calculator_element/Story1_Habit3_happy_1.png')}/>
+              <div id="slh" style={{position: 'absolute', left: 320, bottom: 129}}>
+                <select id="selectHabit" value={this.state.value} onChange={this.onChangeHandler}>
+                  <option value="1" >do not use single use plastic straws</option>
+                  <option value="2" >bring my own bag for shopping</option>
+                  <option value="3" >bring my own bottle and cup</option>
+                </select>
+              </div>
+              <div id="sld" style={{position: 'absolute', left: 360, bottom: 40}}>
+                <select id="selectDay" size="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                </select>
+              </div>
+              <img id="countCover" src={require('../static/calculator_element/btn_count.png')}/>
+              <button id="count" onClick={this.onClickHandler}>count</button>
             </div>
 
-            <div id="sld">
-              <select id="selectDay" size="5">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="1">6</option>
-                <option value="2">7</option>
-                <option value="3">8</option>
-                <option value="4">9</option>
-                <option value="5">10</option>
-                <option value="1">11</option>
-                <option value="2">12</option>
-                <option value="3">13</option>
-                <option value="4">14</option>
-                <option value="5">15</option>
-                <option value="1">16</option>
-                <option value="2">17</option>
-                <option value="3">18</option>
-                <option value="4">19</option>
-                <option value="5">20</option>
-                <option value="5">21</option>
-              </select>
-            </div>
-            
-            <img id="countCover" src={require('../static/calculator_element/btn_count.png')}/>
-            <div>
-              <button id="count" onClick={this.onClickHandler}></button>
-              {this.state.showResults ? results : null}
-              {this.state.showReset ? reset : null}
-            </div>
+            {this.state.showResults ? results : null}
+            {this.state.showReset ? reset : null}
+
+          <div style={{position: 'relative'}}>
+            <div id="showFst"></div>
+
+            <div id="show2nd"></div>
+
+            <button id="reset" onClick={this.onClearHandler}></button>
           </div>
-
-          <div class="show" id="showFst"></div>
-
-          <div class="show" id="show2nd"></div>
-
-          <button id="reset" onClick={this.onClearHandler}></button>
-        </body>
+        </div>
     );
   }
 }

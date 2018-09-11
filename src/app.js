@@ -70,6 +70,7 @@ class App extends Component {
                         value={this.state.password}
                         onChange={(e) => this.setState({ password: e.target.value })}
                         type="password" 
+                        onPressEnter={() => this.handleOk()}
                         addonBefore={<Icon type="lock" theme="outlined" />} 
                         placeholder="enter your password here!" />
                 </Modal>

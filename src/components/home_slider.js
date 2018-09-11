@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import { NextArrow, PrevArrow } from './slider_arrow';
 
 class HomeSliders extends React.Component {
+    //constructor for quiz component, and init component state
 
   //constructor function for Home slider component
   constructor(props) {
@@ -36,11 +37,9 @@ class HomeSliders extends React.Component {
       dots: true,
       infinite: true,
       fade: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
       pauseOnFocus:true,
       pauseOnHover:true,
       autoplay:true

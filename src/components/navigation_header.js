@@ -20,6 +20,7 @@ class NavigationHeader extends Component {
     return (
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
         <div className="logo">
+         <img src={require('../static/logo.png')} style={{height:58, marginLeft:-30}}/>
           Zero-Waste Challenge
         </div>
         <Menu
@@ -35,14 +36,14 @@ class NavigationHeader extends Component {
           <Menu.Item key="/story/1">
             <NavMenuItem routeUrl="/story/1" icon="book-reader" label="Story" iconColor="#ea7066" />
           </Menu.Item>
-          <Menu.Item key="/habit-tracker">
-            <NavMenuItem routeUrl="/habit-tracker" icon="tasks" label="Challenge" iconColor="#a597e7" />
-          </Menu.Item>
           <Menu.Item key="/quiz">
             <NavMenuItem routeUrl="/quiz" icon="question-circle" label="Quiz" iconColor="#43a3f2" />
           </Menu.Item>
           <Menu.Item key="/calculator">
             <NavMenuItem routeUrl="/calculator" icon="calculator" label="Calculator" iconColor="#ed592d" />
+          </Menu.Item>
+          <Menu.Item key="/habit-tracker">
+            <NavMenuItem routeUrl="/habit-tracker" icon="tasks" label="Challenge" iconColor="#a597e7" />
           </Menu.Item>
         </Menu>
       </Header>
