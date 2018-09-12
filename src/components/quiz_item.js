@@ -3,9 +3,11 @@ import {DragSource} from 'react-dnd';
 
 //event handler for drag and drop
 const itemSource = {
+    //event handler when drag get started
     beginDrag(props){
         return props.item;
     },
+    //event handler when drag ended
     endDrag(props,monitor,component){
         if(!monitor.didDrop()){
             return;
@@ -40,4 +42,5 @@ class QuizItem extends Component {
     }
 }
 
+//export quiz item as drag source
 export default DragSource('item',itemSource,collect)(QuizItem);

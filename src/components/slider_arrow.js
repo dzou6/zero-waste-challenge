@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+//arrow circle left to display for previous icon
 export const PrevArrow = (props) => {
     const { className, onClick } = props
     return (
@@ -17,6 +18,7 @@ export const PrevArrow = (props) => {
     );
   }
   
+//arrow circle right to display for next icon
 export const NextArrow = (props) => {
     const { className, onClick } = props
     return (

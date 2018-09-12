@@ -6,6 +6,7 @@ import StoryPlasticComponent from './story_plastic';
 class StoryBodyComponent extends Component {
     render() {
         const {story, inputIndex, inputType} = this.props;
+        //render plastic story component when plastic id is 1
         switch(story.id) {
             case STORY_PLASTIC_ID:
                 return (

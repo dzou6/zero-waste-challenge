@@ -191,7 +191,7 @@ class StoryPlasticComponent extends Component {
         }, 1000);
     }
 
-    //render all animation items for specific story input
+    //render all animation items for bad habit
     renderBadHabitAnimationItems() {
         const {inputIndex} = this.props;
         return this.state.badHabit.selHabits.length > 0? (
@@ -214,6 +214,7 @@ class StoryPlasticComponent extends Component {
         ): null;
     }
 
+    //render all animation items for good habit
     renderGoodHabitAnimationItems() {
         const {inputIndex} = this.props;
         return this.state.goodHabit.selHabits.length > 0? (
