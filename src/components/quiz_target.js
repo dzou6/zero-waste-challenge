@@ -3,6 +3,7 @@ import { DropTarget } from 'react-dnd';
 
 //event handler for drag and drop
 const targetSource = {
+    //event handler when item get dropped on this component
     drop(props, monitor, component) {
         return props.onDropTarget(props.optionVal);
     }
@@ -32,4 +33,5 @@ class QuizTarget extends Component {
     }
 }
 
+//export quiz target component as the drop target
 export default DropTarget('item', targetSource, collect)(QuizTarget);

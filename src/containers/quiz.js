@@ -108,7 +108,7 @@ class Quiz extends Component {
                     />
                 </QuizTargetComponent>
                 <Tooltip 
-                    overlayStyle={{fontSize: 20}}
+                    overlayStyle={{fontSize: 20, zIndex: 900}}
                     title="Drag Me to Yes or No!" 
                     visible={this.state.tooltipVisible}>
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />

@@ -12,8 +12,6 @@ const InputImage = styled.div`
     background-size: contain;
     cursor: pointer;
     pointer-events: auto;
-    /* opacity: 0.5; */
-    /* pointer-events: none; */
     ${props => `
         background-image: url(${props.inputBg});
         opacity: ${(props.clicked || props.storyPlaying)? 0.2: 1};
