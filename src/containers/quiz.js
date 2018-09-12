@@ -57,6 +57,7 @@ class Quiz extends Component {
             this.setState({isAnswerCorrect: false});
         }
         this.setState({modalVisible: true});
+        this.setState({tooltipVisible: false});
     }
 
 
@@ -75,6 +76,7 @@ class Quiz extends Component {
             
         }
         this.setState({isAnswerCorrect: false});
+        this.setState({tooltipVisible: true});
       }
 
     //handle cancle evetn for moda;

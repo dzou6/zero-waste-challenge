@@ -39,6 +39,7 @@ class HomeSliders extends React.Component {
       infinite: true,
       fade: true,
       speed: 1000,
+      autoplaySpeed:2000,
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnFocus:true,
@@ -46,7 +47,7 @@ class HomeSliders extends React.Component {
       autoplay:true
     }
     return (
-      <Tooltip title="Hover on Blue Image to Pause the Animation" placement="rightTop">
+      <Tooltip title="Hover around the Middle to Pause the Animation" placement="right">
         <div style={{margin: '10px auto', width: 898.64, height: 680}}>
           <Slider {...sliderSettings}>
               {this.renderBackgrounds()}

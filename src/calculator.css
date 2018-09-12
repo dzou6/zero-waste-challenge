@@ -26,7 +26,7 @@
   
   #outputWaste {
     position: relative;
-    left: -256px;
+    left: -226px;
     bottom: -105px;
     color:rgb(0, 110, 255);
     font-size: small;
@@ -90,7 +90,7 @@
   
   #showFst{
     position: absolute;
-    left: 437px;
+    left: 443px;
     bottom: 50px;
     color:rgb(0, 110, 255);
     font-size: 3em;
@@ -103,7 +103,7 @@
   
   #show2nd{
     position: absolute;
-    left: 62px;
+    left: 36px;
     bottom: 34px;
     color:rgb(0, 110, 255);
     font-size: 3em;
