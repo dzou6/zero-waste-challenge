@@ -14,7 +14,7 @@ const results = (<div style={{marginTop: 60, display: 'flex'}}>
                   <img id="card_02" src={require('../static/calculator_element/card_02.png')} />
 
                   <div id="outputWaste">
-                    <div id="kg">KG</div>
+                    <div id="kg">Grams</div>
                   </div>
                 </div>);
 
@@ -56,7 +56,7 @@ class Calculator extends Component {
   }
 
   caculateLife(wasteReduce) {
-    const lifeSaving = 5;
+    const lifeSaving = 252;
     document.getElementById("show2nd").innerHTML = "\<div id=\'s2\'\>"+wasteReduce*lifeSaving+"<\/div\>";
   }
 
@@ -88,17 +88,17 @@ class Calculator extends Component {
       document.getElementById("happy_03").style.visibility= "visible";
     }
 
-    if(e.target.value==1)
+    if(e.target.value==13)
     {
       show1();
     }
 
-    if(e.target.value==2)
+    if(e.target.value==50)
     {
       show2();
     }
 
-    if(e.target.value==3)
+    if(e.target.value==55)
     {
       show3();
     }
@@ -115,9 +115,9 @@ class Calculator extends Component {
               <img id="happy_03" src={require('../static/calculator_element/Story1_Habit3_happy_1.png')}/>
               <div id="slh" style={{position: 'absolute', left: 320, bottom: 129}}>
                 <select id="selectHabit" value={this.state.value} onChange={this.onChangeHandler}>
-                  <option value="1" >do not use single use plastic straws</option>
-                  <option value="2" >bring my own bag for shopping</option>
-                  <option value="3" >bring my own bottle and cup</option>
+                  <option value="13" >do not use single use plastic straws</option>
+                  <option value="50" >bring my own bag for shopping</option>
+                  <option value="55" >bring my own bottle and cup</option>
                 </select>
               </div>
               <div id="sld" style={{position: 'absolute', left: 360, bottom: 40}}>

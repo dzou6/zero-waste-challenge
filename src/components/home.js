@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import HomeSliders from '../components/home_slider';
 import { Link } from 'react-router-dom';
-import { Tooltip } from 'antd';
 
 
 //funciton component to render home page
@@ -21,9 +20,7 @@ class Home extends Component {
     render(){
             return (
                 <div className="container">
-                    <Tooltip title="abc" placement="right">
-                        <HomeSliders/>
-                    </Tooltip>
+                    <HomeSliders/>
                     <div style={{position: "relative", height: "0px"}}>
                     
                         <div style={{

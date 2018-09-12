@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { NextArrow, PrevArrow } from './slider_arrow';
+import { Tooltip } from 'antd';
 
 class HomeSliders extends React.Component {
     //constructor for quiz component, and init component state
@@ -45,11 +46,13 @@ class HomeSliders extends React.Component {
       autoplay:true
     }
     return (
-      <div style={{margin: '10px auto', width: 898.64, height: 680}}>
-        <Slider {...sliderSettings}>
-            {this.renderBackgrounds()}
-          </Slider>
-      </div>
+      <Tooltip title="Hover on Blue Image to Pause the Animation" placement="rightTop">
+        <div style={{margin: '10px auto', width: 898.64, height: 680}}>
+          <Slider {...sliderSettings}>
+              {this.renderBackgrounds()}
+            </Slider>
+        </div>
+      </Tooltip>
 
 
     )

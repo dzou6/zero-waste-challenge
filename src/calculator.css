@@ -90,7 +90,7 @@
   
   #showFst{
     position: absolute;
-    left: 477px;
+    left: 437px;
     bottom: 50px;
     color:rgb(0, 110, 255);
     font-size: 3em;
@@ -103,8 +103,8 @@
   
   #show2nd{
     position: absolute;
-    left: 65px;
-    bottom: 50px;
+    left: 62px;
+    bottom: 34px;
     color:rgb(0, 110, 255);
     font-size: 3em;
   }
