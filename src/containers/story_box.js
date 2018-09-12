@@ -87,7 +87,8 @@ class StoryBoxComponent extends Component {
                 showModal: true,
                 modalTitle: 'Turtle: You are making a better world!',
                 modalImg: 'Story1_Ending_happy.png',
-                modalOkText: `Let's Replay!`
+                modalOkText: `Let's Replay!`,
+                isModalExternalRoute: false
             });
         }
     }
