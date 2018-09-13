@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../calculator.css';
 
+//The piece of HTML will appear after clicking the "count" button
 const results = (<div style={{marginTop: 60, display: 'flex'}}>
 
                   <img id="card_03" src={require('../static/calculator_element/card_03.png')} />
@@ -17,14 +18,16 @@ const results = (<div style={{marginTop: 60, display: 'flex'}}>
                     <div id="kg">Grams</div>
                   </div>
                 </div>);
-
+//The piece of HTML is "reset" button, which is hidden until clicking the "count" button
 const reset = (<div style={{position: 'relative'}}><img id="btn_reset_cover" src={require('../static/calculator_element/btn_reset.png')}/></div>);
 
 class Calculator extends Component {
+  //in the begining, the "reset" button and part of HTML are not be shown
   state = { showResults: false,
     showReset: false
   };
   
+  //after clicking "count" button, part of HTML will be displayed and the "recet" button will be displayed
   onClickHandler = ()=>{
     this.setState(prev => ({showResults: true,showReset: true}));
     this.caculateWaste();
@@ -33,9 +36,11 @@ class Calculator extends Component {
       document.getElementById("count").style.visibility = "hidden";
       document.getElementById("reset").style.visibility = "visible";
     }
+    //call the function to make "count" button invisable
     disableCount();
   };
 
+  //after clicking "reset" button, the "reset" button will disappear and part of the HTML will also disabled
   onClearHandler = ()=>{
     this.setState(prev => ({showResults: false,showReset:false}));
     this.clearAll();
@@ -44,9 +49,11 @@ class Calculator extends Component {
       document.getElementById("count").style.visibility = "visible";
       document.getElementById("reset").style.visibility = "hidden";
     }
+    //call the function to make "count" button visable
     disableCount();
   };
 
+  //mutiply the number of day with the data associated with habit to caculate the amount of waste reduced
   caculateWaste() {
     var t = document.getElementById("selectHabit").value;
     var d = document.getElementById("selectDay").value;
@@ -55,16 +62,21 @@ class Calculator extends Component {
     this.caculateLife(wasteReduce);
   }
 
+  //caculate how many sea life will be save if a habit is insisted
   caculateLife(wasteReduce) {
+    //the relation between daily used plastic and affected marine animal every day in Australia
     const lifeSaving = 252;
+    //use the relation value to mutiply a waste reduce value to count how many sea life can be saved
     document.getElementById("show2nd").innerHTML = "\<div id=\'s2\'\>"+wasteReduce*lifeSaving+"<\/div\>";
   }
 
+  //clear all calculation output on screen
   clearAll() {
     document.getElementById("showFst").innerHTML = "";
     document.getElementById("show2nd").innerHTML = "";
   }
 
+  //show different image based on the value of habit
   onChangeHandler(e)
   {
     function show1()
@@ -106,6 +118,7 @@ class Calculator extends Component {
   }
 
   render() {
+    //return the initial HTML part
     return (
         <div style={{width: 815, height: 499, backgroundImage: `url(${require('../static/calculator_element/Calculator_background.png')})`}}>
             <img id="card_01" src={require('../static/calculator_element/card_01.png')} />
