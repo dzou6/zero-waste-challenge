@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
-import { Modal, Button, Tooltip } from 'antd';
+import { Modal, Button } from 'antd';
 import LoadingPanel from '../components/loading_panel';
 import StoryBodyComponent from '../components/story_body';
 import StoryInputComponent from '../components/story_input';

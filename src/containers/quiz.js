@@ -5,7 +5,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd'
 import styled from 'styled-components';
 import _ from 'lodash';
-import { Modal, Button, Icon } from 'antd';
+import { Modal, Button } from 'antd';
 import { connect } from 'react-redux';
 import LoadingPanel from '../components/loading_panel';
 import { getAllQuiz } from '../actions/index';
@@ -90,7 +90,7 @@ class Quiz extends Component {
     render() {
         const {quiz} = this.props;
 
-        if(quiz.length == 0) {
+        if(quiz.length === 0) {
             return <LoadingPanel />
         }
 

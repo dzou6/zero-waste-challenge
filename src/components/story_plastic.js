@@ -75,7 +75,7 @@ const AnimationItem = styled(posed.div({
     ${props => `
         background-image: url(${props.itemImg});
         transform: 
-            ${props.pose == 3? 
+            ${props.pose === 3? 
                 `translateX(${props.positions[2].x}px)
                  translateY(${props.positions[2].y}px)
                  rotate(360deg)

@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { NextArrow, PrevArrow } from './slider_arrow';
 import { Tooltip } from 'antd';
 
 class HomeSliders extends React.Component {

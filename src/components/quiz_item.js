@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import {DragSource} from 'react-dnd';
-import { Tooltip } from 'antd';
 
 //event handler for drag and drop
 const itemSource = {
@@ -32,7 +31,7 @@ function collect(connect,monitor){
 class QuizItem extends Component {
     // render functiction to dispaly quiz item compnent
     render(){
-        const{isDragging,connectDragSource,item} = this.props;
+        const{connectDragSource,item} = this.props;
         return connectDragSource(
             <img
                 height="200px" 

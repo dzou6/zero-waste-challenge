@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import { Icon, Tooltip } from 'antd';
+import { Tooltip } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //styled component to render input image. background img re-rendered based on props setting.
