@@ -7,10 +7,10 @@ const NavMenuItem = (props) => {
     return (
         <Link to={props.routeUrl} 
             style={{ textDecoration: 'none' ,display: 'flex', flexDirection: 'column', textAlign: 'center'}}>
-            <div style={{height: '32px', lineHeight: '45px', fontSize: '20px'}}>
-                <FontAwesomeIcon color={props.iconColor} icon={props.icon} />
+            <div style={{height: '50px', lineHeight: '120px'}}>
+                <FontAwesomeIcon color={props.iconColor} icon={props.icon} size="4x"/>
             </div>
-            <div style={{height: '32px', lineHeight: '20px'}}>
+            <div style={{height: '50px', lineHeight: '70px'}}>
                 {props.label}
             </div>
         </Link>

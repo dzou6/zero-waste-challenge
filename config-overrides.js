@@ -10,6 +10,7 @@ module.exports = function override(config, env) {
             // modify ant design theme here
             "@primary-color": "#18bc9c",
             "@font-family": `'M PLUS Rounded 1c', sans-serif !important`,
+            "layout-header-height": "100px"
         },
     })(config, env);
 

@@ -512,11 +512,11 @@ hr.star-dark, hr.star-light {
 }
 
 .logo {
-  width: 200px;
+  width: 310px;
   height: 20px;
-  /* background: rgba(255,255,255,.2); */
-  /* margin: 16px 24px 16px 0; */
+  font-weight: bolder;
   float: left;
+  font-size: 1.5em;
   color:#fff;
   
 }

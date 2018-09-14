@@ -10,14 +10,14 @@ const receiveStories = stories => ({
 
 //handle action to fectch all stroies from firebase DB
 export const getAllStories = () => dispatch => {
-    // StoriesAPI.getStroies(stories => {
-    //     dispatch(receiveStories(stories))
-    // })
+    StoriesAPI.getStroies(stories => {
+        dispatch(receiveStories(stories))
+    })
 
-    storiesRef.on("value", snapshot => {
-         console.log(snapshot.val());
-         dispatch(receiveStories(snapshot.val()));
-     })
+    // storiesRef.on("value", snapshot => {
+    //      console.log(snapshot.val());
+    //      dispatch(receiveStories(snapshot.val()));
+    //  })
 }
 
 //receive habits from redux thunk dispatch
@@ -28,13 +28,13 @@ const receiveHabits = habits => ({
 
 //handle action to fetch all habits from firebase DB
 export const getAllHabits = () => dispatch => {
-    // StoriesAPI.getStroies(stories => {
-    //    dispatch(receiveHabits(stories.map(story => story.habits)))
-    // })
+    StoriesAPI.getStroies(stories => {
+       dispatch(receiveHabits(stories.map(story => story.habits)))
+    })
 
-    storiesRef.on("value", snapshot => {
-         dispatch(receiveHabits(snapshot.val().map(story => story.habits)))
-     })
+    // storiesRef.on("value", snapshot => {
+    //      dispatch(receiveHabits(snapshot.val().map(story => story.habits)))
+    //  })
 }
 
 //receive quiz from redux thunk dispatch
@@ -44,11 +44,11 @@ const receiveQuiz = quiz => ({
 });
 
 export const getAllQuiz = () => dispatch => {
-    // StoriesAPI.getStroies(stories => {
-    //     dispatch(receiveQuiz(stories.map(story => story.quiz)));
-    // })
+    StoriesAPI.getStroies(stories => {
+        dispatch(receiveQuiz(stories.map(story => story.quiz)));
+    })
 
-    storiesRef.on("value", snapshot => {
-         dispatch(receiveQuiz(snapshot.val().map(story => story.quiz)))
-     })
+    // storiesRef.on("value", snapshot => {
+    //      dispatch(receiveQuiz(snapshot.val().map(story => story.quiz)))
+    //  })
 }

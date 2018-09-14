@@ -5,11 +5,13 @@ import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd'
 import styled from 'styled-components';
 import _ from 'lodash';
-import { Modal,Button } from 'antd';
+import { Modal, Button, Icon } from 'antd';
 import { connect } from 'react-redux';
 import LoadingPanel from '../components/loading_panel';
 import { getAllQuiz } from '../actions/index';
 import { Tooltip } from 'antd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSmile, faFrown } from '@fortawesome/fontawesome-free-regular';
 
 //Component to have all quiz target components
 const QuizTargetComponent = styled.div`
@@ -113,9 +115,19 @@ class Quiz extends Component {
                     visible={this.state.tooltipVisible}>
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />
                 </Tooltip>
+                <div style={{fontSize: 20}}>{quiz[this.state.shownItmIdx].title}</div>
                 <Modal
                     visible={this.state.modalVisible}
-                    title={this.state.modalTitle}
+                    title={
+                        <div>
+                            <FontAwesomeIcon 
+                                icon={this.state.isAnswerCorrect? faSmile: faFrown}
+                                size="3x" 
+                                style={{marginRight: 40}}
+                            />
+                            {this.state.modalTitle}
+                        </div>
+                    }
                     onOK={this.handleClick}
                     onCancel={this.handleCancel}
                     footer={

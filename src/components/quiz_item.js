@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {DragSource} from 'react-dnd';
+import { Tooltip } from 'antd';
 
 //event handler for drag and drop
 const itemSource = {
