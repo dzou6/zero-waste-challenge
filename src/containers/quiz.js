@@ -33,7 +33,7 @@ class Quiz extends Component {
             modalTitle: '',
             modalOkText: '',
             isAnswerCorrect: false,
-            shownItmIdx: Math.floor(Math.random() * 7)  
+            shownItmIdx: Math.floor(Math.random() * 6)  
         };
     }
 
