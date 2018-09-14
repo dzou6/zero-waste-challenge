@@ -3,14 +3,38 @@
         "id": 1, 
         "title": "Story 1",
         "storyBadInputs": [
-            "1_bad_input0.png",
-            "1_bad_input1.png",
-            "1_bad_input2.png"
+            {
+                "id": 1,
+                "file": "1_bad_input0.png",
+                "desc": "1 bad input desc"
+            },
+            {
+                "id": 2,
+                "file": "1_bad_input1.png",
+                "desc": "2 bad input desc"
+            },
+            {
+                "id": 3,
+                "file": "1_bad_input2.png",
+                "desc": "3 bad input desc"
+            }
         ],
         "storyGoodInputs": [
-            "1_good_input0.png",
-            "1_good_input1.png",
-            "1_good_input2.png"
+            {
+                "id": 1,
+                "file": "1_good_input0.png",
+                "desc": "1 good input desc"
+            },
+            {
+                "id": 2,
+                "file": "1_good_input1.png",
+                "desc": "2 good input desc"
+            },
+            {
+                "id": 3,
+                "file": "1_good_input2.png",
+                "desc": "3 good input desc"
+            }
         ],
         "quiz": [
             {
@@ -54,18 +78,23 @@
             {
                 "id": 1,
                 "title": "habit 1",
+                "item": "straws",
                 "badHabitDesc": "bad habit desc for 1",
                 "goodHabitDesc": "good habit desc for 1",
                 "goodHabitAnimationImg": [
                     {
                         "file": "1_fish0.svg",
-                        "x": 220,
-                        "y": 285
+                        "x1": -120,
+                        "y1": 285,
+                        "x2": 220,
+                        "y2": 285
                     },
                     {
                         "file": "1_fish1.svg",
-                        "x": 167,
-                        "y": 308
+                        "x1": -100,
+                        "y1": 308,
+                        "x2": 167,
+                        "y2": 308
                     }
                 ],
                 "badHabitAnimationImg": [
@@ -95,13 +124,16 @@
             {
                 "id": 2,
                 "title": "habit 2",
+                "item": "bags",
                 "badHabitDesc": "bad habit desc for 2",
                 "goodHabitDesc": "good habit desc for 2",
                 "goodHabitAnimationImg": [
                     {
                         "file": "2_fish0.svg",
-                        "x": 270,
-                        "y": 285
+                        "x1": -340,
+                        "y1": 285,
+                        "x2": 270,
+                        "y2": 285
                     }
                 ],
                 "badHabitAnimationImg": [
@@ -131,13 +163,16 @@
             {
                 "id": 3,
                 "title": "habit 3",
+                "item": "some",
                 "badHabitDesc": "bad habit desc for 3",
                 "goodHabitDesc": "good habit desc for 3",
                 "goodHabitAnimationImg": [
                     {
                         "file": "3_fish0.svg",
-                        "x": 250,
-                        "y": 285
+                        "x1": -400,
+                        "y1": 285,
+                        "x2": 250,
+                        "y2": 285
                     }
                 ],
                 "badHabitAnimationImg": [

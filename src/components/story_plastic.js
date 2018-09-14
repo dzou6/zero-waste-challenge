@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import posed from "react-pose";
 import _ from 'lodash';
-import HabitItem from './habit_item';
 import HabitsBoxComponent from './habits_box';
 import { ANIMATION_SPEED_ITEM } from '../constants/static_types';
+import { Tooltip } from 'antd';
 
 //styled component to render story detail
 const DetailContainer = styled.div`
@@ -46,6 +46,7 @@ const AnimationItem = styled(posed.div({
    0: {
         x: ({positions}) => positions[0].x,
         y: ({positions}) => positions[0].y,
+        rotate: ({positions}) => positions[0].rotate,
         transition: {
             duration: ANIMATION_SPEED_ITEM
          }
@@ -53,7 +54,7 @@ const AnimationItem = styled(posed.div({
    1: {
        x: ({positions}) => positions[1].x, 
        y: ({positions}) => positions[1].y, 
-       rotate: 180,
+       rotate: ({positions}) => positions[1].rotate,
        transition: {
            duration: ANIMATION_SPEED_ITEM
         }
@@ -61,6 +62,7 @@ const AnimationItem = styled(posed.div({
     2: {
        x: ({positions}) => positions[2].x, 
        y: ({positions}) => positions[2].y, 
+       rotate: ({positions}) => positions[2].rotate,
        transition: {
            duration: ANIMATION_SPEED_ITEM
         }
@@ -90,6 +92,7 @@ class StoryPlasticComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            turtleTooltipTitle: '',
             badHabit: {
                 poseConfigs: {},
                 storyOutputIdx: 0,
@@ -145,6 +148,7 @@ class StoryPlasticComponent extends Component {
                         storyOutputIdx: prevState.badHabit.storyOutputIdx + 1
                     }
                 }));
+                this.setState({turtleTooltipTitle: `Turtle: ${story.habits[inputIndex].item} goes into my belly`});
                 this.props.onOneAnimationFinished("bad")
             }
         }, 1000);
@@ -202,9 +206,9 @@ class StoryPlasticComponent extends Component {
                             itemImg={require(`../static/story_animate/${img.file}`)}    
                             pose={this.state.badHabit.poseConfigs[habit.id].toString()}
                             positions={{
-                                0: {x: 0, y: 20}, 
-                                1: {x: 170, y: 105},
-                                2: {x: img.x, y: img.y}
+                                0: {x: 0, y: 20, rotate: 0}, 
+                                1: {x: 170, y: 105, rotate: 180},
+                                2: {x: img.x, y: img.y, rotate: 360}
                             }}
                         />
                     );
@@ -216,30 +220,29 @@ class StoryPlasticComponent extends Component {
 
     //render all animation items for good habit
     renderGoodHabitAnimationItems() {
-        const {inputIndex} = this.props;
-        return this.state.goodHabit.selHabits.length > 0? (
-            this.state.goodHabit.selHabits.map(habit => {
+        const {inputIndex, story} = this.props;
+        return (
+            story.habits.map(habit => {
                 return _.map(habit.goodHabitAnimationImg, img => {
                     return ( 
                         <AnimationItem key={inputIndex + img.file}
                             itemImg={require(`../static/story_animate/${img.file}`)}    
-                            pose={this.state.goodHabit.poseConfigs[habit.id].toString()}
+                            pose={this.state.goodHabit.poseConfigs[habit.id]? this.state.goodHabit.poseConfigs[habit.id].toString() : '0'}
                             positions={{
-                                0: {x: 370, y: 15}, 
-                                1: {x: 220, y: 120},
-                                2: {x: img.x, y: img.y}
+                                0: {x: img.x1, y: img.y1, rotate: 0}, 
+                                1: {x: img.x1, y: img.y1, rotate: 0},
+                                2: {x: img.x2, y: img.y2, rotate: 0}
                             }}
                         />
                     );
                 })
             }) 
-            
-        ): null;
+        );
     }
 
     //render plastic story component
     render() {
-        const {story, inputIndex, inputType} = this.props;
+        const {story, inputIndex, inputType, isTurtleTooltipVisible} = this.props;
         return (
             <DetailContainer>
                 <HabitContainer mr="2px" bgImage= {require(`../static/story_bg/${story.id}_bad_bg.svg`)}>
@@ -253,12 +256,16 @@ class StoryPlasticComponent extends Component {
                     </HabitAnimationComponent>
                     <AnimationItemComponent>
                         {this.renderBadHabitAnimationItems()}
-                        <img 
-                            width="200px"
-                            style={{marginTop: '170px', marginLeft: "165px"}} 
-                            src={require(`../static/story_output/${story.id}_outputItem_${this.state.badHabit.storyOutputIdx}.png`)} 
-                            alt="story output" 
-                        />
+                        <Tooltip 
+                            title={this.state.turtleTooltipTitle}
+                            visible={isTurtleTooltipVisible }>
+                            <img 
+                                width="200px"
+                                style={{marginTop: '170px', marginLeft: "165px"}} 
+                                src={require(`../static/story_output/${story.id}_outputItem_${this.state.badHabit.storyOutputIdx}.png`)} 
+                                alt="story output" 
+                            />
+                        </Tooltip>
                     </AnimationItemComponent>
                 </HabitContainer>
                 <HabitContainer ml="2px" bgImage= {require(`../static/story_bg/${story.id}_good_bg.svg`)}>

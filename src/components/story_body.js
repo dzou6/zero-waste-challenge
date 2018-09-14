@@ -5,12 +5,13 @@ import StoryPlasticComponent from './story_plastic';
 //Story body component to render story detail information. For now, only supported plastic story
 class StoryBodyComponent extends Component {
     render() {
-        const {story, inputIndex, inputType} = this.props;
+        const {story, inputIndex, inputType, isTurtleTooltipVisible} = this.props;
         //render plastic story component when plastic id is 1
         switch(story.id) {
             case STORY_PLASTIC_ID:
                 return (
                     <StoryPlasticComponent 
+                        isTurtleTooltipVisible={isTurtleTooltipVisible}
                         inputIndex={inputIndex} 
                         inputType={inputType}
                         story={story} 

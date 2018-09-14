@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import {withRouter} from 'react-router';
 import {connect} from 'react-redux';
-import { Modal, Button } from 'antd';
+import { Modal, Button, Tooltip } from 'antd';
 import LoadingPanel from '../components/loading_panel';
 import StoryBodyComponent from '../components/story_body';
 import StoryInputComponent from '../components/story_input';
@@ -61,15 +61,15 @@ class StoryBoxComponent extends Component {
             modalImg: 'Story1_Ending_sad.png',
             modalOkText: '',
             isModalExternalRoute: false,
+            isTurtleTooltipVisible: false
         }
     }
 
     //event handeler after animation completed
     onAnimationFinished(type) {
-        console.log(type);
         this.setState({isStoryPlaying: false});
         if(type === 'bad') {
-            this.setState({badAnimationCounter: this.state.badAnimationCounter + 1});
+            this.setState({badAnimationCounter: this.state.badAnimationCounter + 1, isTurtleTooltipVisible: true});
         } else {
             this.setState({goodAnimationCounter: this.state.goodAnimationCounter + 1});
         }
@@ -132,21 +132,24 @@ class StoryBoxComponent extends Component {
                 <StoryContainer key={this.state.boxKey}>
                     <StoryLeftSider>
                         <StoryInputComponent 
-                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'bad'})}
+                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'bad', isTurtleTooltipVisible: false})}
                             storyInputs={story.storyBadInputs}
+                            type="bad"
                             isStoryPlaying={this.state.isStoryPlaying}
                         />
                     </StoryLeftSider>
                     <StoryBodyComponent 
                         story={story} 
+                        isTurtleTooltipVisible={this.state.isTurtleTooltipVisible}
                         inputIndex={this.state.inputIndex}
                         inputType={this.state.inputType}
                         onOneAniFinished={(type) => this.onAnimationFinished(type)}
                     />
                     <StoryRightSider>
                         <StoryInputComponent 
-                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'good'})}
+                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'good', isTurtleTooltipVisible: false})}
                             storyInputs={story.storyGoodInputs}
+                            type="good"
                             isStoryPlaying={this.state.isStoryPlaying}
                         />
                     </StoryRightSider>
@@ -162,7 +165,14 @@ class StoryBoxComponent extends Component {
                         ]}
                         onCancel={this.handleCancel.bind(this)}
                     >
-                        <p style={{display: "flex"}}><img className="img-fluid mb-0" style={{margin: '0 auto'}} src={require(`../static/story_end/${this.state.modalImg}`)} alt="story end"></img></p>
+                        <p style={{display: "flex"}}>
+                            <img 
+                                className="img-fluid mb-0" 
+                                style={{margin: '0 auto'}} 
+                                src={require(`../static/story_end/${this.state.modalImg}`)} 
+                                alt="story end"
+                            />
+                        </p>
                     </Modal>
                 </StoryContainer>
             </div>

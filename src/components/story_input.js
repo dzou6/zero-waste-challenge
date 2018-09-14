@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import { Icon } from 'antd';
+import { Icon, Tooltip } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //styled component to render input image. background img re-rendered based on props setting.
@@ -38,7 +38,7 @@ class StoryInputComponent extends Component {
 
     //render the story input buttons
     render() {
-        const {storyInputs} = this.props;
+        const {storyInputs, type} = this.props;
         return (
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <FontAwesomeIcon 
@@ -48,14 +48,18 @@ class StoryInputComponent extends Component {
                 />
                 {storyInputs.map((input, index) => {
                     return (
-                        <InputImage 
-                            key={input}
-                            index={index}
-                            onClick={() => this.onInputClicked(index)}
-                            clicked={this.state.clicked[index]}
-                            storyPlaying={this.props.isStoryPlaying}
-                            imgOpacity={this.state.clicked[index]? '0.5': '1'}
-                            inputBg={require(`../static/story_input/${input}`)}/>
+                        <Tooltip 
+                            key={input.id}
+                            title={input.desc}
+                            placement={type === 'bad'? 'left': 'right'}>
+                            <InputImage 
+                                index={index}
+                                onClick={() => this.onInputClicked(index)}
+                                clicked={this.state.clicked[index]}
+                                storyPlaying={this.props.isStoryPlaying}
+                                imgOpacity={this.state.clicked[index]? '0.5': '1'}
+                                inputBg={require(`../static/story_input/${input.file}`)}/>
+                        </Tooltip>
                     );
                 })}
                 <FontAwesomeIcon 
