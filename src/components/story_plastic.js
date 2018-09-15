@@ -230,8 +230,8 @@ class StoryPlasticComponent extends Component {
                             pose={this.state.goodHabit.poseConfigs[habit.id]? this.state.goodHabit.poseConfigs[habit.id].toString() : '0'}
                             positions={{
                                 0: {x: img.x1, y: img.y1, rotate: 0}, 
-                                1: {x: img.x1, y: img.y1, rotate: 0},
-                                2: {x: img.x2, y: img.y2, rotate: 0}
+                                1: {x: img.x2, y: img.y2, rotate: 0},
+                                2: {x: img.x3, y: img.y3, rotate: 0}
                             }}
                         />
                     );
