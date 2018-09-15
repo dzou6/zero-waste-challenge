@@ -77,7 +77,7 @@ class StoryBoxComponent extends Component {
             this.setState({
                 isTurtleTooltipVisible: false,
                 showModal: true,
-                modalTitle: 'Turtle: I am dying. Can you please help me?',
+                modalTitle: 'Turtle: I am sick. Can you please help me?',
                 modalImg: 'Story1_Ending_sad.png',
                 modalOkText: `Let's Do It!`,
                 isModalExternalRoute: true,
