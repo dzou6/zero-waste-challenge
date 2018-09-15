@@ -108,6 +108,7 @@ class StoryPlasticComponent extends Component {
     //event handler when bad habit animation get started
     onBadHabitAnimationStart() {
         const {inputIndex, story} = this.props;
+        //manage pose configs for bad habit
         this.setState(prevState => ({
             ...prevState,
             badHabit: {
@@ -118,6 +119,7 @@ class StoryPlasticComponent extends Component {
                 }
             }
         }));
+        //manage selected bad habit with the component state
         this.setState(prevState => ({
             ...prevState,
             badHabit: {
@@ -128,7 +130,9 @@ class StoryPlasticComponent extends Component {
                 ]
             }
         }));
+        //set time interval to enable the animation by pre-set animation speed
         const interval = setInterval(() => {
+            //update animation pose after defined interval
             this.setState(prevState => ({
                 ...prevState,
                 badHabit: {
@@ -139,8 +143,10 @@ class StoryPlasticComponent extends Component {
                     }
                 }
             }));
+            //stop the animation when pose has reached 2
             if(this.state.badHabit.poseConfigs[story.habits[inputIndex].id] === 2) {
                 clearInterval(interval);
+                //increase the number of story output times by 1
                 this.setState(prevState => ({
                     ...prevState,
                     badHabit: {
@@ -148,7 +154,9 @@ class StoryPlasticComponent extends Component {
                         storyOutputIdx: prevState.badHabit.storyOutputIdx + 1
                     }
                 }));
+                // set the turtle tooltip title
                 this.setState({turtleTooltipTitle: `Turtle: ${story.storyBadInputs[inputIndex].desc} go into my belly! I am sick.`});
+                //trigger the animation finished event
                 this.props.onOneAnimationFinished("bad")
             }
         }, 1000);
@@ -157,6 +165,7 @@ class StoryPlasticComponent extends Component {
     //event handler when good habit animation get started
     onGoodHabitAnimationStart() {
         const {inputIndex, story} = this.props;
+        //manage pose configs for good habit
         this.setState(prevState => ({
             ...prevState,
             goodHabit: {
@@ -167,6 +176,7 @@ class StoryPlasticComponent extends Component {
                 }
             }
         }));
+        //manage selected good habit with the component state
         this.setState(prevState => ({
             ...prevState,
             goodHabit: {
@@ -177,6 +187,7 @@ class StoryPlasticComponent extends Component {
                 ]
             }
         }));
+        //set time interval to enable the animation by pre-set animation speed
         const interval = setInterval(() => {
             this.setState(prevState => ({
                 ...prevState,
@@ -188,8 +199,10 @@ class StoryPlasticComponent extends Component {
                     }
                 }
             }));
+            //stop the animation when pose has reached 2
             if(this.state.goodHabit.poseConfigs[story.habits[inputIndex].id] === 2) {
                 clearInterval(interval);
+                //trigger the animation finished event
                 this.props.onOneAnimationFinished("good")
             }
         }, 1000);
