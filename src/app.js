@@ -43,7 +43,7 @@ class App extends Component {
             <Layout>
                 <NavigationHeader />
                 <Content className="bg-primary text-white text-center"
-                    style={{ minHeight: 'calc(100vh - 169px)', marginTop: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    style={{ minHeight: 'calc(100vh - 169px)', marginTop: 86, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Switch>
                         <Route path="/habit-tracker" component={HabitTrackerDetail} />
                         <Route path="/calculator" component={Calculator} />

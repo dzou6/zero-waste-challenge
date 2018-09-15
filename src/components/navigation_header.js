@@ -20,7 +20,7 @@ class NavigationHeader extends Component {
     return (
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
         <div className="logo">
-         <img src={require('../static/logo.png')} style={{height:100, position: 'relative', bottom: 5, marginLeft:-30}} alt="logo"/>
+         <img src={require('../static/logo.png')} style={{height:100, position: 'relative', bottom: 12, marginLeft:-30}} alt="logo"/>
           Zero-Waste Challenge
         </div>
         <Menu
@@ -28,7 +28,7 @@ class NavigationHeader extends Component {
           mode="horizontal"
           defaultSelectedKeys={['/']}
           selectedKeys={[pathname]}
-          style={{ lineHeight: '100px', float: "right" }}
+          style={{ lineHeight: '86px', float: "right" }}
         >
           <Menu.Item key="/">
             <NavMenuItem routeUrl="/" icon="home" label="Home" iconColor="#f0c24b" />
