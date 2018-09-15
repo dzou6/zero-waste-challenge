@@ -116,6 +116,12 @@ class Quiz extends Component {
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />
                 </Tooltip>
                 <div style={{fontSize: 20}}>{quiz[this.state.shownItmIdx].title}</div>
+                <div style={{position: 'relative', height: 0}}>
+                    You win:
+                    <div>
+                        img goes here
+                    </div>
+                </div>
                 <Modal
                     visible={this.state.modalVisible}
                     title={
