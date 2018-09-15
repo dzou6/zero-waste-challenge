@@ -139,7 +139,7 @@ class StoryPlasticComponent extends Component {
                     }
                 }
             }));
-            if(this.state.badHabit.poseConfigs[story.habits[inputIndex].id] > 2) {
+            if(this.state.badHabit.poseConfigs[story.habits[inputIndex].id] === 2) {
                 clearInterval(interval);
                 this.setState(prevState => ({
                     ...prevState,
@@ -188,7 +188,7 @@ class StoryPlasticComponent extends Component {
                     }
                 }
             }));
-            if(this.state.goodHabit.poseConfigs[story.habits[inputIndex].id] > 2) {
+            if(this.state.goodHabit.poseConfigs[story.habits[inputIndex].id] === 2) {
                 clearInterval(interval);
                 this.props.onOneAnimationFinished("good")
             }

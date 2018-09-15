@@ -75,6 +75,7 @@ class StoryBoxComponent extends Component {
         }
         if(this.state.badAnimationCounter === this.props.story.storyBadInputs.length) {
             this.setState({
+                isTurtleTooltipVisible: false,
                 showModal: true,
                 modalTitle: 'Turtle: I am dying. Can you please help me?',
                 modalImg: 'Story1_Ending_sad.png',
@@ -84,6 +85,7 @@ class StoryBoxComponent extends Component {
         }
         if(this.state.goodAnimationCounter === this.props.story.storyGoodInputs.length) {
             this.setState({
+                isTurtleTooltipVisible: false,
                 showModal: true,
                 modalTitle: 'Turtle: You are making a better world!',
                 modalImg: 'Story1_Ending_happy.png',
