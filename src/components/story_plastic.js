@@ -148,7 +148,7 @@ class StoryPlasticComponent extends Component {
                         storyOutputIdx: prevState.badHabit.storyOutputIdx + 1
                     }
                 }));
-                this.setState({turtleTooltipTitle: `Turtle: ${story.habits[inputIndex].item} goes into my belly`});
+                this.setState({turtleTooltipTitle: `Turtle: ${story.storyBadInputs[inputIndex].desc} go into my belly! I am sick.`});
                 this.props.onOneAnimationFinished("bad")
             }
         }, 1000);

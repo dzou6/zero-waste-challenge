@@ -78,7 +78,6 @@
             {
                 "id": 1,
                 "title": "habit 1",
-                "item": "straws",
                 "badHabitDesc": "bad habit desc for 1",
                 "goodHabitDesc": "good habit desc for 1",
                 "goodHabitAnimationImg": [
@@ -128,7 +127,6 @@
             {
                 "id": 2,
                 "title": "habit 2",
-                "item": "bags",
                 "badHabitDesc": "bad habit desc for 2",
                 "goodHabitDesc": "good habit desc for 2",
                 "goodHabitAnimationImg": [
@@ -169,7 +167,6 @@
             {
                 "id": 3,
                 "title": "habit 3",
-                "item": "some",
                 "badHabitDesc": "bad habit desc for 3",
                 "goodHabitDesc": "good habit desc for 3",
                 "goodHabitAnimationImg": [
