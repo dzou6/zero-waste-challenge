@@ -91,7 +91,7 @@ class Quiz extends Component {
     renderCandyReward() {
         return this.state.candyNum !== 0? 
         (
-            <div style={{position: 'relative', height: 0, left: 803, bottom: 200, fontSize: 20, width: 276}}>
+            <div style={{position: 'relative', height: 0, left: 707, bottom: 211, fontSize: 20, width: 276}}>
                 <span>You win:</span>
                 <img
                     alt="candy"
