@@ -33,6 +33,7 @@ class Quiz extends Component {
             modalTitle: '',
             modalOkText: '',
             isAnswerCorrect: false,
+            candyNum: 0,
             shownItmIdx: Math.floor(Math.random() * 6)  
         };
     }
@@ -53,6 +54,7 @@ class Quiz extends Component {
             this.setState({modalTitle: 'Congratulations! You are correct :)'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
+            this.setState({candyNum: this.state.candyNum + 1});
         } else {
             this.setState({modalTitle: 'Sorry, you are wrong :( '});
             this.setState({modalOkText: 'Retry'});
@@ -86,6 +88,19 @@ class Quiz extends Component {
         this.setState({ modalVisible: false });
     }
 
+    renderCandyReward() {
+        return this.state.candyNum !== 0? 
+        (
+            <div style={{position: 'relative', height: 0, left: 803, bottom: 200, fontSize: 20, width: 276}}>
+                <span>You win:</span>
+                <img
+                    alt="candy"
+                    src={require('../static/quiz_output/candy_1.png')}
+                /> X <span style={{fontSize: 40, marginLeft: 10}}>{this.state.candyNum}</span>
+            </div>
+        ): null;
+    }
+
     // render the quiz componet
     render() {
         const {quiz} = this.props;
@@ -116,12 +131,7 @@ class Quiz extends Component {
                     <QuizItem item={quiz[this.state.shownItmIdx]} handleDrop={id => this.onDropFinished(id)} />
                 </Tooltip>
                 <div style={{fontSize: 20}}>{quiz[this.state.shownItmIdx].title}</div>
-                <div style={{position: 'relative', height: 0}}>
-                    You win:
-                    <div>
-                        img goes here
-                    </div>
-                </div>
+                {this.renderCandyReward()}
                 <Modal
                     visible={this.state.modalVisible}
                     title={
