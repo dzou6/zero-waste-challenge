@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { ANIMATION_SPEED_HABIT } from '../constants/static_types';
+import { Tooltip } from 'antd';
 
 class HabitItem extends Component{
 
@@ -43,7 +44,7 @@ class HabitItem extends Component{
     }
 
     //render habit image based on state image index.
-    render() {
+render() {
         return (
             <img width="250px" 
                 style={{marginTop: 20}}

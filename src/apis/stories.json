@@ -6,17 +6,20 @@
             {
                 "id": 1,
                 "file": "1_bad_input0.png",
-                "desc": "1 bad input desc"
+                "desc": "1 bad input desc",
+                "wording": "word1"
             },
             {
                 "id": 2,
                 "file": "1_bad_input1.png",
-                "desc": "2 bad input desc"
+                "desc": "2 bad input desc",
+                "wording": "word2"
             },
             {
                 "id": 3,
                 "file": "1_bad_input2.png",
-                "desc": "3 bad input desc"
+                "desc": "3 bad input desc",
+                "wording": "word3"
             }
         ],
         "storyGoodInputs": [

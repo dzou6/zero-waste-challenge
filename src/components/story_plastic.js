@@ -155,7 +155,7 @@ class StoryPlasticComponent extends Component {
                     }
                 }));
                 // set the turtle tooltip title
-                this.setState({turtleTooltipTitle: `Turtle: ${story.storyBadInputs[inputIndex].desc} go into my belly! I am sick.`});
+                this.setState({turtleTooltipTitle: story.storyBadInputs[inputIndex].wording});
                 //trigger the animation finished event
                 this.props.onOneAnimationFinished("bad")
             }

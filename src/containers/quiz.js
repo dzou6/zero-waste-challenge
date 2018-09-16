@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import QuizItem from '../components/quiz_item';
 import QuizTarget from '../components/quiz_target';
 import HTML5Backend from 'react-dnd-html5-backend';
-import { DragDropContext } from 'react-dnd'
+import { default as TouchBackend } from 'react-dnd-touch-backend';
+import {isMobile} from 'react-device-detect';
+import { DragDropContext } from 'react-dnd';
 import styled from 'styled-components';
 import _ from 'lodash';
 import { Modal, Button } from 'antd';
@@ -34,7 +36,7 @@ class Quiz extends Component {
             modalOkText: '',
             isAnswerCorrect: false,
             candyNum: 0,
-            shownItmIdx: Math.floor(Math.random() * 6)  
+            shownItmIdx: Math.floor(Math.random() * 11)  
         };
     }
 
@@ -51,12 +53,12 @@ class Quiz extends Component {
     onDropFinished(id) {
         const {quiz} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
-            this.setState({modalTitle: 'Congratulations! You are correct :)'});
+            this.setState({modalTitle: 'Congratulations! You are correct'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
             this.setState({candyNum: this.state.candyNum + 1});
         } else {
-            this.setState({modalTitle: 'Sorry, you are wrong :( '});
+            this.setState({modalTitle: 'Sorry, you are wrong'});
             this.setState({modalOkText: 'Retry'});
             this.setState({isAnswerCorrect: false});
         }
@@ -91,9 +93,9 @@ class Quiz extends Component {
     renderCandyReward() {
         return this.state.candyNum !== 0? 
         (
-            <div style={{position: 'relative', height: 0, left: 707, bottom: 211, fontSize: 20, width: 276}}>
+            <div style={{position: 'relative', height: 0, left: 707, bottom: 192, fontSize: 20, width: 276}}>
                 <span>You win:</span>
-                <img
+                <img width="100px"
                     alt="candy"
                     src={require('../static/quiz_output/candy_1.png')}
                 /> X <span style={{fontSize: 40, marginLeft: 10}}>{this.state.candyNum}</span>
@@ -135,7 +137,7 @@ class Quiz extends Component {
                 <Modal
                     visible={this.state.modalVisible}
                     title={
-                        <div>
+                        <div style={{fontSize:"18px"}}>
                             <FontAwesomeIcon 
                                 icon={this.state.isAnswerCorrect? faSmile: faFrown}
                                 size="3x" 
@@ -152,7 +154,7 @@ class Quiz extends Component {
                         </Button>
                       }
                 >
-                    <p>
+                    <p style={{fontSize:"18px"}}>
                         {quiz[this.state.shownItmIdx].desc}
                     </p>
                 </Modal>
@@ -167,7 +169,11 @@ const mapStateToProps = (state) => {
 }
 
 //define the drag and drop context
-Quiz =  DragDropContext(HTML5Backend)(Quiz);
+if(isMobile) {
+    Quiz =  DragDropContext(TouchBackend)(Quiz);
+} else {
+    Quiz =  DragDropContext(HTML5Backend)(Quiz);
+}
 
 //establish connect between redux and quiz component
 export default connect(
