@@ -19,7 +19,7 @@ const StoryContainer = styled.div`
     flex-direction: row;
 `;
 
-//style componet to story right sider bar to include story input btns
+//style componet to story left sider bar to include story input btns
 const StoryLeftSider = styled.div`
     background: #d3fff6;
     border-radius: 8px;
@@ -52,7 +52,7 @@ class StoryBoxComponent extends Component {
         this.state = {
             inputIndex: null,
             inputType: null,
-            isStoryPlaying: false,
+            isStoryPlaying: false,//check current story playing or not to control button ocupacity
             boxKey: 0,
             badAnimationCounter: 0,
             goodAnimationCounter: 0,

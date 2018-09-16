@@ -183,7 +183,7 @@ class Calculator extends Component {
   render() {
     //return the initial HTML part
     return (
-        <div style={{width: 815, height: 520, backgroundImage: `url(${require('../static/calculator_element/Calculator_background.png')})`}}>
+        <div style={{width: 815, height: 541, backgroundImage: `url(${require('../static/calculator_element/Calculator_background.png')})`}}>
             <img id="card_01" src={require('../static/calculator_element/card_01.png')} />
             <div style={{position: 'relative', height: 0}}>
               <img id="happy_01" src={require('../static/calculator_element/Story1_Habit1_happy_1.png')}/>

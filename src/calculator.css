@@ -36,14 +36,14 @@
 }
 
 #card_01{
-  width: 624px;
-  height: 192px;
+  width: 648px;
+  height: 202px;
   margin-top: 20px
 }
 
 #card_02{
   width: 352px;
-  height: 192px;
+  height: 228px;
   -webkit-animation: smooth 0.8s ease-in;
   -moz-animation: smooth 0.8s ease-in;
   -o-animation: smooth 0.8s ease-in;
@@ -53,7 +53,7 @@
 
 #card_03{
   width: 352px;
-  height: 192px;
+  height: 228px;
   margin-left: 20px;
   -webkit-animation: smooth 2s ease-in;
   -moz-animation: smooth 2s ease-in;
@@ -82,7 +82,7 @@
 #showFst{
   position: absolute;
   left: 483px;
-  bottom: 103px;
+  bottom: 123px;
   color:rgb(0, 110, 255);
   font-size: 3em;
   -webkit-animation: smooth 1s ease-in;
@@ -95,7 +95,7 @@
 #show2nd{
   position: absolute;
   left: 56px;
-  bottom: 86px;
+  bottom: 97px;
   color:rgb(0, 110, 255);
   font-size: 3em;
 }
@@ -112,7 +112,7 @@
 
 #arrow_01{
   position: absolute;
-  bottom: 204px;
+  bottom: 232px;
   left: 342px;
   height:50px;
   width: 50px;
@@ -125,7 +125,7 @@
 
 #arrow_02{
   position: absolute;
-  top: 189px;
+  top: 226px;
   right: -5px;
   height:21px;
   width: 78px;
@@ -139,7 +139,7 @@
 #arrow_03{
   position: absolute;
   left: -324px;
-  bottom: 205px;
+  bottom: 232px;
   height:50px;
   width: 50px;
   -webkit-animation: smooth 2.5s ease-in;
@@ -313,7 +313,7 @@
 
   #straws{
     position:absolute;
-    bottom: 107px;
+    bottom: 123px;
     left:662px;
     color:rgb(0, 110, 255);
     font-size: 3em;
@@ -326,11 +326,10 @@
 
   #day{
     position:absolute;
-    bottom: 40px;
+    bottom: 21px;
     left:500px;
     color:rgb(0, 110, 255);
-    font-weight: bold;
-    font-size:25px;
+    font-size:3em;
   }
 
   .text_btn{

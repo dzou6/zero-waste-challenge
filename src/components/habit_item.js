@@ -27,9 +27,9 @@ class HabitItem extends Component{
     changeHabitImg() {
         this.setState({renderCounter: this.state.renderCounter + 1});
         if(this.state.renderCounter > this.imgs.length-1) {
-            if(this.props.onAnimationFinished){
+            // if(this.props.onAnimationFinished){
                 this.props.onAnimationFinished();
-            }
+            // }
         } else {
             this.setState( ({ imgIndex }) => {
                 const nextImgIndex = ++imgIndex % this.imgs.length
