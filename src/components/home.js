@@ -16,7 +16,7 @@ class Home extends Component {
     //event handler for react life cycle event
     componentDidMount() {
         //set read story opacity after 3.5 seconds
-        setTimeout(() => this.setState({opacity:1}), 35000);
+        setTimeout(() => this.setState({opacity:1}), 25000);
     }
 
     render(){

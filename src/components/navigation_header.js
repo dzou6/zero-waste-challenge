@@ -18,7 +18,7 @@ class NavigationHeader extends Component {
     // }
     
     return (
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <Header style={{ position: 'fixed', zIndex: 10, width: '100%' }}>
         <div className="logo">
          <img src={require('../static/logo.png')} style={{height:100, position: 'relative', bottom: 12, marginLeft:-30}} alt="logo"/>
           Zero-Waste Challenge

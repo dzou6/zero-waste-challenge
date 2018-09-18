@@ -221,7 +221,7 @@
 }
 
 #happy_01{
-  z-index: 1;
+  z-index: 0;
   left: 151px;
   bottom: 84px;
   position: absolute;
@@ -265,7 +265,7 @@
     position: absolute;
     width: 185px;
     height:100px;
-    z-index: 2;
+    z-index: 1;
     opacity: 0;
     cursor: pointer;
     
