@@ -46,13 +46,13 @@ class HomeSliders extends React.Component {
       autoplay:true
     }
     return (
-      <Tooltip title="Hover around the Middle to Pause the Animation" placement="right">
+      // <Tooltip title="Hover around the Middle to Pause the Animation" placement="right">
         <div style={{margin: '10px auto', width: 898.64, height: 680}}>
           <Slider {...sliderSettings}>
               {this.renderBackgrounds()}
             </Slider>
         </div>
-      </Tooltip>
+      // </Tooltip>
 
 
     )
