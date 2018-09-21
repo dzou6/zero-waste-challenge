@@ -7,7 +7,7 @@ import {isMobile} from 'react-device-detect';
 import { DragDropContext } from 'react-dnd';
 import styled from 'styled-components';
 import _ from 'lodash';
-import { Modal, Button } from 'antd';
+import { Modal, Button, Progress } from 'antd';
 import { connect } from 'react-redux';
 import LoadingPanel from '../components/loading_panel';
 import { getAllQuiz } from '../actions/index';
@@ -51,12 +51,16 @@ class Quiz extends Component {
 
     //event handler when drop is finished
     onDropFinished(id) {
-        const {quiz} = this.props;
+        const {quiz, quizInitLength} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
             this.setState({modalTitle: 'Congratulations! You are correct'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
             this.setState({candyNum: this.state.candyNum + 1});
+            if(this.state.candyNum === quizInitLength) {
+                this.setState({modalTitle: 'Congratulations! You finish all the questions'});
+                this.setState({modalOkText: 'Go to Challenge'});
+            }
         } else {
             this.setState({modalTitle: 'Sorry, you are wrong'});
             this.setState({modalOkText: 'Retry'});
@@ -69,25 +73,34 @@ class Quiz extends Component {
 
     //handle click envent on modal
     handleClick = () => {
-        const {quiz} = this.props;
+        const {quiz, quizInitLength} = this.props;
         this.setState({ modalVisible: false });
-        if(this.state.isAnswerCorrect) {
-            _.remove(quiz, itm => itm.id === quiz[this.state.shownItmIdx].id);
-            console.log(quiz.length);
-            if(quiz.length !== 0) {
-                this.setState({shownItmIdx: Math.floor(Math.random() * (quiz.length - 1))});
-            } else {
-                this.props.getAllQuiz();
+        if(this.state.candyNum === quizInitLength) {
+            this.props.getAllQuiz();
+            this.props.history.push('/habit-tracker');
+        } else {
+            if(this.state.isAnswerCorrect) {
+                _.remove(quiz, itm => itm.id === quiz[this.state.shownItmIdx].id);
+                if(quiz.length !== 0) {
+                    this.setState({shownItmIdx: Math.floor(Math.random() * (quiz.length - 1))});
+                } else {
+                    this.props.getAllQuiz();
+                }
+                
             }
-            
+            this.setState({tooltipVisible: true});
+            setTimeout(() => this.setState({isAnswerCorrect: false}), 1000);
         }
-        this.setState({isAnswerCorrect: false});
-        this.setState({tooltipVisible: true});
       }
 
     //handle cancle evetn for moda;
     handleCancel = () => {
+        const {quizInitLength} = this.props;
         this.setState({ modalVisible: false });
+        if(this.state.candyNum === quizInitLength) {
+            this.setState({candyNum: 0});
+            this.props.getAllQuiz();
+        }
     }
 
     renderCandyReward() {
@@ -101,6 +114,17 @@ class Quiz extends Component {
                 /> X <span style={{fontSize: 40, marginLeft: 10}}>{this.state.candyNum}</span>
             </div>
         ): null;
+    }
+
+    renderProgressCircle() {
+        const {candyNum} = this.state;
+        const {quizInitLength} = this.props;
+        return (
+            <div style={{position: 'relative', height: 0, left: 120, bottom: 192, fontSize: 20, width: 276}}>
+                <Progress type="circle" percent={(candyNum / quizInitLength) * 100} format={() => candyNum < quizInitLength? `Quiz ${candyNum + 1}`: `Done`} />
+            </div>
+            
+        );
     }
 
     // render the quiz componet
@@ -134,6 +158,7 @@ class Quiz extends Component {
                 </Tooltip>
                 <div style={{fontSize: 20}}>{quiz[this.state.shownItmIdx].title}</div>
                 {this.renderCandyReward()}
+                {this.renderProgressCircle()}
                 <Modal
                     visible={this.state.modalVisible}
                     title={
@@ -165,7 +190,7 @@ class Quiz extends Component {
 
 //map redux app state to this component state
 const mapStateToProps = (state) => {
-    return { quiz: state.quiz };
+    return { quiz: state.quiz, quizInitLength: state.quiz.length };
 }
 
 //define the drag and drop context

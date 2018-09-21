@@ -50,7 +50,8 @@ class HabitTrackerDetail extends Component {
             return (
                 <div key={instruction}>
                     <img 
-                        className="img-fluid mb-5 d-block mx-auto" 
+                        style={{margin: '0 auto'}}
+                        height="540px"
                         src={instruction} 
                         alt="instruction" />
                 </div>
@@ -98,7 +99,7 @@ class HabitTrackerDetail extends Component {
                     </div>
                 </TabPane>
                 <TabPane tab={<span><Icon type="info-circle-o" />How to Use the Form</span>} key="3">
-                    <div style={{width: 540, height: 625, margin: '0 auto'}}>
+                    <div style={{width: 455, height: 558, margin: '0 auto'}}>
                     <Slider {...sliderSettings}>
                         {this.renderInstructions()}
                     </Slider>

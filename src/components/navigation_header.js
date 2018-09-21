@@ -1,51 +1,79 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { Layout, Menu } from 'antd';
+import {Link} from 'react-router-dom';
 import NavMenuItem from './nav_menu_item';
 
+const menuItems = [
+  {
+    id: 'home',
+    url: '/home',
+    imgFile: require('../static/nav_bar/bar_btn_1.svg')
+  },
+  {
+    id: 'story',
+    url: '/story/1',
+    imgFile: require('../static/nav_bar/bar_btn_2.svg')
+  },
+  {
+    id: 'quiz',
+    url: '/quiz',
+    imgFile: require('../static/nav_bar/bar_btn_3.svg')
+  },
+  {
+    id: 'calculator',
+    url: '/calculator',
+    imgFile: require('../static/nav_bar/bar_btn_4.svg')
+  },
+  {
+    id: 'habit-tracker',
+    url: '/habit-tracker',
+    imgFile: require('../static/nav_bar/bar_btn_5.svg')
+  }
+]
+
 class NavigationHeader extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeMenuItem: props.location.pathname
+    }
+  }
+
+  onMenuItemClick(url) {
+    this.setState({activeMenuItem: url});
+  }
+
+  renderMenuItems() {
+    return menuItems.map(menuItem => {
+        return (
+          <NavMenuItem 
+            key={menuItem.id} 
+            isActive={this.state.activeMenuItem === menuItem.url}
+            onClick={(url) => this.onMenuItemClick(url)}
+            routeUrl={menuItem.url} 
+            btnImg={menuItem.imgFile} 
+          />
+        );
+    })
+  }
+
   //render the header componet of web app, allowing menu navigation
   render() {
-    const { pathname } = this.props.location;
+    
     const { Header } = Layout;
-
-    // reserve this code for future use.
-    // let rootPath = pathname.split('/')[1];
-    // if(rootPath && rootPath === 'story') {
-    //   rootPath = '/stories';
-    // } else {
-    //   rootPath = pathname;
-    // }
     
     return (
-      <Header style={{ position: 'fixed', zIndex: 10, width: '100%' }}>
-        <div className="logo">
-         <img src={require('../static/logo.png')} style={{height:100, position: 'relative', bottom: 12, marginLeft:-30}} alt="logo"/>
-          Zero-Waste Challenge
+      <Header style={{ padding: 0, position: 'fixed', display: 'flex', alignItems: 'center', zIndex: 10, width: '100%', height: 80, backgroundImage: `url(${require('../static/nav_bar/bar.svg')})` }}>
+        <div style={{width: 120}}>
+          <Link to='/'>
+            <img src={require('../static/nav_bar/logo.svg')} alt="bar log"/>
+          </Link>
         </div>
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['/']}
-          selectedKeys={[pathname]}
-          style={{ lineHeight: '86px', float: "right" }}
-        >
-          <Menu.Item key="/">
-            <NavMenuItem routeUrl="/" icon="home" label="Home" iconColor="#f0c24b" />
-          </Menu.Item>
-          <Menu.Item key="/story/1">
-            <NavMenuItem routeUrl="/story/1" icon="book-reader" label="Story" iconColor="#ea7066" />
-          </Menu.Item>
-          <Menu.Item key="/quiz">
-            <NavMenuItem routeUrl="/quiz" icon="question-circle" label="Quiz" iconColor="#43a3f2" />
-          </Menu.Item>
-          <Menu.Item key="/calculator">
-            <NavMenuItem routeUrl="/calculator" icon="calculator" label="Calculator" iconColor="#ed592d" />
-          </Menu.Item>
-          <Menu.Item key="/habit-tracker">
-            <NavMenuItem routeUrl="/habit-tracker" icon="tasks" label="Challenge" iconColor="#a597e7" />
-          </Menu.Item>
-        </Menu>
+        <div style={{flex: 1, display: 'flex', justifyContent: 'space-evenly'}}>
+          {this.renderMenuItems()}
+        </div>
       </Header>
     );
   }

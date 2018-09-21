@@ -566,7 +566,6 @@ hr.star-dark, hr.star-light {
   display: flex;
   justify-content: center;
   width: 50%;
-  height: 160px;
   border-left: 2px solid #18bc9c;
   border-top: 2px solid #18bc9c;
   border-bottom: 2px solid #18bc9c;
@@ -576,7 +575,6 @@ hr.star-dark, hr.star-light {
   display: flex;
   justify-content: center;
   width: 50%;
-  height: 160px;
   border: 2px solid #18bc9c;
 }
 

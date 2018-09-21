@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="80px" viewBox="0 0 1024 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Bar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1024" height="80"></rect>
+    </defs>
+    <g id="Bar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#71BE63" x="0" y="0" width="1024" height="80"></rect>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Rectangle" fill="#FFEFC6" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <rect id="Combined-Shape" fill="#055077" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="34" width="1024" height="12"></rect>
+    </g>
+</svg>

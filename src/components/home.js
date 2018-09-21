@@ -28,7 +28,7 @@ class Home extends Component {
                         <div style={{
                             position: "relative",
                             fontSize: "1.1em",
-                            bottom: "650px"
+                            bottom: "598px"
                         }}>
                             <span className="mb-4" style={{width: "500px", fontSize:"20px"}}>
                                 <p>Hi, did you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>

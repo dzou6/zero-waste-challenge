@@ -11,7 +11,7 @@ import StoryInputComponent from '../components/story_input';
 const StoryContainer = styled.div`
     margin: 10px auto;
     height: 606px;
-    width: 1196px;
+    width: 1024px;
     border: 3px solid #18bc9c;
     text-align: center;
     border-radius: 10px;

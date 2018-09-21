@@ -25,7 +25,7 @@ class HomeSliders extends React.Component {
     return this.backgrounds.map(bg => {
       return (
         <div key={bg}>
-          <img height="665px" src={bg} alt="slider"/>
+          <img height="580px" width="890px" src={bg} alt="slider"/>
         </div>
       );
     });
@@ -47,7 +47,7 @@ class HomeSliders extends React.Component {
     }
     return (
       // <Tooltip title="Hover around the Middle to Pause the Animation" placement="right">
-        <div style={{margin: '10px auto', width: 898.64, height: 680}}>
+        <div style={{margin: '10px auto', width: 890, height: 600}}>
           <Slider {...sliderSettings}>
               {this.renderBackgrounds()}
             </Slider>

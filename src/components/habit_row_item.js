@@ -12,12 +12,12 @@ const HabitRowItem = (props) => {
             <div className="habit-pics">
                 <div className="bad-habit">
                     <Tooltip placement="left" title={habit.badHabitDesc}>
-                        <img width="160px" src={require(`../static/tracker_bad/${habit.id}_sad.png`)} alt="bad habit"/>
+                        <img height="130px" src={require(`../static/tracker_bad/${habit.id}_sad.png`)} alt="bad habit"/>
                     </Tooltip>
                 </div>
                 <div className="good-habit">
                     <Tooltip placement="right" title={habit.goodHabitDesc}>
-                        <img width="160px" src={require(`../static/tracker_good/${habit.id}_happy.png`)} alt="good habit"/>
+                        <img height="130px" src={require(`../static/tracker_good/${habit.id}_happy.png`)} alt="good habit"/>
                     </Tooltip>
                 </div>
             </div>
