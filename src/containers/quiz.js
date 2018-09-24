@@ -34,9 +34,10 @@ class Quiz extends Component {
             modalVisible: false,
             modalTitle: '',
             modalOkText: '',
+            modalClosable: false,
             isAnswerCorrect: false,
             candyNum: 0,
-            shownItmIdx: Math.floor(Math.random() * 11)  
+            shownItmIdx: Math.floor(Math.random() * 2)
         };
     }
 
@@ -60,6 +61,7 @@ class Quiz extends Component {
             if(this.state.candyNum === quizInitLength) {
                 this.setState({modalTitle: 'Congratulations! You finish all the questions'});
                 this.setState({modalOkText: 'Go to Challenge'});
+                this.setState({modalClosable: true});
             }
         } else {
             this.setState({modalTitle: 'Sorry, you are wrong'});
@@ -75,30 +77,27 @@ class Quiz extends Component {
     handleClick = () => {
         const {quiz, quizInitLength} = this.props;
         this.setState({ modalVisible: false });
-        if(this.state.candyNum === quizInitLength) {
-            this.props.getAllQuiz();
-            this.props.history.push('/habit-tracker');
-        } else {
-            if(this.state.isAnswerCorrect) {
-                _.remove(quiz, itm => itm.id === quiz[this.state.shownItmIdx].id);
-                if(quiz.length !== 0) {
-                    this.setState({shownItmIdx: Math.floor(Math.random() * (quiz.length - 1))});
-                } else {
-                    this.props.getAllQuiz();
-                }
-                
+        if(this.state.isAnswerCorrect) {
+            _.remove(quiz, itm => itm.id === quiz[this.state.shownItmIdx].id);
+            if(quiz.length !== 0) {
+                this.setState({shownItmIdx: Math.floor(Math.random() * quiz.length)});
             }
-            this.setState({tooltipVisible: true});
-            setTimeout(() => this.setState({isAnswerCorrect: false}), 1000);
+            if(this.state.candyNum === quizInitLength) {
+                this.props.getAllQuiz();
+                this.props.history.push('/habit-tracker');
+            }
         }
+        this.setState({tooltipVisible: true});
+        setTimeout(() => this.setState({isAnswerCorrect: false}));
       }
 
     //handle cancle evetn for moda;
     handleCancel = () => {
-        const {quizInitLength} = this.props;
+        const {quizInitLength, quiz} = this.props;
         this.setState({ modalVisible: false });
         if(this.state.candyNum === quizInitLength) {
-            this.setState({candyNum: 0});
+            this.setState({candyNum: 0, modalClosable: false});
+            _.remove(quiz, itm => itm.id === quiz[this.state.shownItmIdx].id);
             this.props.getAllQuiz();
         }
     }
@@ -161,6 +160,7 @@ class Quiz extends Component {
                 {this.renderProgressCircle()}
                 <Modal
                     visible={this.state.modalVisible}
+                    closable={this.state.modalClosable}
                     title={
                         <div style={{fontSize:"18px"}}>
                             <FontAwesomeIcon 

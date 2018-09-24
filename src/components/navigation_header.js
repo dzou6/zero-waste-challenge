@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import {Link} from 'react-router-dom';
 import NavMenuItem from './nav_menu_item';
 
@@ -30,7 +30,7 @@ const menuItems = [
     url: '/habit-tracker',
     imgFile: require('../static/nav_bar/bar_btn_5.svg')
   }
-]
+];
 
 class NavigationHeader extends Component {
 
@@ -39,6 +39,16 @@ class NavigationHeader extends Component {
     this.state = {
       activeMenuItem: props.location.pathname
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.onRouteChanged(this.props.location.pathname);
+    }
+  }
+
+  onRouteChanged(url) {
+    this.setState({activeMenuItem: url});
   }
 
   onMenuItemClick(url) {
