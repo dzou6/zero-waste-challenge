@@ -16,14 +16,14 @@ const menuItems = [
     imgFile: require('../static/nav_bar/bar_btn_2.svg')
   },
   {
-    id: 'quiz',
-    url: '/quiz',
-    imgFile: require('../static/nav_bar/bar_btn_3.svg')
-  },
-  {
     id: 'calculator',
     url: '/calculator',
     imgFile: require('../static/nav_bar/bar_btn_4.svg')
+  },
+  {
+    id: 'quiz',
+    url: '/quiz',
+    imgFile: require('../static/nav_bar/bar_btn_3.svg')
   },
   {
     id: 'habit-tracker',
