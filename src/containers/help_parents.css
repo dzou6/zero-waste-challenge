@@ -1,0 +1,9 @@
+.helpParentstooltip .ant-tooltip-inner {
+    width: 180px;
+    color: #18bc9c;
+    background: rgba(255, 255, 255, 0.9)
+}
+
+.helpParentstooltip .ant-tooltip-arrow {
+    border-right-color: rgba(255, 255, 255, 0.9);
+}

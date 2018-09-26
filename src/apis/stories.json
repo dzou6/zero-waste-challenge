@@ -39,6 +39,23 @@
                 "desc": "3 good input desc"
             }
         ],
+        "helpParents": [
+            {
+                "id": 1,
+                "kidDialog": "kid say 1",
+                "parentDialog": "parent say 1"
+            },
+            {
+                "id": 2,
+                "kidDialog": "kid say 2",
+                "parentDialog": "parent say 2"
+            },
+            {
+                "id": 3,
+                "kidDialog": "kid say 3",
+                "parentDialog": "parent say 3"
+            }
+        ],
         "quiz": [
             {
                 "id": 1,

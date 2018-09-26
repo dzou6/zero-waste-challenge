@@ -11,7 +11,7 @@ import Home from './components/home';
 import HabitTrackerDetail from './containers/habit_tracker_detail';
 import Quiz from './containers/quiz';
 import Calculator from './components/calculator';
-import HelpYourParents from './components/help_parents';
+import HelpYourParents from './containers/help_parents';
 import NavPanelComponent from './components/nav_panel';
 
 class App extends Component {

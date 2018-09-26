@@ -10,14 +10,14 @@ const receiveStories = stories => ({
 
 //handle action to fectch all stroies from firebase DB
 export const getAllStories = () => dispatch => {
-    // StoriesAPI.getStroies(stories => {
-    //     dispatch(receiveStories(stories))
-    // })
+    StoriesAPI.getStroies(stories => {
+        dispatch(receiveStories(stories))
+    })
 
-    storiesRef.on("value", snapshot => {
-         console.log(snapshot.val());
-         dispatch(receiveStories(snapshot.val()));
-     })
+    // storiesRef.on("value", snapshot => {
+    //      console.log(snapshot.val());
+    //      dispatch(receiveStories(snapshot.val()));
+    //  })
 }
 
 //receive habits from redux thunk dispatch
