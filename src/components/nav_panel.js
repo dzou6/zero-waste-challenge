@@ -30,6 +30,12 @@ const NavPanelComponent = (props) => {
                         <Link to="/habit-tracker">
                             <img src={require('../static/nav_item/btn_navi_05.svg')} alt="nav_05"/>
                         </Link>
+                        <Link to="/help-your-parents">
+                            <img src={require('../static/nav_item/btn_navi_06.svg')} alt="nav_06"/>
+                        </Link>
+                        <Link to="/for-your-future">
+                            <img src={require('../static/nav_item/btn_navi_07.svg')} alt="nav_07"/>
+                        </Link>
                     </div>
                 </div>
             </div>

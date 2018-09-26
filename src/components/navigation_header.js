@@ -18,17 +18,27 @@ const menuItems = [
   {
     id: 'calculator',
     url: '/calculator',
-    imgFile: require('../static/nav_bar/bar_btn_4.svg')
+    imgFile: require('../static/nav_bar/bar_btn_3.svg')
   },
   {
     id: 'quiz',
     url: '/quiz',
-    imgFile: require('../static/nav_bar/bar_btn_3.svg')
+    imgFile: require('../static/nav_bar/bar_btn_4.svg')
   },
   {
     id: 'habit-tracker',
     url: '/habit-tracker',
     imgFile: require('../static/nav_bar/bar_btn_5.svg')
+  },
+  {
+    id: 'help-your-parents',
+    url: '/help-your-parents',
+    imgFile: require('../static/nav_bar/bar_btn_6.svg')
+  },
+  {
+    id: 'for-your-future',
+    url: '/for-your-future',
+    imgFile: require('../static/nav_bar/bar_btn_7.svg')
   }
 ];
 

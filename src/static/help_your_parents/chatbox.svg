@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="260px" viewBox="0 0 450 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>chatbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="chatbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.398635643">
+        <path d="M126.952945,216.358196 L57.6544384,258.559633 L57.6544384,216.358196 L17,216.358196 C9.2680135,216.358196 3,210.090182 3,202.358196 L3,17 C3,9.2680135 9.2680135,3 17,3 L433,3 C440.731986,3 447,9.2680135 447,17 L447,202.358196 C447,210.090182 440.731986,216.358196 433,216.358196 L126.952945,216.358196 Z" id="Rectangle-4" stroke="#075D89" stroke-width="4" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>
