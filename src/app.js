@@ -13,6 +13,7 @@ import Quiz from './containers/quiz';
 import Calculator from './components/calculator';
 import HelpYourParents from './containers/help_parents';
 import NavPanelComponent from './components/nav_panel';
+import FutureContainer from './containers/future_container';
 
 class App extends Component {
 
@@ -48,7 +49,7 @@ class App extends Component {
                 <Content className="bg-primary text-white text-center"
                     style={{ minHeight: this.props.location.pathname !== '/'? 'calc(100vh - 113px)' : 'calc(100vh - 33px)', marginTop: this.props.location.pathname !== '/'? 80: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Switch>
-                        <Route path="/for-your-future" component={HelpYourParents}/>
+                        <Route path="/for-your-future" component={FutureContainer}/>
                         <Route path="/help-your-parents" component={HelpYourParents}/>
                         <Route path="/habit-tracker" component={HabitTrackerDetail} />
                         <Route path="/calculator" component={Calculator} />
