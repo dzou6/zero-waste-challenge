@@ -39,6 +39,9 @@ class FutureContainer extends Component {
                     type="card"
                 >
                     <TabPane tab={<span><Icon type="line-chart" />Prediction</span>} key="1">
+                        <div style={{textAlign: "center", color:"#18bc9c", fontWeight: "bold", fontSize: "1.3em"}}>
+                            Ocean Plastic Waste VS Fish in Asutralia
+                        </div>
                         <PredictLineChart data={lineChartData} fishAvgWeight={fishAvgWeight}></PredictLineChart>
                     </TabPane>
                     <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
