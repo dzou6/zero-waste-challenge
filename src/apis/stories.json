@@ -43,18 +43,36 @@
             {
                 "id": 1,
                 "kidDialog": "kid say 1",
+                "kidUrl": "https://ant.design/components/icon/",
                 "parentDialog": "parent say 1"
             },
             {
                 "id": 2,
                 "kidDialog": "kid say 2",
+                "kidUrl": "https://www.google.com",
                 "parentDialog": "parent say 2"
             },
             {
                 "id": 3,
                 "kidDialog": "kid say 3",
+                "kidUrl": "https://ant.design/components/anchor/#Anchor-Props",
                 "parentDialog": "parent say 3"
             }
+        ],
+        "predictData": [
+            { "id": 1, "year": 2005, "plasticInOcean": 193333 },
+            { "id": 2, "year": 2006, "plasticInOcean": 203333 },
+            { "id": 3, "year": 2007, "plasticInOcean": 256083 },
+            { "id": 4, "year": 2008, "plasticInOcean": 261417 },
+            { "id": 5, "year": 2009, "plasticInOcean": 274083 },
+            { "id": 6, "year": 2010, "plasticInOcean": 335070 },
+            { "id": 7, "year": 2011, "plasticInOcean": 240167 },
+            { "id": 8, "year": 2012, "plasticInOcean": 239500 },
+            { "id": 9, "year": 2013, "plasticInOcean": 252167 },
+            { "id": 10, "year": 2014, "plasticInOcean": 284833 },
+            { "id": 11, "year": 2015, "plasticInOcean": 217583 },
+            { "id": 12, "year": 2016, "plasticInOcean": 323479 },
+            { "id": 13, "year": 2017, "plasticInOcean": 235000 }
         ],
         "quiz": [
             {

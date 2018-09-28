@@ -10,6 +10,7 @@ class HelpParents extends Component {
         super(props);
         this.state = {
             kidTooltipVisible: false,
+            kidTooltipUrl: '',
             kidTooltipTitle: '',
             parentTooltipVisible: false,
             parentTooltipTitle: '',
@@ -18,20 +19,22 @@ class HelpParents extends Component {
 
     renderParentCard(cards) {
         return cards.map(card => {
-            return <img onClick={() => this.showTooltips(card.kidDialog, card.parentDialog)} style={{cursor: 'pointer'}} src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
+            return <img key={card.id} onClick={() => this.showTooltips(card.kidDialog, card.parentDialog, card.kidUrl)} style={{cursor: 'pointer'}} src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
         });
     }
 
-    showTooltips(kidDialog, parentDialog) {
+    showTooltips(kidDialog, parentDialog, kidUrl) {
         this.setState({
             kidTooltipVisible: false,
-            parentTooltipVisible: false
+            parentTooltipVisible: false,
+            kidTooltipUrl: '',
         })
 
         setTimeout(()=> {
             this.setState({
                 kidTooltipVisible: true,
-                kidTooltipTitle: kidDialog
+                kidTooltipTitle: kidDialog,
+                kidTooltipUrl: kidUrl,
             });
         }, 1000)
         
@@ -44,6 +47,11 @@ class HelpParents extends Component {
         }, 2000)
     }
 
+    renderTooltipTitle(title, url) {
+        return (
+            <div>{title} <span><a href={url}>{url}</a></span></div>
+        );
+    }
 
     render() {
         const {stories} = this.props;
@@ -59,14 +67,14 @@ class HelpParents extends Component {
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
                     <Tooltip
                         visible={this.state.kidTooltipVisible}
-                        title={this.state.kidTooltipTitle} 
+                        title={this.renderTooltipTitle(this.state.kidTooltipTitle, this.state.kidTooltipUrl)}
                         placement="rightTop" 
                         overlayClassName="helpParentstooltip">
                         <img src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
                     </Tooltip>
                     <Tooltip
                         visible={this.state.parentTooltipVisible}
-                        title={this.state.parentTooltipTitle}
+                        title={this.renderTooltipTitle(this.state.parentTooltipTitle, null)}
                         placement="rightTop" 
                         overlayClassName="helpParentstooltip">
                         <img src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
@@ -79,6 +87,7 @@ class HelpParents extends Component {
         );
     }
 }
+
 const mapStateToProps = (state) => {
     return {stories: state.stories }
 }
