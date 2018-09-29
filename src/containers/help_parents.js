@@ -19,7 +19,8 @@ class HelpParents extends Component {
 
     renderParentCard(cards) {
         return cards.map(card => {
-            return <img key={card.id} onClick={() => this.showTooltips(card.kidDialog, card.parentDialog, card.kidUrl)} style={{cursor: 'pointer'}} src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
+            return <img key={card.id} onClick={() => this.showTooltips(card.kidDialog, card.parentDialog, card.kidUrl)} 
+                    style={{cursor: 'pointer'}} src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
         });
     }
 
@@ -65,18 +66,18 @@ class HelpParents extends Component {
         return (
             <div style={{ width: 1000 }}>
                 <h4 style={{color:"white"}}>Help your parents in daily life with suggestions! Click images at bottom!</h4>
-                <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
+                <div style={{ marginTop:34,  flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
                     <Tooltip
                         visible={this.state.kidTooltipVisible}
                         title={this.renderTooltipTitle(this.state.kidTooltipTitle, this.state.kidTooltipUrl)}
-                        placement="rightTop" 
+                        placement="right" 
                         overlayClassName="helpParentstooltip">
                         <img src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
                     </Tooltip>
                     <Tooltip
                         visible={this.state.parentTooltipVisible}
                         title={this.renderTooltipTitle(this.state.parentTooltipTitle, null)}
-                        placement="rightTop" 
+                        placement="right" 
                         overlayClassName="helpParentstooltip">
                         <img src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
                     </Tooltip>
