@@ -64,6 +64,7 @@ class HelpParents extends Component {
 
         return (
             <div style={{ width: 1000 }}>
+                <h4 style={{color:"white"}}>Help your parents in daily life with suggestions! Click images at bottom!</h4>
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
                     <Tooltip
                         visible={this.state.kidTooltipVisible}

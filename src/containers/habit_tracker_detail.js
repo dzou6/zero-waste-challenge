@@ -20,7 +20,7 @@ class HabitTrackerDetail extends Component {
         ];
     }
 
-    //functio to download 0-waste challenge form
+    //function to download 0-waste challenge form
     downloadPdf() {
         const input = document.getElementById('imgToPrint');
         html2canvas(input)

@@ -42,21 +42,21 @@
         "helpParents": [
             {
                 "id": 1,
-                "kidDialog": "kid say 1",
-                "kidUrl": "https://ant.design/components/icon/",
-                "parentDialog": "parent say 1"
+                "kidDialog": "Mom,instead of using one-off plastic straws, this website provides reusable straws",
+                "kidUrl": "https://www.biome.com.au/805-reusable-straws",
+                "parentDialog": "Thanks, I will visit and use it when drink drinks."
             },
             {
                 "id": 2,
-                "kidDialog": "kid say 2",
-                "kidUrl": "https://www.google.com",
-                "parentDialog": "parent say 2"
+                "kidDialog": "Mom, you can buy reusable bags which are very pretty on this website",
+                "kidUrl": "https://www.smartbag.com.au/smartbag-shop/reusable-eco-bags",
+                "parentDialog": "That is fantastic！I will use it for shopping. Thank you!"
             },
             {
                 "id": 3,
-                "kidDialog": "kid say 3",
-                "kidUrl": "https://ant.design/components/anchor/#Anchor-Props",
-                "parentDialog": "parent say 3"
+                "kidDialog": "Mom, you can have a visit on this website:https://trashlesstakeaway.com.au/ to bring our food container to get discount",
+                "kidUrl": "https://trashlesstakeaway.com.au/",
+                "parentDialog": "Thanks, Lovely! I didn't know I can get discount for bringing reusable containers for take-away" 
             }
         ],
         "predictData": [
