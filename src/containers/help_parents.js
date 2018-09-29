@@ -14,12 +14,34 @@ class HelpParents extends Component {
             kidTooltipTitle: '',
             parentTooltipVisible: false,
             parentTooltipTitle: '',
+            showCardBorder: {},
+            cardClicked: ''
         }
     }
 
     renderParentCard(cards) {
         return cards.map(card => {
-            return <img key={card.id} onClick={() => this.showTooltips(card.kidDialog, card.parentDialog, card.kidUrl)} style={{cursor: 'pointer'}} src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
+            return (
+                <img
+                    key={card.id}
+                    onMouseOver={() => {
+                        let showCardBorder = {...this.state.showCardBorder};
+                        showCardBorder[card.id] = true;
+                        this.setState({showCardBorder});
+                    }}
+                    onMouseOut={() => {
+                        let showCardBorder = {...this.state.showCardBorder};
+                        showCardBorder[card.id] = false;
+                        this.setState({showCardBorder});
+                    }}
+                    onClick={() => {
+                        this.setState({cardClicked: card.id});
+                        this.showTooltips(card.kidDialog, card.parentDialog, card.kidUrl)}
+                    }
+                    className={this.state.showCardBorder[card.id] || this.state.cardClicked === card.id? "card-hover": ""}
+                    style={{cursor: 'pointer'}} 
+                    src={require(`../static/help_your_parents/Card_0${card.id}.svg`)} alt="parent card" />
+            );
         });
     }
 

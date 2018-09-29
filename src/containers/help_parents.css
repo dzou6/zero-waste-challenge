@@ -7,3 +7,8 @@
 .helpParentstooltip .ant-tooltip-arrow {
     border-right-color: rgba(255, 255, 255, 0.9);
 }
+
+.card-hover {
+    border: solid 3px #FFA500;
+    border-radius: 10px;
+}
