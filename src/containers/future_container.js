@@ -5,6 +5,7 @@ import PredictLineChart from '../components/predict_line_chart';
 import For_health from '../components/for_health';
 import LoadingPanel from '../components/loading_panel';
 import _ from 'lodash';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class FutureContainer extends Component {
     render() {
@@ -42,7 +43,7 @@ class FutureContainer extends Component {
                         </div>
                         <PredictLineChart data={lineChartData} fishAvgWeight={fishAvgWeight}></PredictLineChart>
                     </TabPane>
-                    <TabPane tab={<span><Icon type="fa-user-md" />For your health</span>} key="2">
+                    <TabPane tab={<span><FontAwesomeIcon icon="user-md"/>  For your health</span>} key="2">
                         <div style={{textAlign: "center", color:"#18bc9c", fontWeight: "bold", fontSize: "1.3em"}}>
                             Do you know what kind of disease might be caused by keep using plastic? Click the circle on body!
                         </div>
@@ -58,14 +59,14 @@ class FutureContainer extends Component {
                             </p>
                             <p>The Zero-waste Challenge website is designed to attract 6 - 8 years old children.
                                 It provides interactive games for children to know how they use plastic can affect marine animals and their health.
-                                So children can learn by play and alternativaly develop a zero-waste habit towards plastics and influence grow-ups.
+                                So children can learn by play and eventually develop a zero-waste habit towards plastics and influence grow-ups.
                                 Fix problem from root!
                             </p>
                             <p>
-                            Zero-waste Challenge provides a progress towards the goal of motivating children to develop zero-waste habit. Children
-                             can play with animation, game, calculator and quiz to understand the urgency of developing zero-waste habit towards 
-                             plastic and gain motivation. Parents can help kids develop the habit by telling them some information provided on the 
-                             website and giving rewards to children if they achieve their daily goal.
+                                Zero-waste Challenge provides a progress towards the goal of motivating children to develop zero-waste habit. Children
+                                can play with animation, game, calculator and quiz to understand the urgency of developing zero-waste habit towards 
+                                plastic and gain motivation. Parents can help kids develop the habit by telling them information on the 
+                                website and giving rewards to children if they achieve their daily goal on developing zero-waste habit.
                             </p>
                         </div>
                     </TabPane>
