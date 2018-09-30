@@ -24,17 +24,17 @@ const NavPanelComponent = (props) => {
                         </Link>
                     </div>
                     <div style={{display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'space-evenly'}}>
-                        <Link to="/quiz">
-                            <img width={200} src={require('../static/nav_item/btn_navi_04.svg')} alt="nav_04"/>
-                        </Link>
-                        <Link to="/habit-tracker">
-                            <img width={200} src={require('../static/nav_item/btn_navi_05.svg')} alt="nav_05"/>
+                        <Link to="/for-your-future">
+                            <img width={200} src={require('../static/nav_item/btn_navi_07.svg')} alt="nav_04"/>
                         </Link>
                         <Link to="/help-your-parents">
-                            <img width={200} src={require('../static/nav_item/btn_navi_06.svg')} alt="nav_06"/>
+                            <img width={200} src={require('../static/nav_item/btn_navi_06.svg')} alt="nav_05"/>
                         </Link>
-                        <Link to="/for-your-future">
-                            <img width={200} src={require('../static/nav_item/btn_navi_07.svg')} alt="nav_07"/>
+                        <Link to="/habit-tracker">
+                            <img width={200} src={require('../static/nav_item/btn_navi_05.svg')} alt="nav_06"/>
+                        </Link>
+                        <Link to="/quiz">
+                            <img width={200} src={require('../static/nav_item/btn_navi_04.svg')} alt="nav_07"/>
                         </Link>
                     </div>
                 </div>

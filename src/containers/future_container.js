@@ -42,9 +42,9 @@ class FutureContainer extends Component {
                         </div>
                         <PredictLineChart data={lineChartData} fishAvgWeight={fishAvgWeight}></PredictLineChart>
                     </TabPane>
-                    <TabPane tab="For your health" key="2">
+                    <TabPane tab={<span><Icon type="fa-user-md" />For your health</span>} key="2">
                         <div style={{textAlign: "center", color:"#18bc9c", fontWeight: "bold", fontSize: "1.3em"}}>
-                            Do you know what kind of disease might cause by keep using plastic?
+                            Do you know what kind of disease might be caused by keep using plastic? Click the circle on body!
                         </div>
                         <For_health></For_health>
                     </TabPane>

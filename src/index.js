@@ -10,7 +10,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import 'font-awesome/css/font-awesome.min.css'
-import { faKey, faBookReader, faHome, faTasks, faUsers, faArrowCircleLeft, faArrowCircleRight, faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp, faPlayCircle} from '@fortawesome/free-solid-svg-icons';
+import { faKey, faBookReader, faHome, faTasks, faUsers, faArrowCircleLeft, faArrowCircleRight, 
+    faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp, faPlayCircle, faUserMd} from '@fortawesome/free-solid-svg-icons';
 
 import { getAllStories, getAllHabits, getAllQuiz } from './actions/index';
 
@@ -50,7 +51,8 @@ library.add(
     faCalculator,
     faHandPointDown,
     faHandPointUp,
-    faPlayCircle
+    faPlayCircle,
+    faUserMd
 );
 
 //render react router for different pages
