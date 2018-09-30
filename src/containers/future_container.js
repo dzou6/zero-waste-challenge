@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Tabs, Icon } from 'antd';
 import PredictLineChart from '../components/predict_line_chart';
+import For_health from '../components/for_health';
 import LoadingPanel from '../components/loading_panel';
 import _ from 'lodash';
 
@@ -17,16 +18,6 @@ class FutureContainer extends Component {
         let lineChartData = _.cloneDeep(stories[1].predictData);
 
         const fishAvgWeight = 856911.875 * 1400000000 / 0.25 / 0.05 / 0.05 / 3500000000000;
-
-        //predict data
-        for (let i = 2018; i <= 2100; i++) {
-            lineChartData.push({
-                year: i,
-                plasticInOcean: Math.round(3448.2 * i - 6679322.7)
-            });
-        }
-
-
 
         return (
             <div style={{
@@ -44,7 +35,12 @@ class FutureContainer extends Component {
                         </div>
                         <PredictLineChart data={lineChartData} fishAvgWeight={fishAvgWeight}></PredictLineChart>
                     </TabPane>
-                    <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
+                    <TabPane tab="For your health" key="2">
+                        <div style={{textAlign: "center", color:"#18bc9c", fontWeight: "bold", fontSize: "1.3em"}}>
+                            Do you know what kind of disease might cause by keep using plastic?
+                        </div>
+                        <For_health></For_health>
+                    </TabPane>
                     <TabPane tab={<span><Icon type="info-circle" />About</span>} key="3">
                         <div style={{ backgroundColor: '#17a2b8', color: "#fff", margin: 20, padding: 10, fontSize: "1.2em", borderRadius: 10, height: 518 }}>
                             <p style={{ fontSize: "1.2em" }}>About Zero-waste Challenge </p>

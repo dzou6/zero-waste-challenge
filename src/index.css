@@ -618,3 +618,97 @@ hr.star-dark, hr.star-light {
  .slick-prev:before, .slick-next:before  {
   content: '' !important;
 }
+
+#child_normal
+{
+  left: 100px;
+  bottom: -10px;
+  position: absolute;
+}
+
+#pancreas
+{
+  left: 190px;
+  bottom: 203px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+
+#child_sick
+{
+  left: 100px;
+  bottom: -10px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#hint
+{
+  left: 110px;
+  bottom: 475px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#diabetes
+{
+  left: 222px;
+  bottom: -20px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#cardiovascular_disease
+{
+  left: 255px;
+  bottom: 230px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#cardiovascular
+{
+  left: 233px;
+  bottom: 247px;
+  position: absolute;
+  opacity: 0;
+}
+
+#diabetes_p
+{
+  left: 355px;
+  bottom: 245px;
+  position: absolute;
+  visibility: hidden;
+  color:#43a3f2;
+  font-weight: bold;
+}
+
+#heart_warning
+{
+  left: 350px;
+  bottom: 160px;
+  position: absolute;
+  visibility: hidden;
+  color:#43a3f2;
+  font-weight: bold;
+}
+
+#vid_d{
+  left: 640px;
+  bottom: 72px;
+  position: absolute;
+  color:#43a3f2;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#vid_c{
+  left: 640px;
+  bottom: 260px;
+  position: absolute;
+  color:#43a3f2;
+  font-weight: bold;
+  visibility: hidden;
+}
