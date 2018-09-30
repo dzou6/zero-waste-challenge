@@ -1,6 +1,9 @@
 import React from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label, ReferenceLine} from 'recharts';
+
+//line chart componet to display predict data
 const PredictLineChart = (props) => {
+    //read the data and fish AVG weight from props
     const {data, fishAvgWeight} = props;
     return (
         <LineChart width={860} height={500} data={data}

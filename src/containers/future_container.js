@@ -6,7 +6,9 @@ import For_health from '../components/for_health';
 import LoadingPanel from '../components/loading_panel';
 import _ from 'lodash';
 
+//componet to show future information for user
 class FutureContainer extends Component {
+    //render function to display the future page
     render() {
         const { TabPane } = Tabs;
         const { stories } = this.props; 
@@ -75,10 +77,12 @@ class FutureContainer extends Component {
     }
 }
 
+//map application state for stories
 const mapStateToProps = (state) => {
     return { stories: state.stories }
 }
 
+//export future container
 export default connect(
     mapStateToProps, null
 )(FutureContainer);
