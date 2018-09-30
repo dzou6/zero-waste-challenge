@@ -4,8 +4,10 @@ import {connect} from 'react-redux';
 import './help_parents.css'
 import LoadingPanel from '../components/loading_panel';
 
+//Componet for showing help parents page
 class HelpParents extends Component {
 
+    //constructor for help parents componet, and initilize state.
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +21,7 @@ class HelpParents extends Component {
         }
     }
 
+    //render the card for user to click
     renderParentCard(cards) {
         return cards.map(card => {
             return (
@@ -45,6 +48,7 @@ class HelpParents extends Component {
         });
     }
 
+    //show tooltips for each dialog
     showTooltips(kidDialog, parentDialog, kidUrl) {
         this.setState({
             kidTooltipVisible: false,
@@ -69,12 +73,14 @@ class HelpParents extends Component {
         }, 2000)
     }
 
+    //render tooltip with title and url if provided
     renderTooltipTitle(title, url) {
         return (
             <div>{title} <span><a href={url}>{url}</a></span></div>
         );
     }
 
+    //render function to display the help parents page
     render() {
         const {stories} = this.props;
 
@@ -111,10 +117,12 @@ class HelpParents extends Component {
     }
 }
 
+//map state to props for stories
 const mapStateToProps = (state) => {
     return {stories: state.stories }
 }
 
+//export help parents page to be used in some other places.
 export default connect(
     mapStateToProps, null
  )(HelpParents);

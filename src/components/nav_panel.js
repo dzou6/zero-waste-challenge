@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//nav panel compoent to provide initial navigation for user
 const NavPanelComponent = (props) => {
     return (
         <div style={{display: 'flex', minHeight: 'calc(100vh - 33px)' ,flex: 1, flexDirection: 'column'}}>
