@@ -59,12 +59,12 @@ class health extends Component {
              Frequently use of plastic product<br/> may cause heart disease,<br/> or heart attack combined.
           </div>
           <div id="vid_d">
-              <iframe width="200" height="170" src="https://www.youtube.com/embed/OBvIYCWOG5Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-              <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>             
+              <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
+              <iframe width="300" height="250" src="https://www.youtube.com/embed/OBvIYCWOG5Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>              
           </div>
           <div id="vid_c">
-              <iframe width="200" height="170" src="https://www.youtube.com/embed/3_PYnWVoUzM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <p>What happens during a heart attack? - Krishna Sudhir</p> 
+              <iframe width="300" height="250" src="https://www.youtube.com/embed/3_PYnWVoUzM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
       </div>
     );

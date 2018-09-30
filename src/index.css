@@ -619,17 +619,21 @@ hr.star-dark, hr.star-light {
   content: '' !important;
 }
 
+
+
 #child_normal
 {
-  left: 100px;
-  bottom: -10px;
+  left: 40px;
+  bottom: 20px;
   position: absolute;
+  height: 400px;
+  width: 200px;
 }
 
 #pancreas
 {
-  left: 190px;
-  bottom: 203px;
+  left: 112px;
+  bottom: 185px;
   position: absolute;
   z-index: 1;
   opacity: 0;
@@ -637,48 +641,50 @@ hr.star-dark, hr.star-light {
 
 #child_sick
 {
-  left: 100px;
-  bottom: -10px;
+  left: 40px;
+  bottom: 20px;
   position: absolute;
   visibility: hidden;
+  height: 400px;
+  width: 200px;
 }
 
 #hint
 {
-  left: 110px;
-  bottom: 475px;
+  left: 30px;
+  bottom: 440px;
   position: absolute;
   visibility: hidden;
 }
 
 #diabetes
 {
-  left: 222px;
-  bottom: -20px;
+  left: 135px;
+  bottom: -35px;
   position: absolute;
   visibility: hidden;
 }
 
 #cardiovascular_disease
 {
-  left: 255px;
-  bottom: 230px;
+  left: 162px;
+  bottom: 209px;
   position: absolute;
   visibility: hidden;
 }
 
 #cardiovascular
 {
-  left: 233px;
-  bottom: 247px;
+  left: 135px;
+  bottom: 222px;
   position: absolute;
   opacity: 0;
 }
 
 #diabetes_p
 {
-  left: 355px;
-  bottom: 245px;
+  left: 250px;
+  bottom: 210px;
   position: absolute;
   visibility: hidden;
   color:#43a3f2;
@@ -687,8 +693,8 @@ hr.star-dark, hr.star-light {
 
 #heart_warning
 {
-  left: 350px;
-  bottom: 160px;
+  left: 255px;
+  bottom: 190px;
   position: absolute;
   visibility: hidden;
   color:#43a3f2;
@@ -696,8 +702,8 @@ hr.star-dark, hr.star-light {
 }
 
 #vid_d{
-  left: 640px;
-  bottom: 72px;
+  left: 535px;
+  bottom: 30px;
   position: absolute;
   color:#43a3f2;
   font-weight: bold;
@@ -705,8 +711,8 @@ hr.star-dark, hr.star-light {
 }
 
 #vid_c{
-  left: 640px;
-  bottom: 260px;
+  left: 535px;
+  bottom: 160px;
   position: absolute;
   color:#43a3f2;
   font-weight: bold;
