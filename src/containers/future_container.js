@@ -19,8 +19,14 @@ class FutureContainer extends Component {
         }
 
         let lineChartData = _.cloneDeep(stories[1].predictData);
-
-        const fishAvgWeight = 856911.875 * 1400000000 / 0.25 / 0.05 / 0.05 / 3500000000000;
+        const fishData = _.cloneDeep(stories[1].reefFishData);
+        let totalFishWeight = 0;
+        let avgFish = 0;
+        for (let i = 0;i < fishData.length; i++){
+            totalFishWeight += fishData[i].total      
+        }
+        avgFish = totalFishWeight/fishData.length;
+        const fishAvgWeight = avgFish * 1400000000 / 0.25 / 0.05 / 0.05 / 3500000000000;
         //predict data
         for (let i = 2018; i <= 2100; i++) {
             lineChartData.push({
