@@ -718,3 +718,7 @@ hr.star-dark, hr.star-light {
   font-weight: bold;
   visibility: hidden;
 }
+
+.readmore{
+  text-decoration: underline;
+}

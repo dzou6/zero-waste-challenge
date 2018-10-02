@@ -90,10 +90,12 @@ class health extends Component {
           <button id="cardiovascular" onClick={this.onClickCardiovascular}>btn_02</button>
         </div>
           <div id="diabetes_p">
-             Look out!<br/> using plastic product for more than <br/><div id="d"></div> days, may double your chances<br/>of getting diabetes.
+             Look out!<br/> using plastic product for more than <br/><div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
+             <a class="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
-             Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.
+             Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.<br/>
+             <a class="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
           </div>
           <div id="vid_d">
               <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
