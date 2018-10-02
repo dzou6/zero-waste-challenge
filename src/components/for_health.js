@@ -9,6 +9,45 @@ function Show()
 
 class health extends Component {
 
+  dataAnalyze(column,total){
+    const dataList = storiesRef.child('0').child('diabetesRatio').child(column);
+    const list = [];
+    dataList.on("value", snapshot => {
+      list.push(snapshot.val());
+    })
+    console.log(list[0]);
+    var sum = 0;
+    function add(value)
+    {
+      sum = sum+value;
+    }
+    list[0].forEach(add);
+    console.log(sum);
+    const all = storiesRef.child('0').child('diabetesRatio').child(total);
+    var tt = 0;
+    all.on("value", snapshot => {
+      tt = snapshot.val();
+    })
+    console.log(tt);
+    const p = sum/tt;
+    console.log(p);
+    return p;
+  }
+
+  countDays(){
+    var dr = this.dataAnalyze('Persons','Total');
+    console.log(dr);
+    var days = 0;
+    var dailyIncre = 0;
+    const dailyIncreRef = storiesRef.child('0').child('diabetesRatio').child('DailyPIncre');
+    dailyIncreRef.on("value", snapshot => {
+      dailyIncre = snapshot.val();
+    })
+    days = dr/dailyIncre;
+    console.log(days);
+    document.getElementById("d").innerHTML = Math.round(days);
+  }
+
   onClickPancreas = ()=>{
     Show()
     document.getElementById("diabetes").style.visibility = "visible";
@@ -17,6 +56,7 @@ class health extends Component {
     document.getElementById("diabetes_p").style.visibility = "visible";
     document.getElementById("vid_d").style.visibility = "visible";
     document.getElementById("vid_c").style.visibility = "hidden";
+    this.countDays();
   };
 
   onClickCardiovascular = ()=>{
@@ -50,7 +90,7 @@ class health extends Component {
           <button id="cardiovascular" onClick={this.onClickCardiovascular}>btn_02</button>
         </div>
           <div id="diabetes_p">
-             Look out!<br/> using plastic product for<br/> more than 18 days,<br/> may mutiply your chances<br/>of getting diabetes by 2.
+             Look out!<br/> using plastic product for more than <br/><div id="d"></div> days, may double your chances<br/>of getting diabetes.
           </div>
           <div id="heart_warning">
              Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.
