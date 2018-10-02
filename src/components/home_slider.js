@@ -56,7 +56,7 @@ class HomeSliders extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       pauseOnFocus:true,
-      pauseOnHover:true,
+      pauseOnHover:false,
       autoplay: true
     }
     return (

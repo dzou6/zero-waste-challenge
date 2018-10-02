@@ -54,17 +54,17 @@ class Quiz extends Component {
     onDropFinished(id) {
         const {quiz, quizInitLength} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
-            this.setState({modalTitle: 'Congratulations! You are correct'});
+            this.setState({modalTitle: 'Good Job!!! You are correct'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
             this.setState({candyNum: this.state.candyNum + 1});
             if(this.state.candyNum === quizInitLength) {
-                this.setState({modalTitle: 'Congratulations! You finish all the questions'});
+                this.setState({modalTitle: 'Gooooooood job!!! You finish all the questions, excellent!!!!'});
                 this.setState({modalOkText: 'Go to Challenge'});
                 this.setState({modalClosable: true});
             }
         } else {
-            this.setState({modalTitle: 'Sorry, you are wrong'});
+            this.setState({modalTitle: 'Sorry, try again'});
             this.setState({modalOkText: 'Retry'});
             this.setState({isAnswerCorrect: false});
         }
@@ -119,8 +119,13 @@ class Quiz extends Component {
         const {candyNum} = this.state;
         const {quizInitLength} = this.props;
         return (
-            <div style={{position: 'relative', height: 0, left: 120, bottom: 192, fontSize: 20, width: 276}}>
-                <Progress type="circle" percent={(candyNum / quizInitLength) * 100} format={() => candyNum < quizInitLength? `Quiz ${candyNum + 1}`: `Done`} />
+            <div style={{position: 'relative', height: 0, left: 120, bottom: 192, fontSize: 20, width: 316}}>
+                <Progress 
+                    type="circle" 
+                    percent={(candyNum / quizInitLength) * 100} 
+                    format={() => candyNum < quizInitLength? 
+                        (<div style={{fontSize: 17}}>Question {candyNum + 1}</div>): 
+                        (<div style={{fontSize: 17}}>Done</div>)} />
             </div>
             
         );

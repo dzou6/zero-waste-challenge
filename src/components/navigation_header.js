@@ -8,36 +8,43 @@ const menuItems = [
   {
     id: 'home',
     url: '/home',
+    title:'What kind of waste is in the ocean?',
     imgFile: require('../static/nav_bar/bar_btn_1.svg')
   },
   {
     id: 'story',
     url: '/story/1',
+    title:'How do your habits affect the ocean?',
     imgFile: require('../static/nav_bar/bar_btn_2.svg')
   },
   {
     id: 'calculator',
     url: '/calculator',
+    title:'How many animals can you save?',
     imgFile: require('../static/nav_bar/bar_btn_3.svg')
   },
   {
     id: 'quiz',
     url: '/quiz',
+    title:'Test your knowledge about habits',
     imgFile: require('../static/nav_bar/bar_btn_4.svg')
   },
   {
     id: 'habit-tracker',
     url: '/habit-tracker',
+    title:'Track your habits\'s progress',
     imgFile: require('../static/nav_bar/bar_btn_5.svg')
   },
   {
     id: 'help-your-parents',
     url: '/help-your-parents',
+    title:'Help your parents',
     imgFile: require('../static/nav_bar/bar_btn_6.svg')
   },
   {
     id: 'for-your-future',
     url: '/for-your-future',
+    title:'For your future',
     imgFile: require('../static/nav_bar/bar_btn_7.svg')
   }
 ];
@@ -71,6 +78,7 @@ class NavigationHeader extends Component {
           <NavMenuItem 
             key={menuItem.id} 
             isActive={this.state.activeMenuItem === menuItem.url}
+            title={menuItem.title}
             onClick={(url) => this.onMenuItemClick(url)}
             routeUrl={menuItem.url} 
             btnImg={menuItem.imgFile} 
