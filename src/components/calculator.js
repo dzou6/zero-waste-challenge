@@ -3,6 +3,7 @@ import '../calculator.css';
 import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 import { number } from 'style-value-types';
+import {storiesRef} from '../config/firebase';
 
 //The piece of HTML will appear after clicking the "count" button
 const results = (<div style={{marginTop: 60, display: 'flex'}}>
@@ -37,6 +38,30 @@ class Calculator extends Component {
   constructor (props, context) {
     super(props, context)
     this.state.value = 1;
+  }
+
+  dataAnalyze(column){
+    const dataList = storiesRef.child('0').child('PlasticAffected').child(column);
+    const list = [];
+    dataList.on("value", snapshot => {
+      console.log(snapshot.val());
+      list.push(snapshot.val());
+    })
+
+    console.log(list[0]);
+
+    var sum = 0;
+    var length = 0;
+    function add(value)
+    {
+      sum = sum+value;
+      length++;
+    }
+    list[0].forEach(add);
+    console.log(sum);
+    var avg = Math.round(sum/length);
+    console.log(avg);
+    return avg;
   }
 
   handleChange = value => {
@@ -103,7 +128,11 @@ class Calculator extends Component {
   //caculate how many sea life will be save if a habit is insisted
   caculateLife(wasteReduce) {
     //the relation between daily used plastic and affected marine animal every day in Australia
-    const lifeSaving = 252;
+    var lifeSaving = 0;
+    var ozcdlf = this.dataAnalyze('OZ children affected mrlf daily');
+    var animal = this.dataAnalyze('plastic pp daily thrown(gram)');
+    lifeSaving = Math.round(ozcdlf/animal);
+    console.log(lifeSaving);
     //use the relation value to mutiply a waste reduce value to count how many sea life can be saved
     document.getElementById("show2nd").innerHTML = "\<div id=\'s2\'\>"+wasteReduce*lifeSaving+"<\/div\>";
   }
@@ -117,7 +146,9 @@ class Calculator extends Component {
   onClickStraw = ()=>{
     document.getElementById("countCover").style.visibility = "visible";
     document.getElementById("count").style.visibility = "visible";
-    this.data = 13;
+    
+    this.data = Math.round(this.dataAnalyze('plastic pp daily thrown(gram)')*0.04);
+
     this.setState({strawBorder: true});
     this.setState({bagBorder: false});
     this.setState({bottleBorder: false});
@@ -130,7 +161,7 @@ class Calculator extends Component {
   onClickBag = ()=>{
     document.getElementById("countCover").style.visibility = "visible";
     document.getElementById("count").style.visibility = "visible";
-    this.data = 50;
+    this.data = Math.round(this.dataAnalyze('plastic pp daily thrown(gram)')*0.16);
     this.setState({strawBorder: false});
     this.setState({bagBorder: true});
     this.setState({bottleBorder: false});
@@ -142,7 +173,7 @@ class Calculator extends Component {
   onClickBottle = ()=>{
     document.getElementById("countCover").style.visibility = "visible";
     document.getElementById("count").style.visibility = "visible";
-    this.data = 55;
+    this.data = Math.round(this.dataAnalyze('plastic pp daily thrown(gram)')*0.175);
     this.setState({strawBorder: false});
     this.setState({bagBorder: false});
     this.setState({bottleBorder: true});
@@ -182,6 +213,7 @@ class Calculator extends Component {
 
   render() {
     //return the initial HTML part
+
     return (
         <div style={{width: 815, height: 541, backgroundImage: `url(${require('../static/calculator_element/Calculator_background.png')})`}}>
             <img id="card_01" src={require('../static/calculator_element/card_01.png')} />
@@ -223,5 +255,6 @@ class Calculator extends Component {
     );
   }
 }
+
 
 export default Calculator;

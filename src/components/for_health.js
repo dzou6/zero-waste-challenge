@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {storiesRef} from '../config/firebase';
 
 function Show()
 {
@@ -32,15 +33,11 @@ class health extends Component {
     document.getElementById("hint").style.visibility = "visible";
   }
 
-  offHoverTip = ()=>{
-    document.getElementById("hint").style.visibility = "hidden";
-  }
-
   render() {
     return (
       <div className="organ_health">
         <div>
-          <div onMouseOver={this.onHoverTip} onMouseOut={this.offHoverTip}>
+          <div onMouseOver={this.onHoverTip}>
             <img id="child_normal" src={require('../static/for_health/child_normal.png') } />
             <img id="child_sick" src={require('../static/for_health/child_sick.png')} />
           </div>          
@@ -53,10 +50,10 @@ class health extends Component {
           <button id="cardiovascular" onClick={this.onClickCardiovascular}>btn_02</button>
         </div>
           <div id="diabetes_p">
-             If you use plastic products<br/> for more than 18 days,<br/> your chances of getting <br/>diabetes may double.
+             Look out!<br/> using plastic product for<br/> more than 18 days,<br/> may mutiply your chances<br/>of getting diabetes by 2.
           </div>
           <div id="heart_warning">
-             Frequently use of plastic product<br/> may cause heart disease,<br/> or heart attack combined.
+             Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.
           </div>
           <div id="vid_d">
               <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
