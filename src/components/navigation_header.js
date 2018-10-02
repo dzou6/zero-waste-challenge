@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Layout } from 'antd';
+import { Layout, Tooltip } from 'antd';
 import {Link} from 'react-router-dom';
 import NavMenuItem from './nav_menu_item';
 
@@ -94,11 +94,13 @@ class NavigationHeader extends Component {
     
     return (
       <Header style={{ padding: 0, position: 'fixed', display: 'flex', alignItems: 'center', zIndex: 10, width: '100%', height: 80, backgroundImage: `url(${require('../static/nav_bar/bar.svg')})` }}>
-        <div style={{width: 120}}>
-          <Link to='/'>
-            <img src={require('../static/nav_bar/logo.svg')} alt="bar log"/>
-          </Link>
-        </div>
+        <Tooltip title="Navigation panel" placement="bottom">
+          <div style={{width: 120}}>
+            <Link to='/'>
+              <img src={require('../static/nav_bar/logo.svg')} alt="bar log"/>
+            </Link>
+          </div>
+        </Tooltip>
         <div style={{flex: 1, display: 'flex', justifyContent: 'space-evenly'}}>
           {this.renderMenuItems()}
         </div>
