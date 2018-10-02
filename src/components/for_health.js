@@ -91,19 +91,19 @@ class health extends Component {
         </div>
           <div id="diabetes_p">
              Look out!<br/> using plastic product for more than <br/><div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
-             <a class="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
+             <a className="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
              Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.<br/>
-             <a class="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
+             <a className="readmore" href="https://www.ataraxik.com/2018/06/10/why-we-need-to-stop-using-plastic/"><em>Read more</em></a>
           </div>
           <div id="vid_d">
               <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
-              <iframe width="300" height="250" src="https://www.youtube.com/embed/OBvIYCWOG5Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>              
+              <iframe width="300" height="250" src="https://www.youtube.com/embed/OBvIYCWOG5Q" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>              
           </div>
           <div id="vid_c">
               <p>What happens during a heart attack? - Krishna Sudhir</p> 
-              <iframe width="300" height="250" src="https://www.youtube.com/embed/3_PYnWVoUzM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="300" height="250" src="https://www.youtube.com/embed/3_PYnWVoUzM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </div>
       </div>
     );
