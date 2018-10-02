@@ -59,7 +59,6 @@ class HabitTrackerDetail extends Component {
         })
     }
 
-
     //render habit tracker detail component
     render() {
         const TabPane = Tabs.TabPane;
@@ -81,9 +80,6 @@ class HabitTrackerDetail extends Component {
                <Tabs 
                 style={{background: "#fff", padding: 10, borderRadius: 8}}
                 type="card">
-                <TabPane tab={<span><Icon type="table" />Bad Habit VS Good Habit</span>} key="1">
-                    {this.renderHabitGrid()}
-                </TabPane>
                 <TabPane tab={<span><Icon type="schedule" />Zero-Waste Challenge Form</span>} key="2">
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                         <button  
@@ -97,6 +93,9 @@ class HabitTrackerDetail extends Component {
                             <img width="800px" height="500px" className="img-fluid mx-auto" src={require('../static/habit_good/habit_table_v2.png')} alt="" />
                         </div>
                     </div>
+                </TabPane>
+                <TabPane tab={<span><Icon type="table" />Bad Habit VS Good Habit</span>} key="1">
+                    {this.renderHabitGrid()}
                 </TabPane>
                 <TabPane tab={<span><Icon type="info-circle-o" />How to Use the Form</span>} key="3">
                     <div style={{width: 455, height: 558, margin: '0 auto'}}>

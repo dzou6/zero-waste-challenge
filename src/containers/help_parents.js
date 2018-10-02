@@ -76,7 +76,7 @@ class HelpParents extends Component {
     //render tooltip with title and url if provided
     renderTooltipTitle(title, url) {
         return (
-            <div>{title} <span><a href={url}>{url}</a></span></div>
+            <div>{title} <span><a style={{textDecoration: 'underline'}} href={url}>Click Here</a></span></div>
         );
     }
 
@@ -99,14 +99,14 @@ class HelpParents extends Component {
                         title={this.renderTooltipTitle(this.state.kidTooltipTitle, this.state.kidTooltipUrl)}
                         placement="right" 
                         overlayClassName="helpParentstooltip">
-                        <img src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
+                        <img width={150} src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
                     </Tooltip>
                     <Tooltip
                         visible={this.state.parentTooltipVisible}
                         title={this.renderTooltipTitle(this.state.parentTooltipTitle, null)}
                         placement="right" 
                         overlayClassName="helpParentstooltip">
-                        <img src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
+                        <img width={150} src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
                     </Tooltip>
                 </div>
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly', marginTop: 20 }}>
