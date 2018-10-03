@@ -16,7 +16,7 @@ class Home extends Component {
     //event handler for react life cycle event
     componentDidMount() {
         //set read story opacity after 3.5 seconds
-        setTimeout(() => this.setState({opacity:1}), 25000);
+        setTimeout(() => this.setState({opacity:1}), 22000);
     }
 
     render(){
@@ -38,7 +38,7 @@ class Home extends Component {
                             <Link to="/story/1"
                                 style={{ width: '200px', marginTop: '5px',opacity:this.state.opacity}}
                                 className="btn btn-primary btn-xl font-weight-light mb-1">
-                                Read Story Now!
+                                Play Game Now!
                             </Link>
                         </div>
                     </div>

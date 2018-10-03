@@ -32,7 +32,7 @@ const menuItems = [
   {
     id: 'habit-tracker',
     url: '/habit-tracker',
-    title:'Track your habits\'s progress',
+    title:'Track your habit\'s progress',
     imgFile: require('../static/nav_bar/bar_btn_5.svg')
   },
   {
