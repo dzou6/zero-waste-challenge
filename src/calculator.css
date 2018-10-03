@@ -308,7 +308,8 @@
   #rangeSlider{
     position:absolute;
     bottom: -24px;
-    left:345px;
+    left:325px;
+    width:170px;
   }
 
   #straws{

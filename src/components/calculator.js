@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../calculator.css';
-import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 import { number } from 'style-value-types';
 import {storiesRef} from '../config/firebase';
+import {Slider} from 'antd';
 
 //The piece of HTML will appear after clicking the "count" button
 const results = (<div style={{marginTop: 60, display: 'flex'}}>
