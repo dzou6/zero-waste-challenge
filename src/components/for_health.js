@@ -69,15 +69,11 @@ class health extends Component {
     document.getElementById("vid_c").style.visibility = "visible";
 };
 
-  onHoverTip = ()=>{
-    document.getElementById("hint").style.visibility = "visible";
-  }
-
   render() {
     return (
       <div className="organ_health">
         <div>
-          <div onMouseOver={this.onHoverTip}>
+          <div>
             <img id="child_normal" src={require('../static/for_health/child_normal.png') } />
             <img id="child_sick" src={require('../static/for_health/child_sick.png')} />
           </div>          
