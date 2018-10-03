@@ -42,21 +42,21 @@
         "helpParents": [
             {
                 "id": 1,
-                "kidDialog": "Mom,instead of using one-off plastic straws, this website provides reusable straws",
+                "kidDialog": "Mom,instead of using one-off plastic straws, this website provides reusable straws!",
                 "kidUrl": "https://www.biome.com.au/805-reusable-straws",
-                "parentDialog": "Thanks, I will visit and use it when drink drinks."
+                "parentDialog": "Thanks, I will visit the webiste and drink with reusable straws."
             },
             {
                 "id": 2,
-                "kidDialog": "Mom, you can buy reusable bags which are very pretty on this website",
+                "kidDialog": "Mom, you can buy reusable bags from this website! These bags are also designed to be more nice-looking than disposable ones.",
                 "kidUrl": "https://www.smartbag.com.au/smartbag-shop/reusable-eco-bags",
-                "parentDialog": "That is fantastic！I will use it for shopping. Thank you!"
+                "parentDialog": "That is fantastic！I will use reusable bags for shopping. Thank you!"
             },
             {
                 "id": 3,
-                "kidDialog": "Mom, you can have a visit on this website:https://trashlesstakeaway.com.au/ to bring our food container to get discount",
+                "kidDialog": "Mom, you can have a visit on this website! It tells us the places where we could even get a dicount, if we bring our food container for takeaways.",
                 "kidUrl": "https://trashlesstakeaway.com.au/",
-                "parentDialog": "Thanks, Lovely! I didn't know I can get discount for bringing reusable containers for take-away" 
+                "parentDialog": "Thanks, Lovely! I didn't know I could even get discount for taking away food with food container" 
             }
         ],
         "predictData": [
@@ -118,6 +118,8 @@
                 "title": "habit 1",
                 "badHabitDesc": "bad habit desc for 1",
                 "goodHabitDesc": "good habit desc for 1",
+                "badHabitTitle": "bad habit title for 1",
+                "goodHabitTitle": "good habit title for 1",
                 "goodHabitAnimationImg": [
                     {
                         "file": "1_fish0.svg",
@@ -167,6 +169,8 @@
                 "title": "habit 2",
                 "badHabitDesc": "bad habit desc for 2",
                 "goodHabitDesc": "good habit desc for 2",
+                "badHabitTitle": "bad habit title for 2",
+                "goodHabitTitle": "good habit title for 2",
                 "goodHabitAnimationImg": [
                     {
                         "file": "2_fish0.svg",
@@ -207,6 +211,8 @@
                 "title": "habit 3",
                 "badHabitDesc": "bad habit desc for 3",
                 "goodHabitDesc": "good habit desc for 3",
+                "badHabitTitle": "bad habit title for 3",
+                "goodHabitTitle": "good habit title for 3",
                 "goodHabitAnimationImg": [
                     {
                         "file": "3_fish0.svg",

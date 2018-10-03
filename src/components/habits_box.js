@@ -3,10 +3,12 @@ import HabitItem from './habit_item';
 
 //function component to render habit box in story animation, including both good and bad habit animation
 const HabitsBoxComponent = (props) => {
-    const { goodHabitImg, badHabitImg, habitRef, habitType } = props;
+    const { goodHabitImg, badHabitImg, habitRef, habitType, tooltipTitle, isHabitTooltipVisible } = props;
 
     return habitRef != null ? (
         <HabitItem
+            isHabitTooltipVisible={isHabitTooltipVisible}
+            tooltipTitle={tooltipTitle}
             onAnimationFinished={() => props.onHabitRendered()}
             key={habitType + habitRef}
             habitsImg={habitType === 'bad' ? badHabitImg.map(img => {

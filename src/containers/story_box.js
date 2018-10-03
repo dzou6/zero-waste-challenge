@@ -61,7 +61,8 @@ class StoryBoxComponent extends Component {
             modalImg: 'Story1_Ending_sad.png',
             modalOkText: '',
             isModalExternalRoute: false,
-            isTurtleTooltipVisible: false
+            isTurtleTooltipVisible: false,
+            isHabitTooltipVisible: false,
         }
     }
 
@@ -76,6 +77,7 @@ class StoryBoxComponent extends Component {
         if(this.state.badAnimationCounter === this.props.story.storyBadInputs.length) {
             this.setState({
                 isTurtleTooltipVisible: false,
+                isHabitTooltipVisible: false,
                 showModal: true,
                 modalTitle: 'Turtle: I am sick. Can you please help me?',
                 modalImg: 'Story1_Ending_sad.png',
@@ -86,6 +88,7 @@ class StoryBoxComponent extends Component {
         if(this.state.goodAnimationCounter === this.props.story.storyGoodInputs.length) {
             this.setState({
                 isTurtleTooltipVisible: false,
+                isHabitTooltipVisible: false,
                 showModal: true,
                 modalTitle: 'Turtle: You are making a better world!',
                 modalImg: 'Story1_Ending_happy.png',
@@ -134,7 +137,7 @@ class StoryBoxComponent extends Component {
                 <StoryContainer key={this.state.boxKey}>
                     <StoryLeftSider>
                         <StoryInputComponent 
-                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'bad', isTurtleTooltipVisible: false})}
+                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'bad', isTurtleTooltipVisible: false, isHabitTooltipVisible: true})}
                             storyInputs={story.storyBadInputs}
                             type="bad"
                             isStoryPlaying={this.state.isStoryPlaying}
@@ -143,13 +146,14 @@ class StoryBoxComponent extends Component {
                     <StoryBodyComponent 
                         story={story} 
                         isTurtleTooltipVisible={this.state.isTurtleTooltipVisible}
+                        isHabitTooltipVisible={this.state.isHabitTooltipVisible}
                         inputIndex={this.state.inputIndex}
                         inputType={this.state.inputType}
                         onOneAniFinished={(type) => this.onAnimationFinished(type)}
                     />
                     <StoryRightSider>
                         <StoryInputComponent 
-                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'good', isTurtleTooltipVisible: false})}
+                            onStoryInputClicked={(index) => this.setState({inputIndex: index, isStoryPlaying: true, inputType: 'good', isTurtleTooltipVisible: false, isHabitTooltipVisible: true})}
                             storyInputs={story.storyGoodInputs}
                             type="good"
                             isStoryPlaying={this.state.isStoryPlaying}
