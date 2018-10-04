@@ -28,10 +28,10 @@ class FutureContainer extends Component {
         avgFish = totalFishWeight/fishData.length;
         const fishAvgWeight = avgFish * 1400000000 / 0.25 / 0.05 / 0.05 / 3500000000000;
         //predict data
-        for (let i = 2018; i <= 2100; i++) {
+        for (let i = 2018; i <= 2060; i++) {
             lineChartData.push({
                 year: i,
-                plasticInOcean: Math.round(3448.2 * i - 6679322.7)
+                plasticInOcean: Math.round(3003.2 * i - 2480 * i* i + 1.200 * i* i * i- 6679322.7)
             });
         }
 
@@ -47,7 +47,7 @@ class FutureContainer extends Component {
                 >
                     <TabPane tab={<span><FontAwesomeIcon icon="user-md"/>  For your health</span>} key="2">
                         <div style={{textAlign: "center", color:"#18bc9c", fontWeight: "bold", fontSize: "1.3em"}}>
-                            Do you know what kind of disease might be caused by keep using plastic? Click the circle on body!
+                            Do you know what kind of disease might be caused by keep using plastic?
                         </div>
                         <For_health></For_health>
                     </TabPane>

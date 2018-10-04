@@ -255,12 +255,14 @@ class StoryPlasticComponent extends Component {
 
     //render plastic story component
     render() {
-        const {story, inputIndex, inputType, isTurtleTooltipVisible} = this.props;
+        const {story, inputIndex, inputType, isTurtleTooltipVisible, isHabitTooltipVisible} = this.props;
         return (
             <DetailContainer>
                 <HabitContainer mr="2px" bgImage= {require(`../static/story_bg/${story.id}_bad_bg.svg`)}>
                     <HabitAnimationComponent>
                         <HabitsBoxComponent 
+                            tooltipTitle={inputIndex !== null? story.habits[inputIndex].badHabitTitle: null}
+                            isHabitTooltipVisible={isHabitTooltipVisible}
                             onHabitRendered={() => this.onBadHabitAnimationStart()} 
                             badHabitImg={inputIndex !== null? story.habits[inputIndex].badHabitImg: null}
                             habitRef={inputType === 'bad'? inputIndex : null}
@@ -284,6 +286,8 @@ class StoryPlasticComponent extends Component {
                 <HabitContainer ml="2px" bgImage= {require(`../static/story_bg/${story.id}_good_bg.svg`)}>
                     <HabitAnimationComponent>
                         <HabitsBoxComponent 
+                            tooltipTitle={inputIndex !== null? story.habits[inputIndex].goodHabitTitle: null}
+                            isHabitTooltipVisible={isHabitTooltipVisible}
                             onHabitRendered={() => this.onGoodHabitAnimationStart()} 
                             goodHabitImg={inputIndex !== null? story.habits[inputIndex].goodHabitImg: null}
                             habitRef={inputType === 'good'? inputIndex : null}

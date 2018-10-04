@@ -306,7 +306,7 @@
   #rangeSlider{
     position:absolute;
     bottom: -24px;
-    left:325px;
+    left:344px;
     width:170px;
   }
 
@@ -326,7 +326,7 @@
   #day{
     position:absolute;
     bottom: 21px;
-    left:500px;
+    left:540px;
     color:rgb(0, 110, 255);
     font-size:3em;
   }

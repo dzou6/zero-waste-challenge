@@ -44,13 +44,16 @@ class HabitItem extends Component{
     }
 
     //render habit image based on state image index.
-render() {
+    render() {
+        const {tooltipTitle, isHabitTooltipVisible} = this.props;
         return (
-            <img width="250px" 
-                style={{marginTop: 20}}
-                src={this.imgs[this.state.imgIndex]}
-                alt="index"
-            />
+            <Tooltip placement="top" title={tooltipTitle} visible={isHabitTooltipVisible}>
+                <img width="230px" 
+                    style={{marginTop: 70}}
+                    src={this.imgs[this.state.imgIndex]}
+                    alt="index"
+                />
+            </Tooltip>
         );
     }
 }
