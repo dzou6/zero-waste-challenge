@@ -94,7 +94,7 @@ class NavigationHeader extends Component {
     
     return (
       <Header style={{ padding: 0, position: 'fixed', display: 'flex', alignItems: 'center', zIndex: 10, width: '100%', height: 80, backgroundImage: `url(${require('../static/nav_bar/bar.svg')})` }}>
-        <Tooltip title="Navigation panel" placement="bottom">
+        <Tooltip title="Menu" placement="bottom">
           <div style={{width: 120}}>
             <Link to='/'>
               <img src={require('../static/nav_bar/logo.svg')} alt="bar log"/>

@@ -11,7 +11,7 @@ import { BrowserRouter} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import 'font-awesome/css/font-awesome.min.css'
 import { faKey, faBookReader, faHome, faTasks, faUsers, faArrowCircleLeft, faArrowCircleRight, 
-    faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp, faPlayCircle, faUserMd} from '@fortawesome/free-solid-svg-icons';
+    faQuestionCircle, faCalculator, faHandPointDown, faHandPointUp, faPlayCircle, faUserMd, faHandPointLeft, faHandPointRight} from '@fortawesome/free-solid-svg-icons';
 
 import { getAllStories, getAllHabits, getAllQuiz } from './actions/index';
 
@@ -51,6 +51,8 @@ library.add(
     faCalculator,
     faHandPointDown,
     faHandPointUp,
+    faHandPointLeft,
+    faHandPointRight,
     faPlayCircle,
     faUserMd
 );
