@@ -12,7 +12,7 @@ const NavPanelComponent = (props) => {
                 Zero-Waste Challenge
             </div>
             <div style={{display: 'flex',flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <div style={{display: 'flex', flexDirection: 'column',backgroundImage: `url(${require('../static/home/bg.svg')})`, height: 665, width: 1024}}>
+                <div style={{display: 'flex', flexDirection: 'column',backgroundImage: `url(${require('../static/home/bg.svg')})`, height: 626, width: 1024}}>
                     <div style={{display: 'flex', flex: 1, alignItems: 'center' , justifyContent: 'space-evenly'}}>
                         <Link to="/home">
                             <img width={200} src={require('../static/nav_item/btn_navi_01.svg')} alt="nav_01"/>

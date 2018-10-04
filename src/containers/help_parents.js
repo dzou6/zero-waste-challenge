@@ -3,6 +3,7 @@ import { Tooltip } from 'antd';
 import {connect} from 'react-redux';
 import './help_parents.css'
 import LoadingPanel from '../components/loading_panel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Componet for showing help parents page
 class HelpParents extends Component {
@@ -93,25 +94,36 @@ class HelpParents extends Component {
         return (
             <div style={{ width: 1000 }}>
                 <h4 style={{color:"white"}}>Help your parents in daily life with suggestions! Click images at bottom!</h4>
-                <div style={{ marginTop:34,  flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
+                <div style={{ marginTop:83,  flex: 1, display: 'flex', justifyContent: 'space-evenly' }}>
                     <Tooltip
                         visible={this.state.kidTooltipVisible}
                         title={this.renderTooltipTitle(this.state.kidTooltipTitle, this.state.kidTooltipUrl)}
-                        placement="right" 
+                        placement="left" 
                         overlayClassName="helpParentstooltip">
-                        <img width={150} src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
+                        <img width={180} src={require('../static/help_your_parents/child.svg')} alt="reusable straws" />
                     </Tooltip>
                     <Tooltip
                         visible={this.state.parentTooltipVisible}
                         title={this.renderTooltipTitle(this.state.parentTooltipTitle, null)}
                         placement="right" 
                         overlayClassName="helpParentstooltip">
-                        <img width={150} src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
+                        <img width={180} src={require('../static/help_your_parents/mom.svg')} alt="reusable bags" />
                     </Tooltip>
                 </div>
-                <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly', marginTop: 20 }}>
+                <div style={{ flex: 1, display: 'flex', justifyContent: 'space-evenly', marginTop: 50, alignItems: 'center' }}>
+                    <FontAwesomeIcon 
+                        icon="hand-point-right"
+                        color="white"
+                        size="3x"
+                    />
                     {this.renderParentCard(helpParents)}
+                    <FontAwesomeIcon 
+                        icon="hand-point-left"
+                        color="#white"
+                        size="3x"
+                    />
                 </div>
+                
             </div>
         );
     }

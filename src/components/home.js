@@ -30,9 +30,9 @@ class Home extends Component {
                             fontSize: "1.1em",
                             bottom: "598px"
                         }}>
-                            <span className="mb-4" style={{width: "500px", fontSize:"20px"}}>
-                                <p>Hi, did you know every year more than 130,000 tonnes of plastics end up in the ocean?</p>
-                                <p>These plastics are causing marine animals sick.</p>
+                            <span className="mb-4" style={{width: "501px", fontSize:"20px"}}>
+                                <p>Hi, did you know over 130,000 tonnes(16,250 elephants) of plastics end up in the ocean yearly?</p>
+                                <p>These plastics are making marine animals sick.</p>
                                 <p>Would you be willing to take actions to save their lives?</p>
                             </span>
                             <Link to="/story/1"

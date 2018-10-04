@@ -64,7 +64,7 @@ class Quiz extends Component {
                 this.setState({modalClosable: true});
             }
         } else {
-            this.setState({modalTitle: 'Sorry, try again'});
+            this.setState({modalTitle: 'You can do better! Just try again'});
             this.setState({modalOkText: 'Retry'});
             this.setState({isAnswerCorrect: false});
         }
@@ -141,7 +141,7 @@ class Quiz extends Component {
 
         return (
             <div>
-                <h3 className="text-white">Do you think the image at the bottom shows a good habit that can help the turtle?</h3>
+                <h3 className="text-white">Do you think the image at the bottom shows a good habit?</h3>
                 <QuizTargetComponent>
                     <QuizTarget
                         optionVal="yes"
