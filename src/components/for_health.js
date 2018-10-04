@@ -87,11 +87,11 @@ class health extends Component {
         </div>
           <div id="diabetes_p">
              Look out!<br/> using plastic product for more than <br/><div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
-             <a className="readmore" href="https://watermark.silverchair.com/jcem3822.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAh0wggIZBgkqhkiG9w0BBwagggIKMIICBgIBADCCAf8GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMgaZygGEdwXfqp14hAgEQgIIB0A1rghBEIS0LvWuI2X9D8x2vxUZwHR52pkPlHjTYWsZyuLhlFaY2RZtuW3GQ0ZPMpOBV7N_RODHfnzbZs4_-uDzWFyl9fw0NCYK28MgfcRbovR6CJHfO0fAlt2_DlMi2QlUUwtA1n-S7yOV9vxVVm8qAOCPjmlzQU-xQ5DQ6lK-MAQtUCo_dRP-8kLPvDXkFtTyOILgXPiN1FibHTo2_pioYtc7pfTdPOnrJ3zJzLBrz3gLSmyKuWSKCBEwaWdel35RpDj_w8iPE0xDv4grBQSYyAqaRW1XiswulxW7ZuhLnzQTrD2eUMprD4WBwMNO660Eimnf06NMAa0KveSVoRui5YyWKw_IvaX1XNj_wvNLW98x0StEiPnS7_UM7hEfpbecZxAUAFTI0nxXR8tM_65dJ5z5GUg05_P4kIlk9FXhSmi4uvkH0k96dijxH6mM69nG50UqfIPwhhtLW5WS8mqbAqP5yeZpQEzLT0UWb20TbYT4IG9vCgylSbPoQhUWRFu79iLiZIoWolY2MLYV6IDgvPCjI2eBDsjjWxHXkWUZN52lvccfzWIvzfUQzW0Uf-_IBHKJeDKdL3rP0KYcBJU0HP3_jmNjyeBGN_Nlees31"><em>Read more</em></a>
+             <a className="readmore" href="https://academic.oup.com/jcem/article/96/12/3822/2834949"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
              Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.<br/>
-             <a className="readmore" href="https://www.tandfonline.com/doi/full/10.3109/10408444.2013.860075#aHR0cHM6Ly93d3cudGFuZGZvbmxpbmUuY29tL2RvaS9wZGYvMTAuMzEwOS8xMDQwODQ0NC4yMDEzLjg2MDA3NT9uZWVkQWNjZXNzPXRydWVAQEAw"><em>Read more</em></a>
+             <a className="readmore" href="https://www.researchgate.net/publication/259605449_Bisphenol_A_and_indicators_of_obesity_glucose_metabolismtype_2_diabetes_and_cardiovascular_disease_A_systematic_review_of_epidemiologic_research"><em>Read more</em></a>
           </div>
           <div id="vid_d">
               <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
