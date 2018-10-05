@@ -90,8 +90,8 @@ class health extends Component {
              <a className="readmore" target="_blank" href="https://academic.oup.com/jcem/article/96/12/3822/2834949"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
-             Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.<br/>
-             <a className="readmore" target="_blank" href="https://www.researchgate.net/publication/259605449_Bisphenol_A_and_indicators_of_obesity_glucose_metabolismtype_2_diabetes_and_cardiovascular_disease_A_systematic_review_of_epidemiologic_research"><em>Read more</em></a>
+             Regular use of plastic products<br/> can lead to issues later in life,<br/> like heart disease.<br/>
+             <a className="readmore" target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/25723814"><em>Read more</em></a>
           </div>
           <div id="vid_d">
               <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
