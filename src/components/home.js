@@ -9,14 +9,14 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            opacity:0
+            showPlayBtn: false
         };
     }
 
     //event handler for react life cycle event
     componentDidMount() {
         //set read story opacity after 3.5 seconds
-        setTimeout(() => this.setState({opacity:1}), 22000);
+        setTimeout(() => this.setState({showPlayBtn: true}), 22000);
     }
 
     render(){
@@ -35,11 +35,14 @@ class Home extends Component {
                                 <p>These plastics are making marine animals sick.</p>
                                 <p>Would you be willing to take actions to save their lives?</p>
                             </span>
-                            <Link to="/story/1"
+                            {this.state.showPlayBtn? (
+                                <Link to="/story/1"
                                 style={{ width: '200px', marginTop: '5px',opacity:this.state.opacity}}
                                 className="btn btn-primary btn-xl font-weight-light mb-1">
                                 Play Game Now!
                             </Link>
+                            ): null}
+                            
                         </div>
                     </div>
                 </div>

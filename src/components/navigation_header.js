@@ -46,6 +46,12 @@ const menuItems = [
     url: '/for-your-future',
     title:'For your future',
     imgFile: require('../static/nav_bar/bar_btn_7.svg')
+  },
+  {
+    id: 'about-website',
+    url: '/about',
+    title:'About Zero-waste Challenge',
+    imgFile: require('../static/nav_bar/bar_btn_8.svg')
   }
 ];
 

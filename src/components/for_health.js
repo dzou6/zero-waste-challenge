@@ -86,20 +86,20 @@ class health extends Component {
           <button id="cardiovascular" onClick={this.onClickCardiovascular}>btn_02</button>
         </div>
           <div id="diabetes_p">
-             Look out!<br/> using plastic product for more than <div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
-             <a className="readmore" href="https://academic.oup.com/jcem/article/96/12/3822/2834949"><em>Read more</em></a>
+             Look out!<br/> Using plastic product for more than <div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
+             <a className="readmore" target="_blank" href="https://academic.oup.com/jcem/article/96/12/3822/2834949"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
-             Regular use of plastic product<br/> can lead to issues later in life,<br/> like heart disease.<br/>
-             <a className="readmore" href="https://www.tandfonline.com/doi/full/10.1080/23312009.2018.1506601"><em>Read more</em></a>
+             Regular use of plastic products<br/> can lead to issues later in life,<br/> like heart disease.<br/>
+             <a className="readmore" target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/25723814"><em>Read more</em></a>
           </div>
           <div id="vid_d">
-              <p>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
+              <p style={{fontSize:14}}>What is Type 1 Diabetes? Diabetes explained for children - Ask Dr.Smarty</p>
               <iframe width="300" height="250" src="https://www.youtube.com/embed/OBvIYCWOG5Q" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>              
           </div>
           <div id="vid_c">
-              <p>What happens during a heart attack? - Krishna Sudhir</p> 
-              <iframe width="300" height="250" src="https://www.youtube.com/embed/3_PYnWVoUzM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+              <p style={{fontSize:14}}>What causes heart attacks?</p> 
+              <iframe width="300" height="250" src="https://www.youtube.com/embed/_WXxET_DzE4" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
           </div>
       </div>
     );

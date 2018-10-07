@@ -105,7 +105,7 @@ class Quiz extends Component {
     renderCandyReward() {
         return this.state.candyNum !== 0? 
         (
-            <div style={{position: 'relative', height: 0, left: 707, bottom: 192, fontSize: 20, width: 276}}>
+            <div style={{position: 'relative', height: 0, left: 516, bottom: 180, fontSize: 20, width: 276}}>
                 <span>You win:</span>
                 <img width="100px"
                     alt="candy"
@@ -119,7 +119,7 @@ class Quiz extends Component {
         const {candyNum} = this.state;
         const {quizInitLength} = this.props;
         return (
-            <div style={{position: 'relative', height: 0, left: 120, bottom: 192, fontSize: 20, width: 316}}>
+            <div style={{position: 'relative', height: 0, left: -56, bottom: 192, fontSize: 20, width: 316}}>
                 <Progress 
                     type="circle" 
                     percent={(candyNum / quizInitLength) * 100} 
