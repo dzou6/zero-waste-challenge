@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+//import real-time database reference into this component
 import {storiesRef} from '../config/firebase';
 
+//change the visibility of a normal and sick child icons
 function Show()
 {
     document.getElementById("child_normal").style.visibility = "hidden";
@@ -8,7 +10,7 @@ function Show()
 }
 
 class health extends Component {
-
+  //high level and flexible function to caculate average rate of diabetes happening in Australia hospital
   dataAnalyze(column,total){
     const dataList = storiesRef.child('0').child('diabetesRatio').child(column);
     const list = [];
@@ -34,6 +36,7 @@ class health extends Component {
     return p;
   }
 
+  //specify the columns of table columns to call the dataAnalyze function and show the result on a specific div
   countDays(){
     var dr = this.dataAnalyze('Persons','Total');
     console.log(dr);
@@ -48,6 +51,7 @@ class health extends Component {
     document.getElementById("d").innerHTML = Math.round(days)+" days, may double your chances";
   }
 
+  //click different buttons to show the different information of diabetes
   onClickPancreas = ()=>{
     Show()
     document.getElementById("diabetes").style.visibility = "visible";
@@ -59,6 +63,7 @@ class health extends Component {
     this.countDays();
   };
 
+  //click different buttons to show the different information of heart disease
   onClickCardiovascular = ()=>{
     Show()
     document.getElementById("diabetes").style.visibility = "hidden";
