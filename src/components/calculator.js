@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import '../calculator.css';
 import 'react-rangeslider/lib/index.css'
 import { number } from 'style-value-types';
+//import real-time database reference
 import {storiesRef} from '../config/firebase';
+//import Slider bar of Ant_design package
 import {Slider} from 'antd';
 
 //The piece of HTML will appear after clicking the "count" button
@@ -40,6 +42,7 @@ class Calculator extends Component {
     this.state.value = 1;
   }
 
+  //high level function of caculating the result of average infected ocean life amount in Australia
   dataAnalyze(column){
     const dataList = storiesRef.child('0').child('PlasticAffected').child(column);
     const list = [];
