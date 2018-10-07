@@ -45,7 +45,7 @@ class health extends Component {
     })
     days = dr/dailyIncre;
     console.log(days);
-    document.getElementById("d").innerHTML = Math.round(days);
+    document.getElementById("d").innerHTML = Math.round(days)+" days, may double your chances";
   }
 
   onClickPancreas = ()=>{
@@ -86,7 +86,7 @@ class health extends Component {
           <button id="cardiovascular" onClick={this.onClickCardiovascular}>btn_02</button>
         </div>
           <div id="diabetes_p">
-             Look out!<br/> Using plastic product for more than <div id="d"></div> days, may double your chances<br/>of getting diabetes.<br/>
+             Look out!<br/> Using plastic product for more than <div id="d"></div>of getting diabetes.<br/>
              <a className="readmore" target="_blank" href="https://academic.oup.com/jcem/article/96/12/3822/2834949"><em>Read more</em></a>
           </div>
           <div id="heart_warning">
