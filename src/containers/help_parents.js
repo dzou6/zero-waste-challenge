@@ -77,7 +77,7 @@ class HelpParents extends Component {
     //render tooltip with title and url if provided
     renderTooltipTitle(title, url) {
         return (
-            <div>{title} <span><a target="_blank" style={{textDecoration: 'underline', fontStyle:'italic'}} href={url}>Click Here</a></span></div>
+            <div>{title} {url != null ? <span><a target="_blank" style={{textDecoration: 'underline', fontStyle:'italic'}} href={url}>Click Here</a></span> : null }</div>
         );
     }
 

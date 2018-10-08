@@ -14,13 +14,14 @@ class About extends Component{
                                     The Zero-Waste Challenges website is designed to attract 6-8 years old children. It provides 
                                     interactive games for children to understand that plastic can affect marine animals and their health. 
                                     So, Children can learn through games and alternatively develop a zero-waste habit towards plastics and 
-                                    influence grow-ups. We aim to fix problems from root!
+                                    influence grow-ups. We aim to fix problems from the root!
                                 </p>
                                 <p style={{marginTop: 50, 'text-align': 'justify'}}>
                                     Zero-Waste Challenge aims to progress towards the goal of motivating children to develop zero-waste habits. 
-                                    Children can interact with animations, games, calculators and quizzes to understand the urgency of developing 
-                                    zero-waste habits towards plastic and gain motivation. Parents can help kids develop these habits by providing 
-                                    them with information provided on the website and giving rewards to children if they achieve their daily goal on developing zero-waste habit.
+                                    Children can interact with animations, games, calculators, and quizzes to understand the urgency of developing 
+                                    zero-waste habits towards plastic and gain motivation. Parents can help kids develop these habits by providing them 
+                                    with information provided on the website and giving rewards to children if they achieve their daily goal of developing 
+                                    a zero-waste habit.
                                 </p>
                             </div>);
                 }

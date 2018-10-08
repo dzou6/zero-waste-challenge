@@ -54,17 +54,17 @@ class Quiz extends Component {
     onDropFinished(id) {
         const {quiz, quizInitLength} = this.props;
         if(this.state.optionVal === quiz[this.state.shownItmIdx].answer) {
-            this.setState({modalTitle: 'Good Job!!! You are correct'});
+            this.setState({modalTitle: 'Good Job!!! You are correct!'});
             this.setState({modalOkText: 'Go to Next Question'});
             this.setState({isAnswerCorrect: true});
             this.setState({candyNum: this.state.candyNum + 1});
             if(this.state.candyNum === quizInitLength) {
-                this.setState({modalTitle: 'Gooooooood job!!! You finish all the questions, excellent!!!!'});
+                this.setState({modalTitle: 'Goooood job! You finish all the questions!!!!'});
                 this.setState({modalOkText: 'Go to Challenge'});
                 this.setState({modalClosable: true});
             }
         } else {
-            this.setState({modalTitle: 'You can do better! Just try again'});
+            this.setState({modalTitle: 'You can do better! Just try again.'});
             this.setState({modalOkText: 'Retry'});
             this.setState({isAnswerCorrect: false});
         }
