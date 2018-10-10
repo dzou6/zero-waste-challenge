@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { Layout, Modal, Button, Input, Icon, Tag } from 'antd';
 
@@ -15,6 +15,7 @@ import HelpYourParents from './containers/help_parents';
 import NavPanelComponent from './components/nav_panel';
 import FutureContainer from './containers/future_container';
 import About from './components/about';
+import PageNotFoundComponet from './components/page_not_found';
 
 class App extends Component {
 
@@ -50,16 +51,18 @@ class App extends Component {
                 <Content className="bg-primary text-white text-center"
                     style={{ minHeight: this.props.location.pathname !== '/'? 'calc(100vh - 113px)' : 'calc(100vh - 33px)', marginTop: this.props.location.pathname !== '/'? 80: 0, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Switch>
-                        <Route path="/about" component={About}/>
-                        <Route path="/for-your-future" component={FutureContainer}/>
-                        <Route path="/help-your-parents" component={HelpYourParents}/>
-                        <Route path="/habit-tracker" component={HabitTrackerDetail} />
-                        <Route path="/calculator" component={Calculator} />
-                        <Route path="/story/:id" component={StoryBoxComponent} />
-                        <Route path="/stories" component={StoriesGridComponent} />
-                        <Route path="/quiz" component={Quiz} />
-                        <Route path="/home" component={Home} />
-                        <Route path="/" component={NavPanelComponent} />
+                        <Route exact path="/about" component={About}/>
+                        <Route exact path="/for-your-future" component={FutureContainer}/>
+                        <Route exact path="/help-your-parents" component={HelpYourParents}/>
+                        <Route exact path="/habit-tracker" component={HabitTrackerDetail} />
+                        <Route exact path="/calculator" component={Calculator} />
+                        <Route exact path="/story/:id" component={StoryBoxComponent} />
+                        <Route exact path="/stories" component={StoriesGridComponent} />
+                        <Route exact path="/quiz" component={Quiz} />
+                        <Route exact path="/home" component={Home} />
+                        <Route exact path="/404" component={PageNotFoundComponet} />
+                        <Route exact path="/" component={NavPanelComponent} />
+                        <Redirect to="/404" />
                     </Switch>
                 </Content>
                 <Footer style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 33, padding: 0}}>

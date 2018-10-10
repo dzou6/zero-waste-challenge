@@ -129,7 +129,7 @@ class StoryBoxComponent extends Component {
     render() {
         const {story} = this.props; 
         if(!story) {
-            return <LoadingPanel />
+            return <LoadingPanel />  // if data hasn't retrieved from database.
         }
         return (
             <div>
